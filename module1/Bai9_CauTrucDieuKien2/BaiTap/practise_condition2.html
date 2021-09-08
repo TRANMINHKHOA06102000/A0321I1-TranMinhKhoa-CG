@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 02</title>
+</head>
+<body>
+<label>Nhập số bài tập: </label>
+<input type="text" id="baitapso">
+<button type="button" onclick="baitap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập</span><br>
+<p><span>Bài 1: Chuyển từ độ C sang độ F.</span></p>
+<p><span>Bài 2: Chuyển từ mét sang feet.</span></p>
+<p><span>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</span></p>
+<p><span>Bài 4: Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</span></p>
+<p><span>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</span></p>
+<p><span>Bài 6: Giải phương trình bậc 1.</span></p>
+<p><span>Bài 7: Giải phương trình bậc 2.</span></p>
+<p><span>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lớn hơn 0.</span>
+</p>
+<p><span>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.</span></p>
+<p><span>Bài 10: Viết chương trình tính giá điện</span></p>
+<p><span>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</span></p>
+<p><span>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</span>
+</p>
+</body>
+<script>
+    function baitap() {
+        let request = document.getElementById("baitapso").value;
+        switch (request) {
+            case '1':
+                bai1();
+                break;
+            case '2':
+                bai2();
+                break;
+            case '3':
+                bai3();
+                break;
+            case '4':
+                bai4();
+                break;
+            case '5':
+                bai5();
+                break;
+            case '6':
+                bai6();
+                break;
+            case '7':
+                bai7();
+                break;
+            case '8':
+                bai8();
+                break;
+            case '9':
+                bai9();
+                break;
+            case '10':
+                bai10();
+                break;
+            case '11':
+                bai11();
+                break;
+            case '12':
+                bai12();
+                break;
+            default:
+                alert("Bạn phải nhập từ 1 đến 12!");
+        }
+    }
+
+    function bai1() {
+        let c = parseFloat(prompt('Nhập độ C: '));
+        let f;
+        if (c<0 || isNaN(c)){
+            alert("bạn phải nhập độ c >=0");
+        }else {
+            f = (9 * c) / 5 + 32;
+            alert(c + 'độ C = ' + f + 'độ F');
+        }
+    }
+    function bai2() {
+        let m = parseFloat(prompt('Nhập số mét: '));
+        let f;
+        if (m<0 || isNaN(m)){
+            alert("bạn phải nhập số mét >=0");
+        }else {
+            f = m * 3.2808;
+            alert(m + 'm = ' + f + 'feet');
+        }
+    }
+    function bai3() {
+        let a = parseInt(prompt('Nhập cạnh a: '));
+        let s;
+        if (a<=0 || isNaN(a)){
+            alert("bạn phải nhập cạnh lớn hơn 0");
+        }
+        else {
+            s =a*a;
+            alert('diện tích hình vuông =' +s);
+        }
+    }
+    function bai4() {
+        let a = parseInt(prompt('Nhập cạnh a: '));
+        let b = parseInt(prompt('Nhập cạnh b: '));
+        let s;
+        if (a<=0 || b<=0 || isNaN(a) || isNaN(b)){
+            alert("bạn phải nhập cạnh lớn hơn 0");
+        }else {
+            s =a*b;
+            alert('diện tích =' +s);
+        }
+    }
+    function bai5() {
+        let a = parseInt(prompt('Nhập cạnh a: '));
+        let b = parseInt(prompt('Nhập cạnh b: '));
+        let s;
+        if (a<=0 || b<=0 || isNaN(a) || isNaN(b)){
+            alert("bạn phải nhập cạnh lớn hơn 0");
+        }else {
+            s =a*b/2;
+            alert('diện tích =' +s);
+        }
+    }
+    function bai6() {
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b: '));
+        if (a==0 && b==0){
+            alert("phương trình có vô số nghiệm.");
+        }else if (b!=0){
+            alert('phương trình vô nghiệm.');
+        }else {
+            alert('phương trình có nghiệm x = '+ (-b/a));
+        }
+    }
+    function bai7() {
+        let a = parseInt(prompt('Nhập a: '));
+        let b = parseInt(prompt('Nhập b: '));
+        let c = parseInt(prompt('Nhập c: '));
+        let delta=b*b-4*a*c;
+        if(delta<0){
+            alert('phương trình vô nghiệm.');
+        }else if (delta==0){
+            alert('phương trình có nghiệm kép x1=x2= '+ (-b/(2*a)));
+        }else {
+            alert("phương trình có hai nghiệm phân biêt: x1= "+ ((-b+Math.sqrt(delta))/(2*a)) + ";x2 = "+((-b-Math.sqrt(delta))/(2*a)) )
+        }
+    }
+    function bai8() {
+        let tuoi = parseInt(prompt('Nhập tuổi: '));
+        if (tuoi>0 && tuoi<120){
+            alert(tuoi+ ' là tuổi của một người');
+        }
+        else{
+            alert(tuoi+ ' không phải là tuổi của một người');
+        }
+    }
+    function bai9() {
+        let a = parseFloat(prompt('Nhập a: '));
+        let b = parseFloat(prompt('Nhập b: '));
+        let c = parseFloat(prompt('Nhập c: '));
+        if( a>0 && b>0 && c>0 ){
+            if(a + b > c && b + c > a && a + c > b){
+                alert('Đây là 3 cạnh của một tam giác');
+            }else {
+                alert('Đây không phải là 3 cạnh của một tam giác');
+            }
+        }else {
+            alert('Bạn cần phải nhập 3 cạnh lớn hơn 0');
+        }
+    }
+    function bai10() {
+        let sodiencu= parseFloat(prompt('nhập số điện cũ (Kwh): '));
+        let sodienmoi= parseFloat(prompt('nhập số điện mới (Kwh): '));
+        let sodien=sodienmoi-sodiencu;
+        let tiendien=0;
+        const  bac1=1678, bac2=1734, bac3=2014, bac4=2536, bac5=2834, bac6=2927;
+        if (sodienmoi<0 || sodiencu<0 || isNaN(sodiencu) || isNaN(sodienmoi)){
+            alert('số điện cũ và số điện mới phải >=0');
+        }else if(sodienmoi<sodiencu){
+            alert('số điện cũ không thể lớn hơn số điện mới');
+        }else if(sodien<=50){
+            tiendien=sodien*bac1;
+        }else if(sodien<=100){
+            tiendien=sodien*bac2;
+        }else if (sodien<=200){
+            tiendien=sodien*bac3;
+        }else if (sodien<=300){
+            tiendien=sodien*bac4;
+        }else if (sodien<=400){
+            tiendien =sodien*bac5;
+        }else {
+            tiendien=sodien*bac6;
+        }
+        alert("tiền điện = " + tiendien.toLocaleString('vi-VN',{style: 'currency',currency: 'VND'}));
+    }
+    function bai11() {
+        let thunhap= parseFloat(prompt('nhập số tiền thu nhập cá nhân(đồng/tháng): '));
+        let thue=0;
+        const  bac1=0, bac2=0.05, bac3=0.01, bac4=0.15, bac5=0.2, bac6=0.25,bac7=0.3,bac8=0.35;
+        if (thunhap<0 || isNaN(thunhap)){
+            alert('bạn phải nhập thu nhập >=0 và không được nhập chữ');
+        }else if(thunhap<=4000000){
+            thue=thunhap*bac1;
+        }else if(thunhap<6000000){
+            thue=thunhap*bac2;
+        }else if(thunhap<=9000000){
+            thue=thunhap*bac3;
+        }else if (thunhap<=14000000){
+            thue=thunhap*bac4;
+        }else if (thunhap<=24000000){
+            thue=thunhap*bac5;
+        }else if (thunhap<=44000000){
+            thue=thunhap*bac6;
+        }else if(thunhap<=84000000){
+            thue=thunhap*bac7;
+        }else {
+            thue=thunhap*bac8;
+        }
+        alert("thuế = " + thue.toLocaleString('vi-VN',{style: 'currency',currency: 'VND'}));
+    }
+    function bai12() {
+        let sotienbandau = parseInt(prompt('Nhập vào số tiền ban đầu(đồng): '));
+        let sothangchovay = parseInt(prompt('Nhập vào số tháng cho vay: '));
+        let laisuathangthang = parseFloat(prompt('Nhập vào lãi suất hàng tháng(%): '));
+        let laisuat=0;
+        if(sothangchovay<0 || sotienbandau<0 || isNaN(sotienbandau)|| isNaN(sothangchovay) || isNaN(laisuathangthang)){
+            alert('nhập số tiền ban đầu, số tháng ban đầu , lãi suất lớn hơn 0 ')
+        }else {
+            for(let i=0; i<=sothangchovay; i++){
+                laisuat = sotienbandau*sothangchovay*laisuathangthang/100;
+            }
+            alert('Lãi suất phải trả sau '+ sothangchovay + " tháng là: " + laisuat.toLocaleString('vi-VN',{style: 'currency',currency: 'VND'}));
+        }
+    }
+</script>
+</html>

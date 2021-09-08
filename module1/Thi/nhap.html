@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Quản lý công nhân</h2>
+<p id="ketQua"></p>
+<script>
+    class CongNhan {
+        constructor(hoVaTen, ngaySinh, diaChi, luong, chucVu) {
+            this.hoVaTen = hoVaTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+
+        setHoVaTen(hoVaTen) {
+            this.hoVaTen = hoVaTen;
+        }
+
+        setNgaySinh(ngaySinh) {
+            this.ngaySinh = ngaySinh;
+        }
+
+        setDiaChi(diaChi) {
+            this.diaChi = diaChi;
+        }
+
+        setLuong(luong) {
+            this.luong = luong;
+        }
+
+        setChucVu(chucVu) {
+            this.chucVu = chucVu;
+        }
+
+        getHoVaTen() {
+            return this.hoVaTen;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        getDiaChi() {
+            return this.diaChi;
+        }
+
+        getLuong() {
+            return this.luong;
+        }
+
+        getChucVu() {
+            return this.chucVu;
+        }
+    }
+
+    let listCongNhan = [];
+    listCongNhan.push(new CongNhan("Trương Tấn B", "11-11-1997", "Quảng Nam", "2000", "Abc"));
+    listCongNhan.push(new CongNhan("Trương Tấn A", "11-11-1998", "Đà Nẫng", "2000", "Abc"));
+    listCongNhan.push(new CongNhan("Trương Tấn C", "11-11-1999", "Huế", "2000", "Abc"));
+    display(listCongNhan);
+
+    function display(list) {
+        list.sort((a, b) => (a.getHoVaTen() < b.getHoVaTen()) ? -1 : 1);
+        let tableString = '<table border="1">\n' +
+            '<tr>\n' +
+            '<th>STT</th>\n' +
+            '<th>Họ và tên</th>\n' +
+            '<th>Ngày sinh</th>\n' +
+            '<th>Địa chỉ</th>\n' +
+            '<th>Lương</th>\n' +
+            '<th>Chức vụ</th>\n'
+        '</tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += ' <tr>\n' +
+                '<td>' + (1 + i) + '</td>\n' +
+                '<td>' + list[i].getHoVaTen() + '</td>\n' +
+                '<td>' + list[i].getNgaySinh() + '</td>\n' +
+                '<td>' + list[i].getDiaChi() + '</td>\n' +
+                '<td>' + list[i].getLuong() + '</td>\n' +
+                '<td>' + list[i].getChucVu() + '</td>\n'
+            '</tr>';
+        }
+        tableString += "</table>";
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+</script>
+</body>
+</html>

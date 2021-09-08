@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+        img{
+            margin: 2px 2px;
+            height: 150px;
+        }
+        body{
+            width: 60%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="puzzle">
+    <img src="images/cat1.jpg" id="img1" onclick="onchangeImages(1)" ><br/>
+    <img src="images/cat2.jpg" id="img2" onclick="onchangeImages(2)" ><br/>
+    <img src="images/cat3.jpg" id="img3" onclick="onchangeImages(3)"><br/>
+    <img src="images/cat4.jpg" id="img4" onclick="onchangeImages(4)" ><br/>
+    <img src="images/cat5.jpg" id="img5" onclick="onchangeImages(5)" ><br/>
+</div>
+<script>
+    let img1=document.getElementById("img1");
+    let img2=document.getElementById("img2");
+    let img3=document.getElementById("img3");
+    let img4=document.getElementById("img4");
+    let img5=document.getElementById("img5");
+
+    function onchangeImages(number) {
+        switch (number) {
+            case 1 : {
+                if (img1.getAttribute('src') === "images/cat1.jpg") {
+                    img1.src = "images/monkey1.jpg";
+                } else if (img1.getAttribute('src') === "images/monkey1.jpg") {
+                    img1.src = "images/panda1.jpg";
+                } else if (img1.getAttribute('src') === "images/panda1.jpg") {
+                    img1.src = "images/cat1.jpg";
+                }
+                break;
+            }
+            case 2 : {
+                if (img2.getAttribute('src') === "images/cat2.jpg") {
+                    img2.src = "images/monkey2.jpg";
+                } else if (img2.getAttribute('src') === "images/monkey2.jpg") {
+                    img2.src = "images/panda2.jpg";
+                } else if (img2.getAttribute('src') === "images/panda2.jpg") {
+                    img2.src = "images/cat2.jpg";
+                }
+                break;
+            }
+            case 3 : {
+                if (img3.getAttribute('src') === "images/cat3.jpg") {
+                    img3.src = "images/monkey3.jpg";
+                } else if (img3.getAttribute('src') === "images/monkey3.jpg") {
+                    img3.src = "images/panda3.jpg";
+                } else if (img3.getAttribute('src') === "images/panda3.jpg") {
+                    img3.src = "images/cat3.jpg";
+                }
+                break;
+            }
+            case 4 : {
+                if (img4.getAttribute('src') === "images/cat4.jpg") {
+                    img4.src = "images/monkey4.jpg";
+                } else if (img4.getAttribute('src') === "images/monkey4.jpg") {
+                    img4.src = "images/panda4.jpg";
+                } else if (img4.getAttribute('src') === "images/panda4.jpg") {
+                    img4.src = "images/cat4.jpg";
+                }
+                break;
+            }
+            case 5 : {
+                if (img5.getAttribute('src') === "images/cat5.jpg") {
+                    img5.src = "images/monkey5.jpg";
+                } else if (img5.getAttribute('src') === "images/monkey5.jpg") {
+                    img5.src = "images/panda5.jpg";
+                } else if (img5.getAttribute('src') === "images/panda5.jpg") {
+                    img5.src = "images/cat5.jpg";
+                }
+                break;
+            }
+        }
+        checkImage();
+    }
+    function checkImage() {
+        if(img1.getAttribute('src') ==="images/cat1.jpg"
+            && img2.getAttribute('src') ==="images/cat2.jpg"
+            && img3.getAttribute('src') ==="images/cat3.jpg"
+            && img4.getAttribute('src') ==="images/cat4.jpg"
+            && img5.getAttribute('src') ==="images/cat5.jpg") {
+            document.getElementById("puzzle").style.boxShadow = '0 0 3px 3px green';
+            return;
+        }
+        else if (img1.getAttribute('src') ==="images/monkey1.jpg"
+            && img2.getAttribute('src') ==="images/monkey2.jpg"
+            && img3.getAttribute('src') ==="images/monkey3.jpg"
+            && img4.getAttribute('src') ==="images/monkey4.jpg"
+            && img5.getAttribute('src') ==="images/monkey5.jpg"){
+            document.getElementById("puzzle").style.boxShadow = '0 0 3px 3px green';
+            return;
+        }
+        else if (img1.getAttribute('src') ==="images/panda1.jpg"
+            && img2.getAttribute('src') ==="images/panda2.jpg"
+            && img3.getAttribute('src') ==="images/panda3.jpg"
+            && img4.getAttribute('src') ==="images/panda4.jpg"
+            && img5.getAttribute('src') ==="images/panda5.jpg"){
+            document.getElementById("puzzle").style.boxShadow = '0 0 3px 3px green';
+            return;
+        }
+    }
+</script>
+</body>
+</html>

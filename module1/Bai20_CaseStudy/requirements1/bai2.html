@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông cân rỗng có chiều cao h</title>
+</head>
+<body>
+<script>
+    let h = parseInt(prompt("nhập chiều cao h= "));
+    for (; h <= 0;) {
+        if (h <= 0) {
+            alert("Phai nhap n > 0");
+            break;
+        }
+    }
+    let rs = '';
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j == 1 || j == i || i == h)
+                rs += "* ";
+            else
+                rs += "&nbsp;&nbsp;&nbsp;";
+        }
+        rs += "<br/>";
+    }
+    document.write(rs);
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+<script>
+    document.write("=========================" + '<br/>');
+    document.write("|  MENU SELECTION THỨC UỐNG  |" + '<br/>');
+    document.write("| Options: " + '<br/>');
+    document.write("| 1.Cafe" + '<br/>');
+    document.write("| 2.Cam vắt" + '<br/>');
+    document.write("| 3.Nước ép cà rốt" + '<br/>');
+    document.write("| 4.Nước ép cà chua" + '<br/>');
+    document.write("| 5.Nước lọc" + '<br/>');
+    document.write("| 6.Nước dừa" + '<br/>');
+    document.write("| 7.EXIT" + '<br/>');
+    document.write("=========================" + '<br/>');
+    do {
+        let choice = parseInt(prompt("Choose option:"));
+        switch (choice) {
+            case 1:
+                document.write("Bạn đã chọn cafe"+"<br/>");
+                tongtien();
+                break;
+            case 2:
+                document.write("Bạn đã chọn Cam vắt"+"<br/>");
+                tongtien();
+                break;
+            case 3:
+                document.write("Bạn đã chọn Nước ép cà rốt"+"<br/>");
+                tongtien()
+                break;
+            case 4:
+                document.write("Bạn đã chọn Nước ép cà chua"+"<br/>");
+                tongtien()
+                break;
+            case 5:
+                document.write("Bạn đã chọn Nước lọc"+"<br/>");
+                tongtien()
+                break;
+            case 6:
+                document.write("Bạn đã chọn Nước dừa"+"<br/>");
+                tongtien()
+                break;
+            case 7:
+                document.write("Cam on ban da dat mon. Xin chao va hen gap lai"+"<br/>");
+                break;
+            default:
+                document.write("Invalid selection");
+                break;
+        }
+    } while (choice != 7);
+
+    function tongtien() {
+        let gia = 10000;
+        document.write("Đơn giá=" + gia + "<br/>");
+        let soluong = parseInt(prompt("Nhập số lượng: "));
+        let tongtien = gia * soluong;
+        document.write("tổng tiền= " + tongtien);
+    }
+</script>
+</body>
+</html>

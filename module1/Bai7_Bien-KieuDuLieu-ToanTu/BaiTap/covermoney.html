@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr style="color: #000;font-weight: bold">
+        <td style="text-align: center">Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="input"></td>
+        <td >
+            <select id="from"style="width: 100px">
+                <option>VND</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td >
+            <select id="to" style="width: 100px" >
+                <option >USD</option>
+                <option >VND</option>
+            </select>
+        </td>
+        <td><Button onclick="cover()"  style="background-color: chartreuse">Convert</Button></td>
+    </tr>
+</table>
+<p id="result" style="color: blue"></p>
+<script>
+    function cover() {
+        let result = 0;
+        let money = document.getElementById("input");
+        if (isNaN(money.value) || money.value < 0) {
+            document.getElementById("result").innerText= "Bạn nhập sai số tiền, vui lòng nhập số tiền > 0";
+        } else {
+            let from = document.getElementById("from");
+            let to = document.getElementById("to");
+            if (from.value === "USD" && to.value === "VND") {
+                result = money.value * 23000 + " VND";
+            } else if (from.value === "VND" && to.value === "USD") {
+                result = money.value / 23000 + " $";
+            } else if(from.value === "USD" && to.value === "USD"){
+                result = money.value + " $";
+            }else{
+                result = money.value + " VND";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    }
+</script>
+</body>
+</html>

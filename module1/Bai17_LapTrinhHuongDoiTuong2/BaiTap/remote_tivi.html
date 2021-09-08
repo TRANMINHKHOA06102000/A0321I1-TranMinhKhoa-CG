@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát triển chương trình sử dụng Remote để điều khiển Tivi</title>
+</head>
+<body>
+<script>
+    class Remote {
+        constructor(id) {
+            this.id = id;
+        }
+
+        changeChannel(tivi, channel) {
+            tivi.changeChannel(channel);
+        }
+
+        changeStatus(tivi) {
+            tivi.changeStatus()
+        }
+
+        changeVolume(tivi, status) {
+            tivi.changeVolume(status);
+        }
+    }
+
+    class Tivi {
+        constructor(channel, volume, status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status;
+        }
+
+        isOn() {
+            return this.status;
+        }
+
+        changeStatus() {
+            return this.status = !this.status;
+        }
+
+        changeChannel(channel) {
+            if (this.isOn()) {
+                this.channel = channel;
+            } else {
+                alert('Tivi off');
+            }
+        }
+
+        changeVolume(status) {
+            if (this.isOn()) {
+                if (status == 'up') {
+                    this.volume++;
+                }
+                if (status == 'down') {
+                    this.volume--;
+                }
+            } else {
+                alert('Tivi off');
+            }
+        }
+    }
+
+    let remote = new Remote(12);
+    let tivi = new Tivi(4, 10, false);
+
+    tivi.changeStatus();
+
+    tivi.changeChannel(7);
+
+    remote.changeChannel(tivi,3);
+
+    tivi.changeVolume('up');
+    tivi.changeVolume('up');
+
+    remote.changeStatus(tivi);
+    document.writeln(tivi.isOn());
+</script>
+</body>
+</html>

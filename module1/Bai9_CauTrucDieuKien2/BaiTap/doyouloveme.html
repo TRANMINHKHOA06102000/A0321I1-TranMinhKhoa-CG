@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+    <style>
+        body {
+            width: 80%;
+            height: 80%;
+        }
+
+        h1 {
+            position: absolute;
+            left: 220px;
+            top: 175px;
+        }
+
+        input {
+            position: absolute;
+            top: 235px;
+        }
+    </style>
+</head>
+<body>
+<h1>Do you love me?</h1>
+<input type="button" value=" YES " onclick="yesclick();" style=" left:285px ">
+<input type="button" id="No" value="NO" onmouseover="noclick();" style="left: 350px">
+<script>
+    function yesclick() {
+        alert("<3");
+    }
+    function noclick() {
+        let h = Math.round(Math.random() * window.innerHeight);
+        let w = Math.round(Math.random() * window.innerWidth);
+        document.getElementById('No').style.left = w + 'px';
+        document.getElementById('No').style.top = h + 'px';
+    }
+</script>
+</body>
+</html>

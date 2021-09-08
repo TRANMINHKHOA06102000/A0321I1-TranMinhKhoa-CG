@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+    <style>
+        input {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>Caculator</h2>
+<input type="text" id="input1">
+<input type="text" id="input2"><br/>
+<Button onclick="calculate('+')">Addition(+)</Button>
+<Button onclick="calculate('-')">Subtraction(-)</Button>
+<Button onclick="calculate('*')">Multiplication(*)</Button>
+<Button onclick="calculate('/')">Devision(/)</Button>
+<p id="result" style="color: blue"></p>
+</body>
+<script>
+    function calculate(operator) {
+        let num1 = document.getElementById("input1");
+        let num2 = document.getElementById("input2");
+        let ketqua = 0;
+        if (isNaN(num1.value) || isNaN(num2.value)) {
+            document.getElementById("result").innerText= "Bạn phải nhập số ";
+        }else {
+            switch (operator) {
+                case '+': {
+                    ketqua = parseFloat(num1.value) + parseFloat(num2.value);
+                    break;
+                }
+                case '-': {
+                    ketqua = parseFloat(num1.value) - parseFloat(num2.value);
+                    break;
+                }
+                case '*': {
+                    ketqua = parseFloat(num1.value) * parseFloat(num2.value);
+                    break;
+                }
+                case '/': {
+                    ketqua = parseFloat(num1.value) / parseFloat(num2.value);
+                    break;
+                }
+            }
+            document.getElementById("result").innerHTML = "result: " + ketqua.toFixed(2);
+        }
+    }
+</script>
+</html>

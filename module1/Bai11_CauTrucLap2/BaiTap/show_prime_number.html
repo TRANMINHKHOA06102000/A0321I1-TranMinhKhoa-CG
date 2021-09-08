@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<p id ='check'></p>
+<script>
+    let numbers;
+    numbers=parseInt(prompt('Nhập số số nguyên tố đầu tiên: '));
+    function checkprime(num) {
+        if (num<2){
+           return 0;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+               return 0;
+            }
+        }
+        return 1;
+    }
+    let result='';
+    let i=2;
+    let dem=0;
+    while (dem<numbers){
+        if (checkprime(i)==1){
+            result=result+' '+i;
+            dem++;
+        }
+        i++;
+    }
+    document.getElementById('check').innerText=numbers+ ' số nguyên tố đầu tiên là: '+ result;
+</script>
+</body>
+</html>

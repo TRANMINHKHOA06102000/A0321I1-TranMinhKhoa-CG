@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        input{
+            width: 210px;
+            color: #001dd1;
+        }
+        button{
+            background-color: white;
+            height: 35px;
+            width: 45px;
+            color: #001dd1;
+        }
+        table{
+            border:1px solid black;
+            display: inline-block;
+        }
+        div{
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+<table >
+    <tr>
+        <td colspan="4"><input type="text" id="ketqua"></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhap('1')">1</button></td>
+        <td><button onclick="nhap('2')">2</button></td>
+        <td><button onclick="nhap('3')">3</button></td>
+        <td><button onclick="nhap('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhap('4')">4</button></td>
+        <td><button onclick="nhap('5')">5</button></td>
+        <td><button onclick="nhap('6')">6</button></td>
+        <td><button onclick="nhap('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhap('7')">7</button></td>
+        <td><button onclick="nhap('8')">7</button></td>
+        <td><button onclick="nhap('9')">9</button></td>
+        <td><button onclick="nhap('x')">x</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="xoaGiaTri()">C</button></td>
+        <td><button onclick="nhap('0')">0</button></td>
+        <td><button onclick="tinhToan()">=</button></td>
+        <td><button onclick="nhap('/')">/</button></td>
+    </tr>
+</table>
+<script>
+    let ketqua = document.getElementById("ketqua");
+    function nhap(so) {
+        ketqua.value = ketqua.value + so;
+    }
+    function tinhToan() {
+        ketqua.value = eval(ketqua.value);
+    }
+    function xoaGiaTri() {
+        ketqua.value = "";
+    }
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Sử dụng các hàm có sẵn của mảng</title>
+</head>
+<span> Nhập bài tập cần kiểm tra: </span>
+<input type="text" id="baitapso">
+<button type="button" onclick="baitap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập: </span><br>
+<p><span>Bài 1: Viết một chương trình Javascript để nối tất cả các phần tử trong một mảng chuỗi lại với nhau. </span>
+</p>
+<p><span>Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn.</span></p>
+<p><span>Bài 3: Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.</span>
+</p>
+<body>
+<script>
+    function baitap() {
+        let request = parseInt(document.getElementById("baitapso").value);
+        switch (request) {
+            case 1:
+                Bai1();
+                break;
+            case 2:
+                Bai2();
+                break;
+            case 3:
+                Bai3();
+                break;
+            default:
+                alert("Nhập vào số từ 1-3!")
+        }
+    }
+
+    function Bai1() {
+        let myColor = ["Red", "Green", "White", "Black"];
+        document.write(myColor.toString() + '<br/>');
+        document.write(myColor.join() + '<br/>');
+        document.write(myColor.join('+'));
+    }
+
+    function Bai2() {
+        let num = parseInt(prompt('Nhập số: '));
+        // let num=window.prompt();
+        let str = num.toString();
+        let result = [str[0]];
+        for (let x = 1; x < str.length; x++) {
+            if ((str[x - 1] % 2 === 0) && (str[x] % 2 === 0)) {
+                result.push('-', str[x]);
+            } else {
+                result.push(str[x]);
+            }
+        }
+        document.write(result.join(''));
+    }
+
+    function Bai3() {
+        let s = prompt('Nhập chuỗi: ');
+        let str = s.toString();
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        for (let x = 0; x < str.length; x++) {
+            if (UPPER.indexOf(str[x]) !== -1) {
+                result.push(str[x].toLowerCase());
+            } else if (LOWER.indexOf(str[x]) !== -1) {
+                result.push(str[x].toUpperCase());
+            } else {
+                result.push(str[x]);
+            }
+        }
+        document.write(result.join(''));
+    }
+</script>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let col = 4;
+        let row = 5;
+
+        // let arr = [[1,2,3,4],[5,6,7,8]];
+
+        // arr[0] = new Array(1,2,1,24);
+        // arr[0] =new Array(4);
+        // arr[0][0] = 1
+        // arr[0][1] = 2
+        // arr[0][2] = 1
+        // arr[0][3] = 24;
+        // arr[1] = new Array(1,2,1,24);
+        // arr[2] = new Array(1,2,1,24);
+        // arr[3] = new Array(1,2,1,24);
+        // arr[4] = new Array(1,2,1,24);
+
+        // //
+        let arr = new Array(row);
+        for(let i = 0; i < row; i++){
+            arr[i] = new Array(col)
+            for(let j = 0; j< col; j++){
+                let value = prompt("a["+i+","+j+"] = ");
+                arr[i][j] = value;
+
+            }
+        }
+        for(let i = 0; i < row; i++){
+            for(let j = 0; j< col; j++){
+                document.write(arr[i][j] +" ");
+            }
+            document.write("<br>")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>-->

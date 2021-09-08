@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let ENG=['Head','Hair','Ear','Beard','Cheek','Chin','Eye','Eyebrow','Eardrum','Earlobe','Eyelash','Nose'];
+    let VI=['đầu','tóc','tai','râu','má','cằm','mắt','lông mày','màng nhĩ','dái tai','lông mi','mũi'];
+    let str =prompt('Nhập từ tiếng việt cần tra: ');
+    if (VI.indexOf(str) !== -1) {
+        document.write(str + " : " + ENG[VI.indexOf(str)])
+    } else {
+        document.write("Từ bạn nhập không có trong từ điển");
+    }
+</script>
+</body>
+</html>

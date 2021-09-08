@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("nhập chiều dài n= "));
+    let m = parseInt(prompt("Nhập chiều rộng m= "));
+    for (; n <= 0 || m <= 0;) {
+        if (n <= 0) {
+            alert("Phai nhap n > 0");
+            break;
+        }
+        if (m <= 0) {
+            alert("Phai nhap m > 0");
+            break;
+        }
+    }
+    let result = '';
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++)
+            if (i == 1 || j == 1 || i == m || j == n){
+                result += "* "
+            }
+            else{
+                result += "&nbsp;&nbsp;&nbsp;";
+            }
+        result += "<br>";
+    }
+    document.write(result);
+</script>
+</body>
+</html>

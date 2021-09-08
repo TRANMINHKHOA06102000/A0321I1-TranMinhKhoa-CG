@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 01</title>
+</head>
+<span> Nhập bài tập cần kiểm tra: </span>
+<input type="text" id="baitapso">
+<button type="button" onclick="baitap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập: </span><br>
+<p><span>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.</span>
+</p>
+<p><span>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</span>
+</p>
+<p><span>Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng</span>
+</p>
+<p><span>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</span>
+</p>
+<p><span>Bài 5- Viết chương trình đếm số nguyên âm trong một mảng</span></p>
+<p><span>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".</span>
+</p>
+<p><span>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)</span>
+</p>
+<p><span>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp</span>
+</p>
+<p><span>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</span>
+</p>
+<body>
+<script>
+    function baitap() {
+        let request = parseInt(document.getElementById("baitapso").value);
+        switch (request) {
+            case 1:
+                Bai1();
+                break;
+            case 2:
+                Bai2();
+                break;
+            case 3:
+                Bai3();
+                break;
+            case 4:
+                Bai4();
+                break;
+            case 5:
+                Bai5();
+                break;
+            case 6:
+                Bai6();
+                break;
+            case 7:
+                Bai7();
+                break;
+            case 8:
+                Bai8();
+                break;
+            case 9:
+                Bai9();
+                break;
+            default:
+                alert("Nhập vào số từ 1-9!")
+        }
+    }
+
+    function Bai1() {
+        let arr1 = [12, 2, 3, 4, 10, 15, 222, 34, 1, 5];
+        let arr2 = [];
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] >= 10) {
+                arr2.push(arr1[i]);
+            }
+        }
+        document.write(arr2.join(','));
+    }
+
+    function Bai2() {
+        let arr1 = [12, 2, 3, 4, 10, 15, 222, 34, 1, 5];
+        let vtMax = 0;
+        let max = arr1[0];
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] > max) {
+                max = arr1[i];
+                vtMax = i;
+            }
+        }
+        document.write('số lớn nhất trong mảng là: ' + max + ' tại vị trí thứ: ' + vtMax);
+    }
+
+    function Bai3() {
+        let arr = [12, 2, 3, 4, 10, 15, -222, 34, 1, 5];
+        let max = arr[0];
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            sum += arr[i];
+        }
+        document.write('giá trị lớn nhất trong mảng là: ' + max + ' mảng có giá trị trung bình: ' + sum / arr.length);
+    }
+
+    function Bai4() {
+        let arr = [12, 2, 3, 4, 10, 15, -222, 34, 1, 5];
+        arr.reverse();
+        document.write(arr.join(','));
+    }
+
+    function Bai5() {
+        let arr = [12, -2, 3, -4, 10, 15, -222, 34, 1, 5];
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                dem = dem + 1;
+            }
+        }
+        document.write('số nguyên âm trong mảng: ' + dem);
+    }
+
+    function Bai6() {
+        let arr = [12, -2, 3, -4, 10, 15, -222, 34, 1, 5];
+        document.write('Mảng ban đầu: ' + arr + '<br/>');
+        let num = parseInt(prompt("Nhập số nguyên  kiểm tra:"));
+        let checknumber;
+        for (let i = 0; i < arr.length; i++) {
+            if (num == arr[i]) {
+                checknumber = true;
+                break;
+            }
+        }
+        if (checknumber) {
+            document.write(num + " is in the array");
+        } else {
+            document.write(num + " is not in the array");
+        }
+    }
+
+    function Bai7() {
+        let arr = [12, -2, 3, -4, 10, 15, -222, 34, 1, 5];
+        document.write('Mảng ban đầu: ' + arr + '<br/>');
+        let num = parseInt(prompt("Nhập số nguyên  kiểm tra:"));
+        let arr2 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == num) {
+                document.write(num + " thuộc mảng đã cho" + "</br>");
+            } else {
+                arr2.push(arr[i]);
+            }
+        }
+        document.write('Mảng sau khi kiểm tra: ' + arr2.join(","));
+    }
+
+    function Bai8() {
+        let arr = [12, -2, 3, -4, 10, 15, -222, 34, 1, 5];
+        document.write('Mảng ban đầu: ' + arr + '<br/>');
+        arr.sort(function (a, b) {
+            return a - b
+        });
+        document.write("Mảng đã sắp xếp: " + arr);
+    }
+
+    function Bai9() {
+        let a = [12, -2, 3, -4, 10, 15, -222, 34, 1, 5];
+        let b = [112, -12, 23, -4, 110, 15, -2, 34, 10, 15];
+        document.write('Mảng ban đầu: ' + '<br/>' + 'Mảng a: ' + a + '<br/>' + 'Mảng b: ' + b + '<br/>');
+        let c = [];
+        c = a.concat(b);
+        document.write('Mảng sau khi nối: ' + c.join(','));
+    }
+</script>
+</body>
+</html>

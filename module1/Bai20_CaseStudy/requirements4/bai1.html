@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuẩn hóa xâu ký tự</title>
+</head>
+<body>
+<script>
+    let s1 = prompt('Nhập chuỗi: ');
+    let s2 = s1.replace(/\s+/g, ' ');
+    let s = s2.trim().toLowerCase();
+    let newArray = s.split(' ');
+    let array = [];
+    newArray.forEach(function (item) {
+        let newItem = item.charAt(0).toUpperCase() + item.slice(1);
+        array.push(newItem);
+    });
+    document.write("Chuỗi đã nhập: "+ s1+"<br/>");
+    document.write("Chuỗi đã chuẩn hóa: "+ array.join(' '));
+    chuoi=array.join(' ');
+    arrChuoi=chuoi.split(' ');
+    let max=0;
+    let len=[];
+    for(let i=0;i<arrChuoi.length;i++){
+        l=arrChuoi[i].length;
+        len[i]=l;
+        if(l>max){
+            max=l
+        }
+    }
+    for(let i=0;i<arrChuoi.length;i++){
+        if(len[i]==max){
+            document.write("<br/>"+"Từ dài nhất trong chuỗi: "+arrChuoi[i]);
+        }
+    }
+</script>
+</body>
+</html>

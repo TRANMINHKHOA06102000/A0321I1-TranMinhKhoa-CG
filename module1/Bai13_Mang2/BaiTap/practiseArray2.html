@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 02</title>
+</head>
+<body>
+<span> Nhập bài tập cần kiểm tra: </span>
+<input type="text" id="baitapso">
+<button type="button" onclick="baitap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập: </span><br>
+<p><span>Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng</span></p>
+<p><span>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.</span></p>
+<p><span>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng. </span></p>
+<p><span>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi</span></p>
+<p><span>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.</span></p>
+<p><span>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</span></p>
+</body>
+<script>
+    function baitap() {
+        let request = parseInt(document.getElementById("baitapso").value);
+        switch (request) {
+            case 1:
+                Bai1();
+                break;
+            case 2:
+                Bai2();
+                break;
+            case 3:
+                Bai3();
+                break;
+            case 4:
+                Bai4();
+                break;
+            case 5:
+                Bai5();
+                break;
+            case 6:
+                Bai6();
+                break;
+            default:
+                alert("Nhập vào số từ 1-6!")
+        }
+    }
+    function Bai1() {
+        let a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+        for (let i=0;i<a.length;i++)
+        {
+            document.write("row " + i+'<br/>');
+            for (let j=0;j<a[i].length;j++)
+            {
+                document.write(a[i][j]+'<br/>');
+            }
+        }
+    }
+    function Bai2() {
+        let array= [ 'c', 's', 'c', '2', '6', '1' ];
+        document.write('Mảng ban đầu: '+ array+'<br/>');
+        array.reverse();
+        document.write('Mảng sau khi đảo ngược: '+array.join());
+    }
+    function Bai3() {
+        let array= [ 'c', 's', 'c', '2', '6', '1' ];
+        let a=[];
+        for (let i in array){
+            if (!isNaN(array[i])){
+                a.push(array[i]);
+            }
+        }
+        document.write('Mảng có : '+array.length+' ký tự và có : '+a.length+" kí tự số");
+    }
+    function Bai4() {
+        let text = prompt("Nhập chuỗi: ");
+        let count = (text[0] != ' ')
+        for (let i = 0; i < text.length- 1; i++)
+        {
+            if (text[i] == ' ' && text[i + 1] != ' ')
+            {
+                count++;
+            }
+        }
+        document.write(text+ " có: "+count+ " từ")
+    }
+    function Bai5() {
+        let text1 = ["anh em","java"]
+        let text2 = ["anh em","python"]
+        if (text1.join(",")==text2.join(",")){
+            document.write(text1+' và '+text2 + ' là hai mảng giống nhau');
+        }else{
+            document.write(text1+' và '+text2 + ' là hai mảng khác nhau');
+        }
+    }
+    function Bai6() {
+        let arr1 = ['c','s','-',2,'-',1];
+        let arr2 = [];
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== '-') {
+                arr2.push(arr1[i]);
+            }
+            else {
+                arr2.push('_');
+            }
+        }
+        document.write(arr2.join(" "));
+    }
+</script>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<span> Nhập bài tập cần kiểm tra: </span>
+<input type="text" id="result">
+<button type="button" onclick="baiTap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập: </span><br>
+<p><span>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</span></p>
+<p><span>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</span></p>
+<p><span>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</span></p>
+<p><span>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.</span>
+</p>
+<p><span>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</span></p>
+<p><span>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.</span>
+</p>
+<p><span>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</span></p>
+<p><span>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</span></p>
+<p><span>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. </span>
+</p>
+<hr/>
+<p id="rs"></p>
+<body>
+<script>
+    function baiTap() {
+        let request = parseInt(document.getElementById("result").value);
+        switch (request) {
+            case 1:
+                bai1();
+                break;
+            case 2:
+                bai2();
+                break;
+            case 3:
+                bai3();
+                break;
+            case 4:
+                bai4();
+                break;
+            case 5:
+                bai5();
+                break;
+            case 6:
+                bai6();
+                break;
+            case 7:
+                bai7();
+                break;
+            case 8:
+
+                let bai8 = "<input type='text' id='txtValue'>";
+                bai8 += "<input type='button' value='Add' id='btnAdd' onclick='addElementToArray()'/>";
+                bai8 += "<input type='button' value='Reserve' id='btnReserve' onclick='reserveArray()'/>";
+                document.getElementById("rs").innerHTML = bai8;
+                break;
+            case 9:
+                let bai9 = "<input type='text' id='txtValue' placeholder='Nhập số'/>";
+                bai9 += "<input type='button' value='Add' onclick='addElement()'/> <br/>";
+                bai9 += "<input type='text' id='Check' placeholder='kiểm tra số'/>";
+                bai9 += "<input type='button' value='check' onclick='checkArray()'/>";
+                document.getElementById("rs").innerHTML = bai9;
+                break;
+            default:
+                alert("Nhập vào số từ 1-9!")
+        }
+    }
+
+    function bai1() {
+        let number = parseFloat(prompt(" nhập số: "));
+        let result = number * number;
+        document.write("Bình phương của " + number + " = " + result);
+    }
+
+    function bai2() {
+        let R = parseFloat(prompt('Nhập bán kính của hình tròn: '));
+        let S = R * R * 3.14;
+        let C = 2 * R * 3.14;
+        document.write('Diện tích hình tròn = ' + S + '<br/>' + 'Chu vi hình tròn = ' + C);
+    }
+
+    function bai3() {
+        let number = parseInt(prompt('Nhập vào số nguyên bất kỳ: '));
+        let giaiThua = 1;
+        for (let i = 1; i <= number; i++) {
+            giaiThua *= i;
+        }
+        document.write(number + '! = ' + giaiThua);
+    }
+
+    function bai4() {
+        let input = prompt("nhập vào ký tự cần kiểm tra");
+
+        function checkNumber(num) {
+            let result = "";
+            if (isNaN(num)) {
+                result = "False";
+                return result;
+            } else {
+                result = "True";
+                return result;
+            }
+        }
+
+        document.write("Số cần kiểm tra là số True/False: " + checkNumber(input));
+    }
+
+    function bai5() {
+        let num1 = parseInt(prompt("nhập vào số thứ 1"));
+        let num2 = parseInt(prompt("nhập vào số thứ 2"));
+        let num3 = parseInt(prompt("nhập vào số thứ 3"));
+
+        function MinTwoNum(a, b) {
+            return (a < b ? a : b);
+        }
+
+        function MinThreeNum(a, b, c) {
+            return MinTwoNum(a, MinTwoNum(b, c));
+        }
+
+        document.write('Số nhỏ nhất trong 3 số ' + num1 + ' ' + num2 + ' ' + num3 + ' là: ' + MinThreeNum(num1, num2, num3));
+    }
+
+    function bai6() {
+        let number = parseInt(prompt('Input: '));
+        let result = "";
+        if (number > 0) {
+            result = "True";
+        } else {
+            result = "False";
+        }
+        document.write("Số cần kiểm tra là số True/False: " + result);
+    }
+
+    function bai7() {
+        function swap(a, b) {
+            let temp = a.value;
+            a.value = b.value;
+            b.value = temp;
+        }
+
+        let a = {value: 5};
+        let b = {value: 10};
+        swap(a, b);
+        document.write("a = " + a.value + ", b = " + b.value);
+    }
+
+    let x = 0;
+    let array = Array();
+
+    function addElementToArray() {
+        array[x] = document.getElementById("txtValue").value;
+        alert("Element:" + array[x] + " Add at index " + x);
+        x++;
+    }
+
+    function reserveArray() {
+        ReverseArray = array.reverse();
+        document.getElementById("rs").innerHTML = ReverseArray;
+    }
+
+    function addElement() {
+        array[x] = document.getElementById("txtValue").value;
+        alert(" Nhập vào là " + array[x] + " tại vị trí " + x);
+        x++;
+    }
+
+    function checkArray() {
+        numberCheck = document.getElementById("Check").value;
+        count = 0;
+        for (i = 0; i < array.length; i++) {
+            if (array[i] == numberCheck) {
+                count = count + 1;
+            }
+        }
+        if (count > 0) {
+            alert("số " + numberCheck + " có xuất hiện trong mảng với số lần xuất hiện là " + count + " lần.")
+        } else {
+            alert(numberCheck + "  không xuất hiện trong mảng")
+        }
+    }
+</script>
+</body>
+</html>

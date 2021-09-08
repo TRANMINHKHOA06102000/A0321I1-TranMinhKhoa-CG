@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 01</title>
+</head>
+<span> Nhập bài tập cần kiểm tra: </span>
+<input type="text" id="result">
+<button type="button" onclick="baiTap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập: </span><br>
+<p><span>Bài 1: Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi  "Xin chao".</span></p>
+<p>
+    <span>Bài 2: Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. </span>
+</p>
+<p><span>Bài 3: Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</span>
+</p>
+<p><span>Bài 4: Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm.<br>
+        function addNumbers() {<br>
+            firstNum = 4;<br>
+            secondNum = 8;<br>
+            result = firstNum + secondNum;<br>
+            return result;<br>
+            }<br>
+        result = 0;<br>
+        result = addNumbers();
+    </span></p>
+<p><span>Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao sau: Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus. Tạo một mảng khác với bảy phần tử dạng chuỗi có giá trị là tên các chòm sao tương ứng chứa các ngôi sao: Ursa Minor, Tarurus, Cygnus, Lyra, Aquila, Ursa Major và Leo. Tiếp theo, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất. Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao. Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai. Nói cách khác, trả lại tên chòm sao của ngôi sao đó. Trong phần <body> của trang web, dùng hộp thoại prompt để người dùng nhập vào tên của ngôi sao, sau đó gọi hàm với thông tin đầu vào. Đừng quên xử lý trong trường hợp không tìm thấy ngôi sao nào</span>
+</p>
+<body>
+<script>
+    function baiTap() {
+        let request = parseInt(document.getElementById("result").value);
+        switch (request) {
+            case 1:
+                Bai1();
+                break;
+            case 2:
+                Bai2(9);
+                break;
+            case 3:
+                Bai3();
+                break;
+            case 4:
+                Bai4();
+                break;
+            case 5:
+                Bai5();
+                break;
+            default:
+                alert("Nhập vào số từ 1-5!")
+        }
+    }
+
+    function Bai1() {
+        document.write('Xin Chào');
+    }
+
+    function Bai2(number) {
+        let num = number + 1;
+        document.write(num);
+    }
+
+    function Bai3() {
+        let number1 = parseInt(prompt('Nhập số thứ nhất: '));
+        let number2 = parseInt(prompt('Nhập số thứ hai: '));
+        if (number1 > number2) {
+            document.write('Số thứ nhất lớn hơn số thứ hai');
+        } else {
+            document.write('Tổng hai số là: ' + (number2 + number1))
+        }
+    }
+
+    function Bai4() {
+        firstNum = 4;
+        secondNum = 8;
+        result = firstNum + secondNum;
+        document.write('Tổng: ' + result);
+        return result;
+    }
+    result = 0;
+    document.write('Tổng: ' + result+'<br/>');
+    result = Bai4();
+
+    function Bai5() {
+        let nameStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let nameConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let text = prompt("Nhập tên ngôi sao: ");
+        if (nameConstellation.indexOf(text) !== -1) {
+            document.write(text + " = " + nameStar[nameConstellation.indexOf(text)]);
+        }else {
+            document.write('Tên ngôi sao bạn nhập không có');
+        }
+    }
+</script>
+</body>
+</html>

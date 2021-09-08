@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong=parseFloat(prompt('Nhập lương nhân viên(triệu): '));
+    let luongthuc=0;
+    let thue=0;
+    if(isNaN(luong) || luong<0){
+        alert('bạn nhập sai');
+    }else if(luong<7 && luong>0){
+        thue=5*luong/100;
+        luongthuc=luong-thue;
+        document.write("Lương ban đầu = "+luong+"triệu<br/>"+"Thuế thu nhập = "+thue+"triệu<br/>"+"Lương thực nhận = "+luongthuc+"triệu");
+    }else if (luong<15){
+        thue=10*luong/100;
+        luongthuc=luong-thue;
+        document.write("Lương ban đầu = "+luong+"triệu<br/>"+"Thuế thu nhập = "+thue+"triệu<br/>"+"Lương thực nhận = "+luongthuc+"triệu");
+    }else if (luong==15){
+        thue=20*luong/100;
+        luongthuc=luong-thue;
+        document.write("Lương ban đầu = "+luong+"triệu<br/>"+"Thuế thu nhập = "+thue+"triệu<br/>"+"Lương thực nhận = "+luongthuc+"triệu");
+    }else {
+        alert("Chưa biết mức thuế");
+    }
+</script>
+</body>
+</html>

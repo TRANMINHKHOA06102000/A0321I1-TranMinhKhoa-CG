@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sô nguyên tố trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let row = parseInt(prompt("Nhập vào số hàng của ma trận: "));
+    let col = parseInt(prompt("Nhập vào số cột của ma trận: "));
+    let arr = new Array(row);
+    for (let i = 0; i < row; i++) {
+        arr[i] = new Array(col)
+        for (let j = 0; j < col; j++) {
+            let value = parseInt(prompt("a[" + i + "," + j + "] = "));
+            arr[i][j] = value;
+        }
+    }
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            document.write(arr[i][j] + " ");
+        }
+        document.write("<br>")
+    }
+
+    function soNguyenTo(a) {
+        if (a < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let dem = 0;
+    document.write("các số nguyên tố trong mảng: ");
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+            if (soNguyenTo(arr[i][j])) {
+                document.write(arr[i][j] + ' ');
+                dem = dem + 1;
+            }
+        }
+    }
+    document.write("<br/>" + "số nguyên tố có trong mảng =  " + dem);
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 01</title>
+    <style>
+        #result{
+            display: flex;
+            flex-flow: row;
+        }
+        #result > span{
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+<span> Nhập bài tập cần kiểm tra: </span>
+<input type="text" id="baitapso">
+<button type="button" onclick="baitap();">Thực hiện</button>
+<br/><br/>
+<span>Danh sách bài tập: </span><br>
+<p><span>Bài 1: In dãy Finonaci</span></p>
+<p><span>Bài 2: Tính giai thừa của một số nguyên dương</span></p>
+<p><span>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau</span></p>
+<p><span>Bài 4: In hình chữ nhật</span></p>
+<p><span>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</span></p>
+<p><span>Bài 6: In hình trái tim</span></p>
+<div id="result">
+    <span id="result1"></span>
+    <span id="result2"></span>
+    <span id="result3"></span>
+    <span id="result4"></span>
+</div>
+<div id="traitim"></div>
+</body>
+<script>
+    function baitap() {
+        let request = parseInt(document.getElementById("baitapso").value);
+        switch (request) {
+            case 1:
+                Bai1();
+                break;
+            case 2:
+                Bai2();
+                break;
+            case 3:
+                Bai3();
+                break;
+            case 4:
+                Bai4();
+                break;
+            case 5:
+                Bai5();
+                break;
+            case 6:
+                Bai6();
+                break;
+            default:
+                alert("Nhập vào số từ 1-6!")
+        }
+    }
+    function Bai1() {
+        let a0 = 1;
+        let a1 = 1;
+        let temp;
+        let result = a0 + '<br/> ' + a1 + '<br/> ';
+        let count = 2;
+        while (count < 100) {
+            temp = a0 + a1;
+            a0 = a1;
+            a1 = temp;
+            result += temp + "<br/> "
+            count++;
+        }
+        document.write(result);
+    }
+    function Bai2() {
+        let n = parseInt(prompt('Nhập số cần tính giai thừa'));
+        let giai_thua = 1;
+        if (n>= 0){
+            for (let i = 1; i <= n; i++){
+                giai_thua *= i;
+            }
+        }
+        document.write(n+'! ='+giai_thua);
+    }
+    function Bai3() {
+        let result1 = "";
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                if (j <= i){
+                    result1 += '*';
+                }
+                else {
+                    result1 += '&nbsp;';
+                }
+            }
+            result1 += "<br>";
+        }
+        document.getElementById("result1").innerHTML = result1;
+
+        let result2="";
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                if (j <= i){
+                    result2 += '*';
+                }
+                else {
+                    result2 += '&nbsp;' ;
+                }
+            }
+            result2 += "<br>";
+        }
+        document.getElementById("result2").innerHTML = result2;
+
+        let result3="";
+        for (let i = 1;i <= 5; i++) {
+            for (let j = 5 ;j >= 1; j--) {
+                if (j <= i){
+                    result3 += '*';
+                }
+                else {
+                    result3 += '&nbsp;' ;
+                }
+            }
+            result3 += "<br>";
+        }
+        document.getElementById("result3").innerHTML = result3;
+
+        let result4="";
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1 ; j <= 5; j++) {
+                if (j >= i){
+                    result4 += '*';
+                }
+                else {
+                    result4 += '&nbsp;' ;
+                }
+            }
+            result4 += "<br>";
+        }
+        document.getElementById("result4").innerHTML = result4;
+    }
+    function Bai4() {
+        let result='';
+        for (let i = 0; i < 7; i++) {
+            for (let j = 0; j <= 20; j++) {
+                if (i===0 || i===6  && j <=20){
+                    result += '*';
+                }
+                else if(j===0 || j===20 ){
+                    result += "*"
+                }
+                else {
+                    result += " " +'&nbsp;';
+                }
+            }
+            result += "<br>";
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+    function Bai5() {
+        let sotienbandau = parseInt(prompt('Nhập vào số tiền ban đầu(đồng): '));
+        let sothangchovay = parseInt(prompt('Nhập vào số tháng cho vay: '));
+        let laisuathangthang = parseFloat(prompt('Nhập vào lãi suất hàng tháng(%): '));
+        let laisuat=0;
+        if(sothangchovay<0 || sotienbandau<0 || isNaN(sotienbandau)|| isNaN(sothangchovay) || isNaN(laisuathangthang)){
+            alert('nhập số tiền ban đầu, số tháng ban đầu , lãi suất lớn hơn 0 ')
+        }else {
+            for(let i=0; i<=sothangchovay; i++){
+                laisuat = sotienbandau*sothangchovay*laisuathangthang/100;
+            }
+            alert('Lãi suất phải trả sau '+ sothangchovay + " tháng là: " + laisuat.toLocaleString('vi-VN',{style: 'currency',currency: 'VND'}));
+        }
+    }
+    function Bai6() {
+        let result= "";
+        for(let i = 1; i < 7; i++) {
+            for(let j = 1; j <= 7; j++) {
+                if(!((i === 1 && (j === 1 || j === 4 || j === 7))
+                    || (i === 4 && (j === 1 || j === 7))
+                    || (i === 5 && (j <= 2 || j >= 6))
+                    || (i === 6 && (j <= 3 || j >= 5)))) {
+                    result+=" * ";
+                } else {
+                    result+='&nbsp;'+" ";
+                }
+            }
+            result += "<br>";
+        }
+        document.getElementById("traitim").innerHTML = result;
+    }
+</script>
+</html>

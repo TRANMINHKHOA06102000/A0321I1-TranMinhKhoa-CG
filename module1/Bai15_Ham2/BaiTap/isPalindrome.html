@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    function ispalindrome(start,end,string) {
+        if(string[start] !== string[end] ){
+            return false
+        }
+        return true;
+        ispalindrome(start+1,end-1,string);
+    }
+    let string = prompt("Nhập chuỗi: ");
+    alert(ispalindrome(0,string.length-1,string));
+    /*//!*Cách ko dùng hàm
+    let reverseString = "";
+    let inputString = prompt("Nhập vào chuỗi bạn muốn kiểm tra: ");
+    le = inputString.length;
+    for ( let i = le- 1 ; i >= 0 ; i-- ){
+        reverseString = reverseString + inputString.charAt(i);
+    }
+    if (inputString === reverseString) {
+        alert("Đây là chuỗi đối xứng!");
+    }
+    else{
+        alert("Đây không phải là chuỗi đối xứng!");
+    }*/
+    /*Cách dùng hàm khử đệ quy
+    function ispalindrome(str) {
+        str=str.toLowerCase().split('');
+        lens=str.length-1;
+        for(i=0;i<lens/2;i++){
+            if(str[i] !==str[lens-i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+    input=prompt("hay nhap vao chu can kiem tra");
+    if (ispalindrome(input)) {
+        alert("Đây là chuỗi đối xứng!");
+    }
+    else{
+        alert("Đây không phải là chuỗi đối xứng!");
+    }*/
+
+</script>
+</body>
+</html>

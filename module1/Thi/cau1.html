@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n;
+    let sum = 0;
+    let count = 0;
+    do {
+        n = prompt("Nhập số phần tử muốn nhập vào mảng!")
+    }
+    while (n < 0 || n > 50);
+    for (let i = 0; i <= n - 1; i++) {
+        arr[i] = parseInt(prompt("Nhập giá trị thứ " + i));
+        arr.push(arr[i]);
+    }
+    document.write("Mảng đã nhập vào : "+"<br/>");
+    for (let i = 0; i <= n - 1; i++) {
+        document.write(arr[i] + " ");
+    }
+    for (let j = 0; j <= n - 1; j++) {
+        if (arr[j] % 3 === 0) {
+            sum += arr[j];
+            count++;
+        }
+    }
+    document.write("<br/>"+"Giá trị trung bình cộng các số có trong mảng chia hết cho 3: " + (sum / count));
+</script>
+</body>
+</html>

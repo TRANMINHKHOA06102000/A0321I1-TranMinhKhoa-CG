@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>missingValue</title>
+</head>
+<body>
+<script>
+    var A = [7,2,5,3,5,3] ;
+    var B = [7,2,5,4,6,3,5,3];
+    var C = B.filter(missing);
+
+    function missing(num){
+        return A.indexOf(num) < 0;
+    }
+    document.write('Mảng ban đầu: Mảng A: '+A +' Mảng B: '+B+'<br/>');
+    document.write('missing: '+C);
+</script>
+</body>
+</html>

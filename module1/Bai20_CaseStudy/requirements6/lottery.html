@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng cho phép khách hàng thực hiện mua vé số tương tự VIETLOT</title>
+    <style>
+        input {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<h2>Xổ số CodeGym</h2>
+<input type="text" id="rs1" disabled>
+<input type="text" id="rs2" disabled>
+<input type="text" id="rs3" disabled>
+<input type="text" id="rs4" disabled>
+<input type="text" id="rs5" disabled>
+<input type="text" id="rs6" disabled>
+<br/>
+<button onclick="chonMua();">Mua vé</button>
+<button onclick="kiemTra();">Xem kết quả</button>
+<script>
+    class Lottery {
+        constructor(num1, num2, num3, num4, num5, num6) {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+            this.num5 = num5;
+            this.num6 = num6;
+        }
+
+        getNum1() {
+            return this.num1;
+        }
+
+        setNum1(num1) {
+            this.num1 = num1;
+        }
+
+        getNum2() {
+            return this.num2;
+        }
+
+        setNum2(num2) {
+            this.num2 = num2;
+        }
+
+        getNum3() {
+            return this.num3;
+        }
+
+        setNum3(num3) {
+            this.num3 = num3;
+        }
+
+        getNum4() {
+            return this.num4;
+        }
+
+        setNum4(num4) {
+            this.num4 = num4;
+        }
+
+        getNum5() {
+            return this.num5;
+        }
+
+        setNum5(num5) {
+            this.num5 = num5;
+        }
+
+        getNum6() {
+            return this.num6;
+        }
+
+        setNum6(num6) {
+            this.num6 = num6;
+        }
+    }
+
+    let lottery = new Lottery();
+    let count=0;
+    function chonMua() {
+        if(count==4){
+            alert("Không được mua quá 4 vé");
+        }else {
+            let chon = prompt("Bạn có 2 lựa chọn: \n 1.Bạn muốn tự chọn số. \n 2.Hệ thống tự random.");
+
+            if (chon == 1) {
+                tuNhap();
+            } else if (chon == 2) {
+                ranDom();
+            } else {
+                alert("Bạn phải chọn 1 hoặc 2!!!")
+            }
+            count++;
+        }
+    }
+
+    function tuNhap() {
+        let nhap1 = prompt("Bạn hãy nhập số 0-99");
+        lottery.setNum1(nhap1);
+        document.getElementById('rs1').value = lottery.getNum1();
+        let nhap2 = prompt("Bạn hãy nhập số 0-99");
+        lottery.setNum2(nhap2);
+        document.getElementById('rs2').value = lottery.getNum2();
+        let nhap3 = prompt("Bạn hãy nhập số 0-99");
+        lottery.setNum3(nhap3);
+        document.getElementById('rs3').value = lottery.getNum3();
+        let nhap4 = prompt("Bạn hãy nhập số 0-99");
+        lottery.setNum4(nhap4);
+        document.getElementById('rs4').value = lottery.getNum4();
+        let nhap5 = prompt("Bạn hãy nhập số 0-99");
+        lottery.setNum5(nhap5);
+        document.getElementById('rs5').value = lottery.getNum5();
+        let nhap6 = prompt("Bạn hãy nhập số 0-99");
+        lottery.setNum6(nhap6);
+        document.getElementById('rs6').value = lottery.getNum6();
+    }
+
+    function ranDom() {
+        let random1 = Math.floor(Math.random() * 100);
+        let random2 = Math.floor(Math.random() * 100);
+        let random3 = Math.floor(Math.random() * 100);
+        let random4 = Math.floor(Math.random() * 100);
+        let random5 = Math.floor(Math.random() * 100);
+        let random6 = Math.floor(Math.random() * 100);
+        lottery.setNum1(random1);
+        document.getElementById('rs1').value = lottery.getNum1();
+        lottery.setNum2(random2);
+        document.getElementById('rs2').value = lottery.getNum2();
+        lottery.setNum3(random3);
+        document.getElementById('rs3').value = lottery.getNum3();
+        lottery.setNum4(random4);
+        document.getElementById('rs4').value = lottery.getNum4();
+        lottery.setNum5(random5);
+        document.getElementById('rs5').value = lottery.getNum5();
+        lottery.setNum6(random6);
+        document.getElementById('rs6').value = lottery.getNum6();
+    }
+
+    function kiemTra() {
+        if (document.getElementById('rs1').value == 1 && document.getElementById('rs2').value == 2 &&
+            document.getElementById('rs3').value == 3 && document.getElementById('rs4').value == 4 &&
+            document.getElementById('rs5').value == 5 && document.getElementById('rs6').value == 6) {
+            alert("Bạn đã giành được giải nhất VIETLOT 2 tỷ đồng");
+        } else if (
+            document.getElementById('rs2').value == 2 && document.getElementById('rs3').value == 3 &&
+            document.getElementById('rs4').value == 4 && document.getElementById('rs5').value == 5 &&
+            document.getElementById('rs6').value == 6) {
+            alert("Bạn giành được giải nhì VIETLOT 500 triệu đồng");
+        } else if (
+            document.getElementById('rs4').value == 4 && document.getElementById('rs5').value == 5 &&
+            document.getElementById('rs6').value == 6) {
+            alert("Bạn giành được giải khuyến khích VIETLOT 10 triệu đồng");
+        } else {
+            alert("Chúc bạn may mắn lần sau");
+        }
+    }
+</script>
+</body>
+</html>

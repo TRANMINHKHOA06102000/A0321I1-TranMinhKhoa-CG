@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n;
+    do {
+        n = parseInt(prompt('Nhập số cần kiểm tra: '));
+    }
+    while (n < 0 || n > 50);
+
+    function soHoanHao(so) {
+        let sum = 0;
+        for (let i = 1; i <= so / 2; i++) {
+            if (so % i == 0)
+                sum += i;
+        }
+        if (sum === so) {
+            return true;
+        }
+        return false;
+    }
+
+    if (soHoanHao(n)) {
+        alert("true");
+    } else {
+        alert("false");
+    }
+</script>
+</body>
+</html>
