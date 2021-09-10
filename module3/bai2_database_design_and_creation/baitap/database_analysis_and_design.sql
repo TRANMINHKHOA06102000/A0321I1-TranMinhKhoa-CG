@@ -47,7 +47,7 @@ create table orders(
     orderDate date not null,
     requiredDate date not null,
     shippedDate date not null,
-    status varchar(15) not null,
+    `status` varchar(15) not null,
     comments text,
     quantityOrdered int not null,
     priceEach double not null,
