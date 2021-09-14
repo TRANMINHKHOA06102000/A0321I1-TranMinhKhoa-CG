@@ -7,7 +7,7 @@ where (hoten like 'H%') or  (hoten like 'T%') or (hoten like 'K%')
 having soluongkituten<=15;
 -- câu 3.Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
 select * from khachhang;
-select *, year(curdate())- year(ngaySinh) as tuoi
+select *, year(now())- year(ngaySinh) as tuoi
 from khachhang
 where (diaChi = 'Da Nang') or (diaChi = 'Quang Tri')
 having tuoi between 18 and 50;
@@ -35,5 +35,22 @@ left join dichvu on dichvu.idDichVu=hopdong.idDichVu
 group by khachhang.hoTen;
 -- câu 6.Hiển thị IDDichVu, TenDichVu, DienTich, ChiPhiThue, TenLoaiDichVu của tất cả các loại Dịch vụ 
 -- chưa từng được Khách hàng thực hiện đặt từ quý 1 của năm 2021 (Quý 1 là tháng 1, 2, 3).
--- select dichvu.idDichVu,dichvu.tenDichVu,dichvu.chiPhiThue,loaidichvu.tenLoaiDichVu
--- from dichvu
+select dichvu.idDichVu,dichvu.tenDichVu,dichvu.dienTich,dichvu.chiPhiThue,loaidichvu.tenLoaiDichVu,temp.ngayLamHopDong
+from dichvu
+left join (select * from hopdong where hopdong.ngayLamHopDong between '2021-01-01' and '2021-03-31') as temp 
+			on dichvu.idDichVu= temp.idDichVu
+inner join loaidichvu on dichvu.idLoaiDichVu= loaidichvu.idLoaiDichVu
+group by dichvu.tenDichVu
+having temp.ngayLamHopDong is null;
+-- câu 7.Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu 
+-- của tất cả các loại dịch vụ đã từng được Khách hàng đặt phòng trong năm 2021
+-- nhưng chưa từng được Khách hàng đặt phòng trong năm 2020.
+select dichvu.idDichVu,dichvu.tenDichVu,dichvu.dienTich,dichvu.soNguoiToiDa,dichvu.chiPhiThue,loaidichvu.tenLoaiDichVu
+from dichvu
+inner join loaidichvu on dichvu.idLoaiDichVu=loaidichvu.idLoaiDichVu
+left join (select * from hopdong where year(ngayLamHopDong)=2021) as temp1
+	on dichvu.idDichVu=temp1.idDichVu
+left join (select * from hopdong where year(ngayLamHopDong)=2020) as temp2
+	on dichvu.idDichVu=temp2.idDichVu
+where temp1.idDichVu is null;
+-- câu 8. 
