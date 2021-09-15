@@ -91,7 +91,6 @@ create table hopdong(
     ngayLamHopDong date not null,
     ngayKetThuc date not null,
     tienDatCoc double,
-    tongTien double,
     primary key(idHopDong),
     foreign key(idNhanvien) references nhanvien(idNhanvien),
     foreign key(idKhachHang) references khachhang(idKhachHang),

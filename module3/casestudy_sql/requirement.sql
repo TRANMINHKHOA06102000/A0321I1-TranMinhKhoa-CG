@@ -53,4 +53,32 @@ left join (select * from hopdong where year(ngayLamHopDong)=2021) as temp1
 left join (select * from hopdong where year(ngayLamHopDong)=2020) as temp2
 	on dichvu.idDichVu=temp2.idDichVu
 where temp1.idDichVu is null;
--- câu 8. 
+-- câu 8.Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoTenKhachHang không trùng nhau.
+-- sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
+select distinct khachhang.hoTen from khachhang;
+select khachhang.hoTen from khachhang group by khachhang.hoTen;
+select hoTen from khachhang union select hoTen from khachhang;
+-- câu 9 vẫn còn chưa đúng yêu cầu
+-- câu 9.Thực hiện thống kê doanh thu theo tháng, 
+-- nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng
+select (dichvu.chiPhiThue + hopdongchitiet.soLuong*dichvudikem.gia) as TongTien,
+		count(hopdong.idHopDong) as 'soluongkhachdatphong',
+        month(hopdong.ngayLamHopDong) as 'tháng'
+from hopdong
+left join dichvu on dichvu.idDichVu=hopdong.idDichVu
+left join hopdongchitiet on hopdongchitiet.idHopDong=hopdong.idHopDong
+left join dichvudikem on dichvudikem.idDichVuDiKem=hopdongchitiet.idDichVuDiKem
+where year(hopdong.ngayLamHopDong)=2021
+group by month(hopdong.ngayLamHopDong);
+-- câu 10.Hiển thị thông tin tương ứng với từng Hợp đồng thì đã sử dụng bao nhiêu Dịch vụ đi kèm. 
+-- Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem 
+-- (được tính dựa trên việc count các IDHopDongChiTiet).
+select hopdong.idHopDong,hopdong.ngayLamHopDong,hopdong.ngayKetThuc,hopdong.tienDatCoc,
+		count(hopdongchitiet.idHopDongChiTiet) as 'SoLuongDichVuDiKem'
+from hopdong
+join hopdongchitiet on hopdong.idHopDong=hopdongchitiet.idHopDong
+join dichvudikem on hopdongchitiet.idDichVuDiKem=dichvudikem.idDichVuDiKem
+group by hopdong.idHopDong
+order by hopdong.idHopDong;
+-- câu 11.Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có TenLoaiKhachHang là “Diamond” 
+-- và có địa chỉ là “Vinh” hoặc “Quảng Ngãi”.
