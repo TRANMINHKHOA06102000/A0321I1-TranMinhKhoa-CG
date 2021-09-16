@@ -58,18 +58,18 @@ where temp1.idDichVu is null;
 select distinct khachhang.hoTen from khachhang;
 select khachhang.hoTen from khachhang group by khachhang.hoTen;
 select hoTen from khachhang union select hoTen from khachhang;
--- câu 9 vẫn còn chưa đúng yêu cầu
 -- câu 9.Thực hiện thống kê doanh thu theo tháng, 
 -- nghĩa là tương ứng với mỗi tháng trong năm 2021 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng
-select (dichvu.chiPhiThue + hopdongchitiet.soLuong*dichvudikem.gia) as TongTien,
-		count(hopdong.idHopDong) as 'soluongkhachdatphong',
-        month(hopdong.ngayLamHopDong) as 'tháng'
+select sum((dichvu.chiPhiThue + hopdongchitiet.soLuong*dichvudikem.gia)) as TongTien,
+		count(khachhang.idKhachHang) as 'soluongkhachdatphong',
+        month(hopdong.ngayLamHopDong) as 'thang'
 from hopdong
-left join dichvu on dichvu.idDichVu=hopdong.idDichVu
-left join hopdongchitiet on hopdongchitiet.idHopDong=hopdong.idHopDong
-left join dichvudikem on dichvudikem.idDichVuDiKem=hopdongchitiet.idDichVuDiKem
+inner join khachhang on hopdong.idKhachHang=khachhang.idKhachHang
+inner join dichvu on dichvu.idDichVu=hopdong.idDichVu
+inner join hopdongchitiet on hopdongchitiet.idHopDong=hopdong.idHopDong
+inner join dichvudikem on dichvudikem.idDichVuDiKem=hopdongchitiet.idDichVuDiKem
 where year(hopdong.ngayLamHopDong)=2021
-group by month(hopdong.ngayLamHopDong);
+group by thang;
 -- câu 10.Hiển thị thông tin tương ứng với từng Hợp đồng thì đã sử dụng bao nhiêu Dịch vụ đi kèm. 
 -- Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem 
 -- (được tính dựa trên việc count các IDHopDongChiTiet).
