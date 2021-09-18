@@ -53,11 +53,11 @@ insert into dichvudikem (tenDichVuDiKem, gia, donVi, trangThaiKhaDung) values
 ('thuc an', 500000, 'VND', 'full'),
 ('nuoc uong', 500000, 'VND', 'full'),
 ('thue xe', 500000, 'VND', 'still');
-insert into hopdong (idNhanvien, idKhachHang, idDichVu,ngayLamHopDong, ngayKetThuc, tienDatCoc) values
-(2, 2, 1,'2021-02-06', '2021-02-24', 5000000),
-(2, 3, 4,'2021-02-06', '2021-02-24', 5000000),
-(2, 3, 3,'2020-02-06', '2020-02-24', 5000000),
-(3, 1, 2,'2021-04-06', '2021-05-18', 6000000);
+insert into hopdong (idNhanvien, idKhachHang, idDichVu,ngayLamHopDong, ngayKetThuc, tienDatCoc,tongtien) values
+(2, 2, 1,'2021-02-06', '2021-02-24', 5000000,10000000),
+(2, 3, 4,'2021-02-06', '2021-02-24', 5000000,10000000),
+(2, 3, 3,'2020-02-06', '2020-02-24', 5000000,10000000),
+(3, 1, 2,'2021-04-06', '2021-05-18', 6000000,10000000);
 insert into hopdongchitiet(idHopDong,idDichVuDiKem,soLuong) values
 (1,5,2),
 (2,1,5);

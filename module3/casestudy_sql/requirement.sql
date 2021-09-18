@@ -150,4 +150,29 @@ having soluonghopdong<=3 and (nam between '2020' and '2021');
 SET SQL_SAFE_UPDATES = 0;
 delete from nhanvien
 where nhanvien.idNhanVien not in (select hopdong.idNhanVien from hopdong where year(hopdong.ngayLamHopDong) between '2017' and '2020');
--- câu 17.
+-- câu 17.Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ Platinium lên Diamond, 
+-- chỉ cập nhật những khách hàng đã từng đặt phòng với tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+ update khachhang
+ set khachhang.idLoaiKhach = 1
+ where khachhang.idLoaiKhach = 2 and khachhang.idLoaiKhach in (select hopdong.idKhachHang from hopdong
+															where hopdong.tongtien >=10000000 and year(hopdong.ngayLamHopDong) = 2021);
+-- câu 18.Xóa những khách hàng có hợp đồng trước năm 2020 (chú ý ràngbuộc giữa các bảng).
+SET SQL_SAFE_UPDATES = 0;
+delete from khachhang
+where khachhang.idKhachHang in (select hopdong.idKhachHang from hopdong where year(hopdong.ngayLamHopDong) < 2020);
+-- câu 19.Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 2 lần trong năm 2021 lên gấp đôi.
+update dichvudikem,
+(select hopdongchitiet.idDichVuDiKem, count(hopdongchitiet.idHopDongChiTiet) as SoLanSuDung 
+from hopdong
+inner join hopdongchitiet on hopdong.idHopDong = hopdongchitiet.idHopDong
+where year(hopdong.ngayLamHopDong) = 2021
+group by hopdongchitiet.idDichVuDiKem) as temp
+set dichvudikem.gia = dichvudikem.gia * 2
+where dichvudikem.idDichVuDiKem = temp.idDichVuDiKem and SoLanSuDung > 2;
+-- câu 20.Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, 
+-- thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi
+select idNhanVien as 'id',hoTen as 'ten',email as 'email',sdt as 'sdt',ngaySinh as 'ngay_sinh',
+		diaChi as 'dia_chi', 'nhanvien' as 'role' from nhanvien 
+union all
+select idKhachHang as 'id',hoTen as 'ten',email as 'email', sdt as 'sdt',ngaySinh as 'ngay_sinh',
+		diaChi as 'dia_chi','khachhang' as 'role' from khachhang; 
