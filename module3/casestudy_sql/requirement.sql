@@ -155,7 +155,7 @@ where nhanvien.idNhanVien not in (select hopdong.idNhanVien from hopdong where y
  update khachhang
  set khachhang.idLoaiKhach = 1
  where khachhang.idLoaiKhach = 2 and khachhang.idLoaiKhach in (select hopdong.idKhachHang from hopdong
-															where hopdong.tongtien >=10000000 and year(hopdong.ngayLamHopDong) = 2021);
+where hopdong.tongtien >=10000000 and year(hopdong.ngayLamHopDong) = 2021);
 -- câu 18.Xóa những khách hàng có hợp đồng trước năm 2020 (chú ý ràngbuộc giữa các bảng).
 SET SQL_SAFE_UPDATES = 0;
 delete from khachhang
@@ -175,4 +175,47 @@ select idNhanVien as 'id',hoTen as 'ten',email as 'email',sdt as 'sdt',ngaySinh 
 		diaChi as 'dia_chi', 'nhanvien' as 'role' from nhanvien 
 union all
 select idKhachHang as 'id',hoTen as 'ten',email as 'email', sdt as 'sdt',ngaySinh as 'ngay_sinh',
-		diaChi as 'dia_chi','khachhang' as 'role' from khachhang; 
+		diaChi as 'dia_chi','khachhang' as 'role' from khachhang;
+-- câu 21.Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Quang Ngai” và 
+-- đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ với ngày lập hợp đồng là “2021-04-06”
+create view V_NHANVIEN as
+select nhanvien.*,count(hopdong.idHopDong) as solanlaphopdong
+from nhanvien 
+left join hopdong on nhanvien.idNhanVien=hopdong.idNhanVien
+where nhanvien.diaChi="Quang Ngai" and hopdong.ngayLamHopDong="2021-02-06";
+select * from V_NHANVIEN;
+drop view V_NHANVIEN;
+-- câu 22.Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Sài Gòn” 
+-- đối với tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+create or replace view V_NHANVIEN as
+select nhanvien.*,count(hopdong.idHopDong) as solanlaphopdong
+from nhanvien 
+left join hopdong on nhanvien.idNhanVien=hopdong.idNhanVien
+where nhanvien.diaChi="Sai Gon" and hopdong.ngayLamHopDong="2021-02-06";
+select * from V_NHANVIEN;
+-- câu 23.Tạo Store procedure Sp_1 Dùng để xóa thông tin của một Khách hàng nào đó 
+-- với Id Khách hàng được truyền vào như là 1 tham số của Sp_1
+delimiter //
+create procedure xoaKhachHang(in id int)
+begin 
+	delete khachhang
+    from khachhang
+    where khachhang.idKhachHang= id;
+end //
+delimiter ;
+call xoaKhachHang(4);
+select * from khachhang;
+-- câu 24.Tạo Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện
+-- kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu
+-- đến các bảng liên quan.
+delimiter //
+create procedure themHopDong()
+begin 
+	insert into  hopdong (idNhanvien, idKhachHang, idDichVu,ngayLamHopDong, ngayKetThuc, tienDatCoc,tongtien) values
+	(3, 1, 2,'2021-04-06', '2021-05-18', 6000000,10000000);
+end //
+delimiter ;
+call themHopDong();
+select * from hopdong;
+-- câu 25.Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại 
+-- có trong bảng HopDong ra giao diện console của database
