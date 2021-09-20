@@ -219,3 +219,16 @@ call themHopDong();
 select * from hopdong;
 -- câu 25.Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại 
 -- có trong bảng HopDong ra giao diện console của database
+set @count=0;
+DELIMITER //
+create trigger after_delete_hopdong 
+after delete 
+on hopdong
+for each row
+begin
+    set @count=(select count(idHopDong) from hopdong);
+end //
+DELIMITER ;
+delete from hopdong where idHopDong=4;
+select @count;
+-- câu 26. signal sqlstate
