@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.header{
+    background-color: black;
+}
+.header-left{
+    color: red;
+    text-align: center;
+}
+.header-right{
+    color: red;
+    text-align: right;
+    margin-top: 10px;
+}
+.banner-left{
+    color: #0645ad;
+    background-color: #333333;
+    height: 500px;
+}
+.banner-mid{
+    color: #333333;
+    background-color: #f2f2f2;
+    height: 500px;
+}
+.banner-right{
+    color: #0645ad;
+    background-color: #333333;
+    height: 500px;
+    text-align: center;
+}
+aside{
+    border: 1px solid red;
+    margin: 10px 0 10px 20px;
+    width: 50px;
+    height: 50px;
+}
+.footer{
+    background-color: #a5912a;
+    color: #f2f2f2;
+    text-align: center;
+    height: 50px;
+}
+/* Màn hình có độ phân giải tối đa 1000px */
+@media only screen and (max-width: 1000px) {
+    .header{
+        background-color: #004C00;
+    }
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Màn hình có độ phân giải tối đa 750px */
+@media only screen and (max-width: 750px) {
+    .header{
+        background-color: chartreuse;
+    }
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Màn hình có độ phân giải tối đa 540px */
+@media only screen and (max-width: 540px) {
+    .header{
+        background-color: chocolate;
+    }
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Màn hình có độ phân giải tối đa 380px */
+@media  only screen and (max-width: 380px) {
+    .header{
+        background-color: cyan;
+    }
+    [class*="col-"] {
+        width: 100%;
+    }
+}
