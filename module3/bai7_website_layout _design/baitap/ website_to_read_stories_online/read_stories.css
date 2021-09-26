@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+div{
+    font-family: 'RobotoRegular';
+    font-size: 14px;
+    color: #333;
+    display: block;
+}
+a {
+    font-size: 14px;
+    font-family: 'RobotoRegular';
+    color: #2489ce;
+    text-decoration: none;
+    background-color: transparent;
+}
+.header{
+    background: #2489ce;
+    padding: 2.5% 0;
+}
+#logo{
+    border: 0;
+    vertical-align: middle;
+    float: left!important;
+    margin-left: 30px;
+}
+#search-form{
+    float: left!important;
+    padding-left: 19%;
+    position: relative;
+}
+.form-group{
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+#search-form input {
+    width: 540px;
+    height: 40px;
+    border: 1px solid #3eb7f5;
+    color: #a0dfff;
+    background: #26a7e9;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: none;
+}
+#form_login{
+    float: right!important;
+    margin-top: 16px;
+}
+#form_login ul {
+    margin: 0;
+}
+#form_login ul li:first-child {
+    background: url(https://thichtruyen.vn/img/bg_right.jpg) no-repeat right center;
+    padding-right: 7px;
+}
+#form_login ul li a {
+    font-size: 15px;
+    color: #a0dfff;
+    font-family: "RobotoRegular";
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+}
+#form_login ul li{
+    list-style: none;
+    display: inline-block;
+    clear: both;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.header-link{
+    background: #666;
+}
+#navbar{
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+}
+#navbar::before{
+    display: table;
+    content: " ";
+}
+#navbar li {
+    margin-right: 70px;
+    float: left;
+    position: relative;
+    display: block;
+    font-family: 'RobotoRegular';
+    font-size: 14px;
+    color: #333;
+}
+#navbar li.active a {
+    color: #ffd451;
+    background: none;
+    padding: 10px 0;
+}
+#navbar li a {
+    color: #fff;
+    background: none;
+    padding: 10px 0;
+}
+#navbar li a:hover{
+    color: #ffd451 ;
+}
+.navbar-nav {
+    float: left;
+    margin: 0;
+    list-style: none;
+}
+.navbar-nav:before{
+    display: table;
+    content: " ";
+}
+.view-content .view-story {
+    float: left;
+    width: 23%;
+    margin-right: 2%;
+    padding-bottom: 2%;
+}
+.view-home {
+    margin-bottom: 7%;
+}
+h3.view-title {
+    background: url(https://thichtruyen.vn/img/border-center.jpg) repeat-x center center;
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+    line-height: 1.1;
+    font-family: "RobotoLight";
+    font-size: 22px;
+    color: #2489ce;
+    margin-bottom: 15px;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+h3.view-title span {
+    display: block;
+    float: left;
+    background: #fff;
+    padding-right: 20px;
+    height: 25px;
+    color: #2489ce;
+    font-size: 18px;
+}
+.view-home .view-title a {
+    font-size: 14px;
+    color: #2489ce;
+}
+.view-story .view-story-img {
+    background: #ffffff;
+    -webkit-border-radius: 3px;
+}
+.view-home .view-story .view-story-img img {
+    width: 176px;
+    height: 270px;
+    vertical-align: middle;
+    border: 0;
+}
+.view-story .view-story-title {
+    margin: 10px 0;
+}
+.view-story .view-story-author, .view-story .view-story-number, .view-story .view-story-status {
+    font-size: 14px;
+}
+.link-category{
+    width: 100%;
+    color: #0000ff;
+    float: left!important;
+    text-align: right;
+    font-family: 'RobotoRegular';
+    font-size: 14px;
+}
+.sub-category{
+    margin-bottom: 20px;
+}
+.sub-category .left-category-title {
+    color: #ffffff;
+    font-size: 16px;
+    background: #444444;
+    line-height: 50px;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.sub-category .left-category-title .glyphicon-menu-hamburger {
+    margin: 0 10px 0 15px;
+}
+.sub-category .nav li {
+    float: left;
+    width: 100%;
+    font-family: 'RobotoRegular';
+    list-style: none;
+}
+.sub-category .nav li a {
+    position: relative;
+    font-size: 14px;
+    color: #333333;
+    display: block;
+    padding: 10px 15px;
+}
+.sub-category .nav li:hover{
+    background: #0467d0;
+}
+.footer{
+    background: #333333;
+    border-top: 12px solid #2489ce;
+    padding: 3% 2%;
+}
+#logo-footer{
+    min-width: 100px;
+    margin-top: 25px;
+}
+#logo-footer img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+#logo-footer-text p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: justify;
+    font-family: 'RobotoRegular';
+    margin: 0 0 10px;
+}
+#social-link {
+    padding: 0;
+    margin-top: 30px;
+}
+.text-right {
+    text-align: right;
+}
+#social-link li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
