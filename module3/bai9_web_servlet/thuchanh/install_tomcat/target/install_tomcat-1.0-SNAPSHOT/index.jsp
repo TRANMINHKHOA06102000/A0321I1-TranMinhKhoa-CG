@@ -2,12 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>Sum</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<form action="/sumServlet" method="get">
+    <div>Number 1: </div>
+    <input type="text" name="number1">
+    <div>Number 2: </div>
+    <input type="text" name="number2">
+    <input type="submit" name="Sum">
+</form>
 </body>
 </html>
