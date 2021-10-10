@@ -15,7 +15,7 @@
         <td>Producer</td>
         <td colspan="2" style="text-align: center">Action</td>
     </tr>
-    <c:forEach items='${productSearch}' var="product">
+    <c:forEach items='${products}' var="product">
         <tr>
             <td>${product.getId()}</td>
             <td><a href="/products?action=view&id=${product.getId()}">${product.getName()}</a></td>

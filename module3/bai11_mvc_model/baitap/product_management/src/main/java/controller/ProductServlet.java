@@ -205,45 +205,18 @@ public class ProductServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    private void showSearchForm(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("name");
-        List<Product> product = this.productService.findByName(name);
-        RequestDispatcher dispatcher;
-        if(product == null){
-            dispatcher = request.getRequestDispatcher("error-404.jsp");
-        } else {
-            request.setAttribute("product", product);
-            dispatcher = request.getRequestDispatcher("product/search.jsp");
-        }
-        try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private void showSearchForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("product/search.jsp").forward(request, response);
     }
-    private void searchProduct(HttpServletRequest request, HttpServletResponse response) {
+    private void searchProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name=request.getParameter("nameSearch");
         List<Product> product = productService.findByName(name);
         if (product.isEmpty()) {
             request.setAttribute("msgErr", "Can't find this product");
-            try {
-                request.getRequestDispatcher("search.jsp").forward(request, response);
-            } catch (ServletException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            request.getRequestDispatcher("product/search.jsp").forward(request, response);
         } else {
             request.setAttribute("productSearch", product);
-            try {
-                request.getRequestDispatcher("result.jsp").forward(request, response);
-            } catch (ServletException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            request.getRequestDispatcher("product/result.jsp").forward(request, response);
         }
     }
 }

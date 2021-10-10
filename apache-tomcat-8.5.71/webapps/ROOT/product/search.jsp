@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Search</title>
+    <title>Title</title>
 </head>
 <body>
 <form method="post">

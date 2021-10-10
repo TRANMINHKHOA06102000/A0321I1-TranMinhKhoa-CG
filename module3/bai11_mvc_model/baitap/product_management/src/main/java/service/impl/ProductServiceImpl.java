@@ -1,40 +1,42 @@
 package service.impl;
 
 import model.Product;
+import reponsitory.ProductReponsitory;
+import reponsitory.impl.ProductReponsitoryImpl;
 import service.ProductService;
 
 import java.util.List;
 
 public class ProductServiceImpl implements ProductService {
-    private ProductService productService = new ProductServiceImpl();
+    private ProductReponsitory productReponsitory = new ProductReponsitoryImpl();
 
     @Override
     public List<Product> findAll() {
-        return productService.findAll();
+        return productReponsitory.findAll();
     }
 
     @Override
     public void save(Product product) {
-        productService.save(product);
+        productReponsitory.save(product);
     }
 
     @Override
     public Product findById(Integer id) {
-        return productService.findById(id);
+        return productReponsitory.findById(id);
     }
 
     @Override
     public void update(Integer id, Product product) {
-        productService.update(id, product);
+        productReponsitory.update(id, product);
     }
 
     @Override
     public void remove(Integer id) {
-        productService.remove(id);
+        productReponsitory.remove(id);
     }
 
     @Override
     public List<Product> findByName(String name) {
-        return productService.findByName(name);
+        return productReponsitory.findByName(name);
     }
 }

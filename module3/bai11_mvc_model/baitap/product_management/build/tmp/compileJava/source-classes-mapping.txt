@@ -4,11 +4,11 @@ reponsitory/ProductReponsitory.java
  reponsitory.ProductReponsitory
 reponsitory/impl/ProductReponsitoryImpl.java
  reponsitory.impl.ProductReponsitoryImpl
-service/impl/ProductServiceImpl.java
- service.impl.ProductServiceImpl
-service/ProductService.java
- service.ProductService
 model/Product.java
  model.Product
+service/ProductService.java
+ service.ProductService
+service/impl/ProductServiceImpl.java
+ service.impl.ProductServiceImpl
 controller/ProductServlet.java
  controller.ProductServlet
