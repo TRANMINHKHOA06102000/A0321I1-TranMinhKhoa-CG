@@ -2,12 +2,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <title>Results Search</title>
+    <title>Result Search</title>
 </head>
 <body>
-<h1>Products</h1>
-<a href="/products?action=create">Create</a>
-<a href="/products?action=search">Search</a>
+<h1>Result search product</h1>
 <table border="1">
     <tr>
         <td>Id</td>
@@ -28,7 +26,8 @@
             <td><a href="/products?action=delete&id=${product.getId()}">delete</a></td>
         </tr>
     </c:forEach>
-</table><a href="/products?action=search">Back to search</a><br>
+<a href="/products?action=search">Back to search</a><br>
 <a href="/products">Back to product list</a>
+</table>
 </body>
 </html>
