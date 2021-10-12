@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="52cddbb2-25a2-4773-b34a-1f3beee6e401" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/bg-button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/bg-middle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/bg-upper.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/tomcat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/tomcat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai10_jsp_and_jstl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai10_jsp_and_jstl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/classes/java/main/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1yUSkOzRWauMLl7NeahdLImJ1Ql" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTHome" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap\js" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap\landing_page" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap\gallery" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\thuchanh" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai9_web_servlet\baitap" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52cddbb2-25a2-4773-b34a-1f3beee6e401" name="Default Changelist" comment="" />
+      <created>1632304815974</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632304815974</updated>
+      <workItem from="1632304817496" duration="3928000" />
+      <workItem from="1632387910529" duration="5192000" />
+      <workItem from="1632479741215" duration="7315000" />
+      <workItem from="1632563724581" duration="12415000" />
+      <workItem from="1632644844985" duration="10396000" />
+      <workItem from="1632739337993" duration="1813000" />
+      <workItem from="1632825661698" duration="3285000" />
+      <workItem from="1632910338733" duration="10324000" />
+      <workItem from="1632988709441" duration="2856000" />
+      <workItem from="1633001021503" duration="6000" />
+      <workItem from="1633001807669" duration="263000" />
+      <workItem from="1633083908345" duration="1292000" />
+      <workItem from="1633087911623" duration="2443000" />
+      <workItem from="1633094166410" duration="3001000" />
+      <workItem from="1633161860271" duration="2040000" />
+      <workItem from="1633253445869" duration="52000" />
+      <workItem from="1633253669573" duration="1354000" />
+      <workItem from="1633344018741" duration="7488000" />
+      <workItem from="1633357484451" duration="61000" />
+      <workItem from="1633516546730" duration="7137000" />
+      <workItem from="1633689306921" duration="142000" />
+      <workItem from="1633689465565" duration="27000" />
+      <workItem from="1633689508071" duration="51000" />
+      <workItem from="1633689578927" duration="8000" />
+      <workItem from="1633689613850" duration="108000" />
+      <workItem from="1633851546778" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bai9_web_servlet/thuchanh/simple_dictionary/src/main/webapp/index.jsp</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
