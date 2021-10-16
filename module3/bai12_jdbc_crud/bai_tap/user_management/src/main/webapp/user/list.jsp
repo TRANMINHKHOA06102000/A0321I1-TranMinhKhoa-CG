@@ -7,11 +7,12 @@
 <body>
 
 <h1>User Management</h1>
-<div >
+<div>
     <table border="1" cellpadding="5">
         <h2>List of Users</h2>
-        <a href="/users?action=create">Create</a>
-        <a href="/users?action=search">Search</a>
+        <a href="/users?action=create" >Create</a>
+        <a href="/users?action=search"style="margin-left: 5px;">Search</a>
+        <a href="/users?action=sort" style="margin-left: 5px;">Sort</a>
         <tr>
             <th>ID</th>
             <th>Name</th>
