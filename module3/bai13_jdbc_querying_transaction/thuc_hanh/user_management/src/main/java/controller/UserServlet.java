@@ -41,10 +41,33 @@ public class UserServlet extends HttpServlet {
             case "sort":
                 goSort(request,response);
                 break;
+            case "permision":
+                addUserPermision(request, response);
+                break;
+            case "test-without-tran":
+                testWithoutTran(request, response);
+                break;
+            case "test-use-tran":
+                testUseTran(request, response);
+                break;
             default:
                 listUser(request, response);
                 break;
         }
+    }
+
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateUseTransaction();
+    }
+
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateWithoutTransaction();
+    }
+
+    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
+        User user = new User("kien", "kienhoang@gmail.com", "vn");
+        int[] permision = {1, 2, 4};
+        userService.addUserTransaction(user, permision);
     }
 
     private void goSort(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -68,7 +91,8 @@ public class UserServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        User user = userService.selectUser(id);
+//        User user = userService.selectUser(id);
+        User user = userService.getUserById(id);
         if (user == null) {
             request.getRequestDispatcher("error-404.jsp");
         } else {
@@ -151,7 +175,8 @@ public class UserServlet extends HttpServlet {
         if (newUser==null){
             request.getRequestDispatcher("error-404.jsp");
         }else{
-            this.userService.insertUser(newUser);
+//            this.userService.insertUser(newUser);
+            this.userService.insertUserStore(newUser);
             request.setAttribute("message", "New user was created");
             request.getRequestDispatcher("user/create.jsp").forward(request, response);
         }

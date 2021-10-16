@@ -4,13 +4,13 @@ reponsitory/BaseRepo.java
  reponsitory.BaseRepo
 bean/User.java
  bean.User
-reponsitory/impl/UserRepoImpl.java
- reponsitory.impl.UserRepoImpl
+controller/UserServlet.java
+ controller.UserServlet
 reponsitory/UserRepo.java
  reponsitory.UserRepo
 service/UserService.java
  service.UserService
+reponsitory/impl/UserRepoImpl.java
+ reponsitory.impl.UserRepoImpl
 service/impl/UserServiceImpl.java
  service.impl.UserServiceImpl
-controller/UserServlet.java
- controller.UserServlet

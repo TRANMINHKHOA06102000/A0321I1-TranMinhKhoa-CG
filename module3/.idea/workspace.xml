@@ -2,34 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52cddbb2-25a2-4773-b34a-1f3beee6e401" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/classes/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/bg-button.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/bg-middle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/bg-upper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/delete.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/customer/view.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/delete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/product/search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/tomcat.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache-tomcat-8.5.71/webapps/ROOT/tomcat.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai10_jsp_and_jstl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bai10_jsp_and_jstl/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/classes/java/main/controller/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/bai11_mvc_model/thuchanh/customer_management/build/libs/customer_management-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai12_jdbc_crud/sql/jdbc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bai12_jdbc_crud/sql/jdbc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/6.8/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.idea/user_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/.idea/user_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/reponsitory/UserRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/reponsitory/UserRepo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/reponsitory/impl/UserRepoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/reponsitory/impl/UserRepoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/classes/java/main/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/libs/user_management-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/libs/user_management-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/reponsitory/UserRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/reponsitory/UserRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/reponsitory/impl/UserRepoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/reponsitory/impl/UserRepoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh/user_management/src/main/java/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,23 +59,36 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bai13_jdbc_querying_transaction/thuc_hanh" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai13_jdbc_querying_transaction\thuc_hanh" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap\js" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap\landing_page" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap\gallery" />
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\thuchanh" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai9_web_servlet\baitap" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai8_bootstrap_basic\baitap" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -115,6 +124,7 @@
       <workItem from="1633689578927" duration="8000" />
       <workItem from="1633689613850" duration="108000" />
       <workItem from="1633851546778" duration="4000" />
+      <workItem from="1634377529503" duration="2546000" />
     </task>
     <servers />
   </component>

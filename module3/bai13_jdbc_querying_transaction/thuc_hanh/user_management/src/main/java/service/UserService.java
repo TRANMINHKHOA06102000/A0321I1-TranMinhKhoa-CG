@@ -19,4 +19,14 @@ public interface UserService {
     List<User> findUser(String country);
 
     List<User> sortName();
+
+    User getUserById(int id);
+
+    boolean insertUserStore(User user) throws SQLException;
+
+    void addUserTransaction(User user, int[] permision);
+
+    void insertUpdateWithoutTransaction();
+
+    void insertUpdateUseTransaction();
 }
