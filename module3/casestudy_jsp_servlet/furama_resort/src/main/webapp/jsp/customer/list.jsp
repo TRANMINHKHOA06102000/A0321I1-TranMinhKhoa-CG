@@ -9,9 +9,17 @@
 </head>
 <body>
 <h2>List of Customer</h2>
+<p>
+    <c:if test='${message != null}'>
+        <span class="message" style="color: green">${message}</span>
+    </c:if>
+</p>
 <div class="col-lg-12">
-    <a href="/customers?action=create">Create</a>
-    <a href="/customers?action=search" style="margin-left: 5px;">Search</a>
+    <form action="/searchCustomer" method="post">
+        <input type="text" placeholder="Search" name="search">
+        <input type="submit" value="Search">
+    </form>
+    <a href="/createCustomer">Create</a>
     <table class="table table-striped table-bordered" id="tableCustomer">
         <thead>
         <tr>
@@ -40,8 +48,8 @@
                 <td>${customer.customer_email}</td>
                 <td>${customer.customer_address}</td>
                 <td>
-                    <a href="/customers?action=edit&id=${customer.customer_id}">Edit</a>
-                    <a href="/customers?action=delete&id=${customer.customer_id}">Delete</a>
+                    <a href="/editCustomer?id=${customer.customer_id}">Edit</a>
+                    <a href="/deleteCustomer?id=${customer.customer_id}">Delete</a>
                 </td>
             </tr>
         </c:forEach>
@@ -57,7 +65,7 @@
         $('#tableCustomer').dataTable({
             "dom": 'lrtip',
             "lengthChange": false,
-            "pageLength": 2
+            "pageLength": 3
         });
     });
 </script>

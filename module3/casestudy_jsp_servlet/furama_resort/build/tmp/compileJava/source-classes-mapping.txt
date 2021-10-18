@@ -12,10 +12,10 @@ bean/CustomerType.java
  bean.CustomerType
 bean/User.java
  bean.User
-controller/customer/ListCustomerServlet.java
- controller.customer.ListCustomerServlet
-service/customer/CustomerService.java
- service.customer.CustomerService
+bean/Division.java
+ bean.Division
+common/Validate.java
+ common.Validate
 bean/AttachService.java
  bean.AttachService
 bean/ContractDetail.java
@@ -26,19 +26,29 @@ bean/ServiceType.java
  bean.ServiceType
 bean/UserRole.java
  bean.UserRole
-repository/customer/Impl/CustomerRepositoryImpl.java
- repository.customer.Impl.CustomerRepositoryImpl
+bean/Position.java
+ bean.Position
 bean/RentType.java
  bean.RentType
 repository/BaseRepository.java
  repository.BaseRepository
-bean/Division.java
- bean.Division
 bean/Customer.java
  bean.Customer
-repository/customer/CustomerRepository.java
- repository.customer.CustomerRepository
 service/customer/Impl/CustomerServiceImpl.java
  service.customer.Impl.CustomerServiceImpl
-bean/Position.java
- bean.Position
+controller/customer/SearchServlet.java
+ controller.customer.SearchServlet
+controller/customer/CreateServlet.java
+ controller.customer.CreateServlet
+controller/customer/DeleteServlet.java
+ controller.customer.DeleteServlet
+controller/customer/ListCustomerServlet.java
+ controller.customer.ListCustomerServlet
+repository/customer/CustomerRepository.java
+ repository.customer.CustomerRepository
+service/customer/CustomerService.java
+ service.customer.CustomerService
+repository/customer/Impl/CustomerRepositoryImpl.java
+ repository.customer.Impl.CustomerRepositoryImpl
+controller/customer/EditServlet.java
+ controller.customer.EditServlet

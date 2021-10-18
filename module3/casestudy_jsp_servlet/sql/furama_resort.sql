@@ -110,7 +110,7 @@ create table customer(
     customer_email varchar(45),
     customer_address varchar(45),
     primary key(customer_id),
-    foreign key(customer_type_id) references customer_type(customer_type_id)
+    foreign key(customer_type_id) references customer_type(customer_type_id) on update cascade on delete cascade
 );
 insert into customer
 (customer_type_id,customer_name,customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address) 
@@ -173,15 +173,15 @@ create table contract(
     customer_id int,
     service_id int,
     primary key(contract_id),
-    foreign key(employee_id) references employee(employee_id),
-    foreign key(customer_id) references customer(customer_id),
-    foreign key(service_id) references service(service_id)
+    foreign key(employee_id) references employee(employee_id) on update cascade on delete cascade,
+    foreign key(customer_id) references customer(customer_id) on update cascade on delete cascade,
+    foreign key(service_id) references service(service_id) on update cascade on delete cascade
 );
 insert into contract(contract_start_date,contract_end_date,contract_deposit,contract_total_money,employee_id, customer_id,service_id) 
 values
-('2021-02-06', '2021-02-24', 5000000,10000000,4, 2, 1),
-('2021-02-06', '2021-02-24', 5000000,10000000,5, 1, 2),
-('2020-02-06', '2020-02-24', 5000000,10000000,6, 3, 3);
+('2021-02-06', '2021-02-24', 5000000,10000000,1, 2, 1),
+('2021-02-06', '2021-02-24', 5000000,10000000,2, 1, 2),
+('2020-02-06', '2020-02-24', 5000000,10000000,3, 3, 3);
 create table attach_service(
 	attach_service_id int auto_increment not null,
     attach_service_name varchar(45) not null,
@@ -202,9 +202,9 @@ create table contract_detail(
     attach_service_id int,
     quantity int,
     primary key(contract_detail_id),
-    foreign key(contract_id) references contract(contract_id),
-    foreign key(attach_service_id) references attach_service(attach_service_id)
+    foreign key(contract_id) references contract(contract_id) on update cascade on delete cascade,
+    foreign key(attach_service_id) references attach_service(attach_service_id) on update cascade on delete cascade
 );
 insert into contract_detail(contract_id,attach_service_id,quantity) values
-(1,5,2),
-(2,1,5);
+(1,3,2),
+(2,3,3);
