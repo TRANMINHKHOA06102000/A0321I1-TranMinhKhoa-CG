@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bf03ed-e543-4c76-960d-2a840dcafc6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/service/CreateServiceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/service/ListServiceServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/service/ServiceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/service/impl/ServiceRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/service/ServiceFurama.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/service/impl/ServiceFuramaImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/service/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/service/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/customer/EditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/customer/EditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/customer/Impl/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/customer/Impl/CustomerRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/customer/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sql/furama_resort.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../sql/furama_resort.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/customer/CreateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/customer/CreateServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +33,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,37 +63,36 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/jsp/service" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\service" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\customer" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\assert" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\java\bean" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\bootstrap" />
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\assert" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller.service" />
       <recent name="common" />
       <recent name="service.customer" />
       <recent name="bean" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,7 +194,8 @@
       <option name="presentableId" value="Default" />
       <updated>1634514418854</updated>
       <workItem from="1634514420909" duration="41765000" />
-      <workItem from="1634618458889" duration="5261000" />
+      <workItem from="1634618458889" duration="10471000" />
+      <workItem from="1634631592447" duration="2988000" />
     </task>
     <servers />
   </component>

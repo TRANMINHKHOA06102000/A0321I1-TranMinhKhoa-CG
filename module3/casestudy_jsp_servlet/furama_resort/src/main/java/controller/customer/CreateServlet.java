@@ -69,7 +69,6 @@ public class CreateServlet extends HttpServlet {
                 if (customerService.insertCus(customer)) {
                     request.setAttribute("listCustomer", customerService.selectAllCus());
                     request.getRequestDispatcher("jsp/customer/list.jsp").forward(request, response);
-//                    response.sendRedirect("customers");
                 }
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
