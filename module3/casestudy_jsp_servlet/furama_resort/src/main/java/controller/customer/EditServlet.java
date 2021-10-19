@@ -18,7 +18,7 @@ public class EditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         try {
-            request.setAttribute("listCustomer", customerService.selectCus(id));
+            request.setAttribute("customer", customerService.selectCus(id));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -36,8 +36,6 @@ public class EditServlet extends HttpServlet {
         String phone = request.getParameter("phone").trim();
         String email = request.getParameter("email").trim();
         String address = request.getParameter("address").trim();
-        Customer customerTemp = new Customer(id,idCustomerType, name, birthDay,gender, idCard, phone, email, address);
-        customerTemp.setCustomer_type_id(idCustomerType);
         Customer customer = new Customer();
         Validate validate=new Validate();
         boolean check = true;
@@ -65,12 +63,13 @@ public class EditServlet extends HttpServlet {
         } else {
             customer.setCustomer_email(email);
         }
+        customer.setCustomer_id(id);
         customer.setCustomer_type_id(idCustomerType);
         customer.setCustomer_birthday(birthDay);
         customer.setCustomer_gender(gender);
         customer.setCustomer_address(address);
         if (!check) {
-            request.setAttribute("customer",customerTemp);
+            request.setAttribute("customer",customer);
             request.getRequestDispatcher("jsp/customer/edit.jsp").forward(request, response);
         } else {
             try {

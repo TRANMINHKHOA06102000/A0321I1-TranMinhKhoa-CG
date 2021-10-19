@@ -55,8 +55,8 @@ create table user_role(
 	role_id int not null,
     username varchar(45) not null,
     primary key(role_id,username),
-    foreign key(role_id) references `role`(role_id),
-    foreign key(username) references `user`(username)
+    foreign key(role_id) references `role`(role_id) on update cascade on delete cascade,
+    foreign key(username) references `user`(username) on update cascade on delete cascade
 );
 insert into user_role(role_id,username) values
 (1,'khoa'),
@@ -76,10 +76,10 @@ create table employee(
     division_id int,
     username varchar(45),
     primary key(employee_id),
-    foreign key(position_id) references `position`(position_id),
-    foreign key(education_degree_id) references education_degree(education_degree_id),
-    foreign key(division_id) references division(division_id),
-    foreign key(username) references `user`(username)
+    foreign key(position_id) references `position`(position_id) on update cascade on delete cascade,
+    foreign key(education_degree_id) references education_degree(education_degree_id) on update cascade on delete cascade,
+    foreign key(division_id) references division(division_id) on update cascade on delete cascade,
+    foreign key(username) references `user`(username) on update cascade on delete cascade
 );
 insert into employee
 (employee_name,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,
@@ -152,8 +152,8 @@ create table service(
     pool_area double,
     number_of_floors int,
 	primary key(service_id),
-    foreign key(service_type_id) references service_type(service_type_id),
-    foreign key(rent_type_id) references rent_type(rent_type_id)
+    foreign key(service_type_id) references service_type(service_type_id) on update cascade on delete cascade,
+    foreign key(rent_type_id) references rent_type(rent_type_id) on update cascade on delete cascade
 );
 insert into 
 service(service_name,service_area,service_cost,service_max_people,rent_type_id,service_type_id,

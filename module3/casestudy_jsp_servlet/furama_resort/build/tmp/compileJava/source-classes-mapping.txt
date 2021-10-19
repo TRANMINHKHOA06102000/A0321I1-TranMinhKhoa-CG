@@ -34,8 +34,8 @@ repository/BaseRepository.java
  repository.BaseRepository
 bean/Customer.java
  bean.Customer
-service/customer/Impl/CustomerServiceImpl.java
- service.customer.Impl.CustomerServiceImpl
+service/customer/CustomerService.java
+ service.customer.CustomerService
 controller/customer/SearchServlet.java
  controller.customer.SearchServlet
 controller/customer/CreateServlet.java
@@ -46,9 +46,9 @@ controller/customer/ListCustomerServlet.java
  controller.customer.ListCustomerServlet
 repository/customer/CustomerRepository.java
  repository.customer.CustomerRepository
-service/customer/CustomerService.java
- service.customer.CustomerService
-repository/customer/Impl/CustomerRepositoryImpl.java
- repository.customer.Impl.CustomerRepositoryImpl
 controller/customer/EditServlet.java
  controller.customer.EditServlet
+repository/customer/Impl/CustomerRepositoryImpl.java
+ repository.customer.Impl.CustomerRepositoryImpl
+service/customer/Impl/CustomerServiceImpl.java
+ service.customer.Impl.CustomerServiceImpl

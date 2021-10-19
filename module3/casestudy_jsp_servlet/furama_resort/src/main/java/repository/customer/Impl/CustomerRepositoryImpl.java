@@ -27,7 +27,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             "left join customer_type on customer_type.customer_type_id=customer.customer_type_id " +
             "where customer.customer_id=?;";
     private static final String UPDATE_CUSTOMER_BY_ID_SQL = "update customer " +
-            "set customer_type_id=?,customer_name=?,customer_birthday=?,customer_gender=?" +
+            "set customer_type_id=?,customer_name=?,customer_birthday=?,customer_gender=b?" +
             ",customer_id_card=?,customer_phone=?,customer_email=?,customer_address=?" +
             "where customer.customer_id=?;";
 
@@ -113,6 +113,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         preparedStatement.setString(6, customer.getCustomer_phone());
         preparedStatement.setString(7, customer.getCustomer_email());
         preparedStatement.setString(8, customer.getCustomer_address());
+        preparedStatement.setInt(9, customer.getCustomer_id());
         row = preparedStatement.executeUpdate();
         return row > 0;
     }
