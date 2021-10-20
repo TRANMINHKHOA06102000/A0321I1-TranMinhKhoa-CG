@@ -15,7 +15,7 @@ public class ServiceRepositoryImpl implements ServiceRepository {
     private static final String SELECT_ALL_SERVICE = "select service.* from service " +
             "left join service_type on service_type.service_type_id = service.service_type_id " +
             "left join rent_type on rent_type.rent_type_id = service.rent_type_id;";
-    private static final String INSERT_SERVICE="insert into service(service_name,service_area,service_cost," +
+    private static final String INSERT_SERVICE = "insert into service(service_name,service_area,service_cost," +
             "service_max_people,rent_type_id,service_type_id,standard_room,description_other_convenience," +
             "pool_area,number_of_floors) values (?,?,?,?,?,?,?,?,?,?);";
     private BaseRepository baseRepository = new BaseRepository();
@@ -40,7 +40,7 @@ public class ServiceRepositoryImpl implements ServiceRepository {
             int number_of_floors = resultSet.getInt("number_of_floors");
             serviceList.add(new Service(service_id, service_name, service_area, service_cost,
                     service_max_people, rent_type_id, service_type_id, standard_room,
-                    description_other_convenience,pool_area,number_of_floors));
+                    description_other_convenience, pool_area, number_of_floors));
         }
         return serviceList;
     }

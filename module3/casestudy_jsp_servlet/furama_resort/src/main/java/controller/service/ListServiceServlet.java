@@ -16,6 +16,7 @@ import java.util.List;
 @WebServlet(name = "ServiceServlet", urlPatterns = "/services")
 public class ListServiceServlet extends HttpServlet {
     private ServiceFurama serviceFurama = new ServiceFuramaImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Service> services = null;

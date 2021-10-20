@@ -14,6 +14,7 @@ import java.sql.SQLException;
 @WebServlet(name = "CreateServlet", urlPatterns = "/createCustomer")
 public class CreateServlet extends HttpServlet {
     private CustomerService customerService = new CustomerServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("jsp/customer/create.jsp").forward(request, response);
@@ -37,7 +38,7 @@ public class CreateServlet extends HttpServlet {
         if (name.equals("")) {
             request.setAttribute("msgName", "Enter incorrect name format");
             check = false;
-        }else {
+        } else {
             customer.setCustomer_name(name);
         }
         if (!idCardValidate.checkRegex(idCard)) {

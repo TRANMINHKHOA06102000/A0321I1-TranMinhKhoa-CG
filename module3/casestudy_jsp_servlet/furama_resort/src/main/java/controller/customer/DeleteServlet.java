@@ -14,6 +14,7 @@ import java.util.List;
 @WebServlet(name = "DeleteServlet", urlPatterns = "/deleteCustomer")
 public class DeleteServlet extends HttpServlet {
     CustomerService customerService = new CustomerServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));

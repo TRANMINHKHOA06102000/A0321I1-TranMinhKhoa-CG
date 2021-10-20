@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface ServiceRepository {
     List<Service> selectAllService() throws SQLException;
+
     boolean insertService(Service service) throws SQLException;
 }

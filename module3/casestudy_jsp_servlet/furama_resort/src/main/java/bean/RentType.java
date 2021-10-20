@@ -3,15 +3,9 @@ package bean;
 public class RentType {
     private int rent_type_id;
     private String rent_type_name;
-    private String rent_type_cost;
+    private double rent_type_cost;
 
     public RentType() {
-    }
-
-    public RentType(int rent_type_id, String rent_type_name, String rent_type_cost) {
-        this.rent_type_id = rent_type_id;
-        this.rent_type_name = rent_type_name;
-        this.rent_type_cost = rent_type_cost;
     }
 
     public int getRent_type_id() {
@@ -30,11 +24,11 @@ public class RentType {
         this.rent_type_name = rent_type_name;
     }
 
-    public String getRent_type_cost() {
+    public double getRent_type_cost() {
         return rent_type_cost;
     }
 
-    public void setRent_type_cost(String rent_type_cost) {
+    public void setRent_type_cost(double rent_type_cost) {
         this.rent_type_cost = rent_type_cost;
     }
 }

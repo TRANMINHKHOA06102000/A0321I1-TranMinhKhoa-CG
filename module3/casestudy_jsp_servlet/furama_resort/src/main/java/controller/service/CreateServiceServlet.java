@@ -34,13 +34,13 @@ public class CreateServiceServlet extends HttpServlet {
         String description_other_convenience = request.getParameter("description_other_convenience");
         double pool_area = Double.parseDouble(request.getParameter("pool_area"));
         int number_of_floors = Integer.parseInt(request.getParameter("number_of_floors"));
-        Service service=new Service(service_name,service_area,service_cost,service_max_people,
-                rent_type_id,service_type_id,standard_room,description_other_convenience,pool_area,number_of_floors);
+        Service service = new Service(service_name, service_area, service_cost, service_max_people,
+                rent_type_id, service_type_id, standard_room, description_other_convenience, pool_area, number_of_floors);
         try {
-            if(serviceFurama.insertService(service)){
+            if (serviceFurama.insertService(service)) {
                 request.setAttribute("listServices", serviceFurama.selectAllService());
                 request.getRequestDispatcher("jsp/service/list.jsp").forward(request, response);
-            }else {
+            } else {
                 request.getRequestDispatcher("jsp/service/create.jsp").forward(request, response);
             }
         } catch (SQLException throwables) {

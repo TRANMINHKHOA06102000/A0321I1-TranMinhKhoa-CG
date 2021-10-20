@@ -9,7 +9,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
-    private CustomerRepository customerRepository=new CustomerRepositoryImpl();
+    private CustomerRepository customerRepository = new CustomerRepositoryImpl();
+
     @Override
     public List<Customer> selectAllCus() throws SQLException {
         return customerRepository.selectAllCus();
@@ -21,7 +22,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public boolean deleteCus(int idCus) throws SQLException{
+    public boolean deleteCus(int idCus) throws SQLException {
         return customerRepository.deleteCus(idCus);
     }
 

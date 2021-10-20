@@ -9,7 +9,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ServiceFuramaImpl implements ServiceFurama {
-    private ServiceRepository serviceRepository= new ServiceRepositoryImpl();
+    private ServiceRepository serviceRepository = new ServiceRepositoryImpl();
+
     @Override
     public List<Service> selectAllService() throws SQLException {
         return serviceRepository.selectAllService();

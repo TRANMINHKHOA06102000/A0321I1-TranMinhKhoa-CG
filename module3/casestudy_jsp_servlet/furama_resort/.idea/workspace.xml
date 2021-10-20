@@ -5,19 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bf03ed-e543-4c76-960d-2a840dcafc6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/service/CreateServiceServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/service/ListServiceServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/service/ServiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/service/impl/ServiceRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/service/ServiceFurama.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/service/impl/ServiceFuramaImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/service/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/service/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controller/employee/CreateEmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controller/employee/DeleteEmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controller/employee/EditEmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controller/employee/ListEmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/controller/employee/SearchEmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/repository/employee/EmployeeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/repository/employee/impl/EmployeeRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/service/employee/EmployeeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/service/employee/impl/EmployeeServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/employee/CreateEmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/employee/DeleteEmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/employee/EditEmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/employee/ListEmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/employee/SearchEmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/employee/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/employee/impl/EmployeeRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/employee/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/employee/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employee/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employee/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bean/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bean/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/customer/CreateServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/customer/CreateServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/furama_resort-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/furama_resort-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/AttachService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/RentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/RentType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/customer/CreateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/customer/CreateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/customer/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/customer/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/customer/EditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/customer/EditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/customer/ListCustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/customer/ListCustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/service/CreateServiceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/service/CreateServiceServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/service/ListServiceServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/service/ListServiceServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/customer/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/service/ServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/service/ServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/service/impl/ServiceRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/service/impl/ServiceRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/customer/Impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/customer/Impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/service/ServiceFurama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/service/ServiceFurama.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/service/impl/ServiceFuramaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/service/impl/ServiceFuramaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/customer/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/service/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/service/create.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,22 +104,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/jsp/service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/jsp/employee" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\employee" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\service" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\customer" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\assert" />
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\java\bean" />
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\bootstrap" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\assert" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller.employee" />
       <recent name="controller.service" />
       <recent name="common" />
       <recent name="service.customer" />
@@ -86,13 +128,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,7 +239,8 @@
       <updated>1634514418854</updated>
       <workItem from="1634514420909" duration="41765000" />
       <workItem from="1634618458889" duration="10471000" />
-      <workItem from="1634631592447" duration="2988000" />
+      <workItem from="1634631592447" duration="3171000" />
+      <workItem from="1634694183968" duration="10004000" />
     </task>
     <servers />
   </component>

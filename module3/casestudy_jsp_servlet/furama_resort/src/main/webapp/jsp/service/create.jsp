@@ -10,7 +10,7 @@
 <div>
     <form method="post" action="/createService">
         <table border="1" cellpadding="5">
-<%--            <input type="hidden" name="service_id" id="service_id" size="45"/>--%>
+            <%--            <input type="hidden" name="service_id" id="service_id" size="45"/>--%>
             <tr>
                 <th>Name:</th>
                 <td>
@@ -56,7 +56,8 @@
             <tr>
                 <th>Description_other_convenience:</th>
                 <td>
-                    <input type="text" name="description_other_convenience" id="description_other_convenience" size="45"/>
+                    <input type="text" name="description_other_convenience" id="description_other_convenience"
+                           size="45"/>
                 </td>
             </tr>
             <tr>

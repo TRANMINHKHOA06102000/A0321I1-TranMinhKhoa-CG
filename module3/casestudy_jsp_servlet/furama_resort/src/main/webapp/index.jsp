@@ -97,8 +97,10 @@
                         LÀ KHU NGHỈ DƯỠNG ẨM THỰC TẠI VIỆT NAM.</h2>
                 </div>
                 <div class="right">
-                    <p>Hướng ra bãi biển Đà Nẵng trải dài cát trắng, Furama Resort Đà Nẵng là cửa ngõ đến với 3 di sản văn hoá thế giới: </p>
-                    <p>Hội An (20 phút), Mỹ Sơn (90 phút) và Huế (2 tiếng. 196 phòng hạng sang cùng với 70 căn biệt thự từ hai đến bốn
+                    <p>Hướng ra bãi biển Đà Nẵng trải dài cát trắng, Furama Resort Đà Nẵng là cửa ngõ đến với 3 di sản
+                        văn hoá thế giới: </p>
+                    <p>Hội An (20 phút), Mỹ Sơn (90 phút) và Huế (2 tiếng. 196 phòng hạng sang cùng với 70 căn biệt thự
+                        từ hai đến bốn
                         phòng ngủ có hồ bơi riêng đều được trang trí trang nhã.</p>
                     <p>Khu nghỉ dưỡng Furama Đà Nẵng là một khu nghỉ dưỡng 5 sao sang trọng, có uy tín và được xem
                         là một trong những biểu tượng của ngành du lịch Việt Nam.</p>
@@ -128,7 +130,8 @@
         <div class="col-lg-6 banner-footer-mid">
             <h3>CONTACT</h3>
             <iframe class="mt-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.502558174662!2d108.
-        24769741468373!3d16.039390188899358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420fdbc8cc38ef%3A0x9a6a3e31121225d2!2sFurama%20Resort%20Danang!5e0!3m2!1svi!2s!4v1621343814937!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        24769741468373!3d16.039390188899358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31420fdbc8cc38ef%3A0x9a6a3e31121225d2!2sFurama%20Resort%20Danang!5e0!3m2!1svi!2s!4v1621343814937!5m2!1svi!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="col-lg-3 banner-footer-right">
             <h3>NEWSLETTER</h3>
@@ -136,7 +139,9 @@
                 Accusantium at deleniti minus nisi nobis temporibus unde.
                 Consectetur cumque dignissimos dolorum est excepturi fugit
                 incidunt, ipsa iste officiis qui quos totam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam deserunt, dicta doloremque, fugit iure, laborum magnam maxime modi mollitia odit provident quae qui quos rerum suscipit ullam. Amet, aperiam?</p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aperiam deserunt, dicta doloremque,
+                fugit iure, laborum magnam maxime modi mollitia odit provident quae qui quos rerum suscipit ullam. Amet,
+                aperiam?</p>
         </div>
     </div>
 </div>

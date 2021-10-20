@@ -16,7 +16,8 @@
             <tr>
                 <th>ID Customer Type:</th>
                 <td>
-                    <input type="text" name="idCustomerType" id="idCustomerType" size="45" value="${customer.customer_type_id}"/>
+                    <input type="text" name="idCustomerType" id="idCustomerType" size="45"
+                           value="${customer.customer_type_id}"/>
                 </td>
             </tr>
             <tr>

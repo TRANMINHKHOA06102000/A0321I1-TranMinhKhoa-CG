@@ -14,6 +14,7 @@ import java.sql.SQLException;
 @WebServlet(name = "EditServlet", urlPatterns = "/editCustomer")
 public class EditServlet extends HttpServlet {
     private CustomerService customerService = new CustomerServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -37,12 +38,12 @@ public class EditServlet extends HttpServlet {
         String email = request.getParameter("email").trim();
         String address = request.getParameter("address").trim();
         Customer customer = new Customer();
-        Validate validate=new Validate();
+        Validate validate = new Validate();
         boolean check = true;
         if (name.equals("")) {
             request.setAttribute("msgName", "Enter incorrect name format");
             check = false;
-        }else {
+        } else {
             customer.setCustomer_name(name);
         }
         if (!validate.checkIdCard(idCard)) {
@@ -69,7 +70,7 @@ public class EditServlet extends HttpServlet {
         customer.setCustomer_gender(gender);
         customer.setCustomer_address(address);
         if (!check) {
-            request.setAttribute("customer",customer);
+            request.setAttribute("customer", customer);
             request.getRequestDispatcher("jsp/customer/edit.jsp").forward(request, response);
         } else {
             try {
