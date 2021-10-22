@@ -18,8 +18,8 @@ service/employee/EmployeeService.java
  service.employee.EmployeeService
 bean/Role.java
  bean.Role
-bean/ContractDetail.java
- bean.ContractDetail
+controller/contract_detail/ListContractDetailServlet.java
+ controller.contract_detail.ListContractDetailServlet
 bean/EducationDegree.java
  bean.EducationDegree
 bean/ServiceType.java
@@ -32,8 +32,8 @@ bean/Customer.java
  bean.Customer
 common/Validate.java
  common.Validate
-repository/contract/impl/ContractRepositoryImp.java
- repository.contract.impl.ContractRepositoryImp
+service/contract/ContractService.java
+ service.contract.ContractService
 controller/customer/EditServlet.java
  controller.customer.EditServlet
 controller/customer/ListCustomerServlet.java
@@ -86,11 +86,23 @@ bean/Contract.java
  bean.Contract
 repository/contract/ContractRepository.java
  repository.contract.ContractRepository
-service/contract/ContractService.java
- service.contract.ContractService
-service/contract/impl/ContractServiceImpl.java
- service.contract.impl.ContractServiceImpl
-controller/contract/CreateContractServlet.java
- controller.contract.CreateContractServlet
 controller/contract/ListContractServlet.java
  controller.contract.ListContractServlet
+controller/contract/CreateContractServlet.java
+ controller.contract.CreateContractServlet
+repository/contract/impl/ContractRepositoryImpl.java
+ repository.contract.impl.ContractRepositoryImpl
+service/contract/impl/ContractServiceImpl.java
+ service.contract.impl.ContractServiceImpl
+bean/ContractDetail.java
+ bean.ContractDetail
+controller/contract_detail/CreateContractDetailServlet.java
+ controller.contract_detail.CreateContractDetailServlet
+service/contract_detail/impl/ContractDetailServiceImpl.java
+ service.contract_detail.impl.ContractDetailServiceImpl
+repository/contract_detail/ContractDetailRepository.java
+ repository.contract_detail.ContractDetailRepository
+service/contract_detail/ContractDetailService.java
+ service.contract_detail.ContractDetailService
+repository/contract_detail/impl/ContractDetailRepositoryImpl.java
+ repository.contract_detail.impl.ContractDetailRepositoryImpl

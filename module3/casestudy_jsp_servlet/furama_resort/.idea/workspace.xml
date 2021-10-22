@@ -23,23 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="54bf03ed-e543-4c76-960d-2a840dcafc6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/furama_resort.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries-with-intellij-classes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/contract/CreateContractServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/contract/ListContractServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/contract/ContractRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/contract/impl/ContractRepositoryImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/contract/ContractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/contract/impl/ContractServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/contract/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/contract/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../bai12_jdbc_crud/bai_tap/user_management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/contract_detail/CreateContractDetailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/contract_detail/ListContractDetailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/contract_detail/ContractDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/repository/contract_detail/impl/ContractDetailRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/contract_detail/ContractDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/contract_detail/impl/ContractDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/contract_detail/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/contract_detail/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
@@ -47,13 +39,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bean/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bean/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bean/ContractDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bean/ContractDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/contract/impl/ContractRepositoryImp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/contract/impl/ContractServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/service/contract/impl/ContractServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/furama_resort-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/furama_resort-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/ContractDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/ContractDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/contract/impl/ContractRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/contract/impl/ContractRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/contract/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/contract/impl/ContractServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +111,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/jsp/contract_detail" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -125,22 +119,22 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\contract" />
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\employee" />
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\service" />
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\customer" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\assert" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="controller.contract_detail" />
       <recent name="controller.contract" />
       <recent name="controller.employee" />
       <recent name="controller.service" />
       <recent name="common" />
-      <recent name="service.customer" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\assert" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\contract_detail" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\contract" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\employee" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\service" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\casestudy_jsp_servlet\furama_resort\src\main\webapp\jsp\customer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -326,7 +320,8 @@
       <workItem from="1634801673965" duration="1797000" />
       <workItem from="1634804086360" duration="697000" />
       <workItem from="1634804825661" duration="448000" />
-      <workItem from="1634805298508" duration="2479000" />
+      <workItem from="1634805298508" duration="2602000" />
+      <workItem from="1634882997874" duration="2585000" />
     </task>
     <servers />
   </component>
@@ -369,66 +364,66 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1634806459727" />
-    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1634802731988">
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser" timestamp="1634885493697">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1634802731988" />
+    <state x="446" y="57" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1634885493697" />
     <state x="372" y="0" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1634805348261">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="372" y="0" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1280.680@0.0.1280.680" timestamp="1634805348261" />
-    <state x="427" y="82" key="FileChooserDialogImpl" timestamp="1634807785365">
+    <state x="427" y="82" key="FileChooserDialogImpl" timestamp="1634883084743">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="427" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1634807785365" />
-    <state width="1237" height="266" key="GridCell.Tab.0.bottom" timestamp="1634807180495">
+    <state x="427" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1634883084743" />
+    <state width="1237" height="258" key="GridCell.Tab.0.bottom" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.0.center" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.0.center" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.0.left" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.0.left" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.0.right" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.0.right" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.1.bottom" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.1.bottom" timestamp="1634885591149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.1.center" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634885591149" />
+    <state width="1237" height="258" key="GridCell.Tab.1.center" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.1.left" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.1.left" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.1.right" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.1.right" timestamp="1634885591148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.2.bottom" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1634885591148" />
+    <state width="1237" height="258" key="GridCell.Tab.2.bottom" timestamp="1634885591149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.2.center" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634885591149" />
+    <state width="1237" height="258" key="GridCell.Tab.2.center" timestamp="1634885591149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.2.left" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1634885591149" />
+    <state width="1237" height="258" key="GridCell.Tab.2.left" timestamp="1634885591149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
-    <state width="1237" height="266" key="GridCell.Tab.2.right" timestamp="1634807180495">
+    <state width="1237" height="258" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1634885591149" />
+    <state width="1237" height="258" key="GridCell.Tab.2.right" timestamp="1634885591149">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="266" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1634807180495" />
+    <state width="1237" height="258" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1634885591149" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1634804849930">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

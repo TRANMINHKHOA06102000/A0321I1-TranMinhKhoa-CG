@@ -9,6 +9,12 @@ public class ContractDetail {
     public ContractDetail() {
     }
 
+    public ContractDetail(int contract_id, int attach_service_id, int quantity) {
+        this.contract_id = contract_id;
+        this.attach_service_id = attach_service_id;
+        this.quantity = quantity;
+    }
+
     public ContractDetail(int contract_detail_id, int contract_id, int attach_service_id, int quantity) {
         this.contract_detail_id = contract_detail_id;
         this.contract_id = contract_id;
