@@ -1,93 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1215e8ad-d0f1-4267-9286-7a6b425013d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/build/classes/java/main/Calculator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/build/classes/java/main/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/src/main/java/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/WebApplication_Gradle.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/config/CharsetFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/controller/SearchServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/model/bean/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/model/repository/BaseRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/model/repository/user/UserRepo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/model/repository/user/impl/UserRepoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/model/service/user/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/classes/java/main/model/service/user/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/libs/WebApplication_Gradle-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/config/CharsetFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/controller/SearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/repository/user/UserRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/repository/user/impl/UserRepoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/service/user/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/service/user/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/webapp/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/webapp/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/webapp/result.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/webapp/search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/furama_resort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/furama_resort/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/WebApplication_Gradle/src/main/java/model/repository/BaseRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +45,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bai14_dependency_management_packaging/bai_tap/Java_Gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai14_dependency_management_packaging\thuc_hanh" />
+      <recent name="D:\A0321I1-TranMinhKhoa-CG\module3\bai14_dependency_management_packaging\bai_tap" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634807786514</updated>
       <workItem from="1634807788095" duration="113000" />
-      <workItem from="1634883087932" duration="1828000" />
+      <workItem from="1634883087932" duration="2070000" />
     </task>
     <servers />
   </component>
@@ -147,9 +86,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1634887345557">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1634887798218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1634887345557" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1634887798218" />
   </component>
 </project>

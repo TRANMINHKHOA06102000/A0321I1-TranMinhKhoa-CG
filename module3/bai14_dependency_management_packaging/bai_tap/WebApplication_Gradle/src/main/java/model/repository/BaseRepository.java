@@ -8,7 +8,7 @@ public class BaseRepository {
     private Connection connection;
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo";
     private String jdbcUsername = "root";
-    private String jdbcPassword = "ainguhon123";
+    private String jdbcPassword = "khoa4755@gmail";
 
     public BaseRepository() {
         try {
