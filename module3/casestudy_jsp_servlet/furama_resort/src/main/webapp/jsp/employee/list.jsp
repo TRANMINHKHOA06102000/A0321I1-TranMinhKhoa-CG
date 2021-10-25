@@ -17,9 +17,9 @@
 <div class="col-lg-12">
     <form action="/searchEmployee" method="post">
         <input type="text" placeholder="Search" name="search">
-        <input type="submit" value="Search">
+        <input type="submit" value="Search" class="btn btn-success">
     </form>
-    <a href="/createEmployee">Create</a>
+    <a href="/createEmployee" class="btn btn-primary">Create</a>
     <table class="table table-striped table-bordered" id="tableCustomer">
         <thead>
         <tr>
@@ -35,7 +35,7 @@
             <th scope="col">education_degree_id</th>
             <th scope="col">division_id</th>
             <th scope="col">username</th>
-            <th scope="col">Action</th>
+            <th scope="col" colspan="2" style="text-align: center">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -54,13 +54,39 @@
                 <td>${employee.division_id}</td>
                 <td>${employee.username}</td>
                 <td>
-                    <a href="/editEmployee?id=${employee.employee_id}">Edit</a>
-                    <a href="/deleteEmployee?id=${employee.employee_id}">Delete</a>
+                    <a class="btn btn-primary" href="/editEmployee?id=${employee.employee_id}">Edit</a>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                            onclick="setValueForm('${employee.employee_id}')">
+                        Delete
+                    </button>
                 </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/deleteEmployee">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input name="employee_id" id="employee_id" hidden>
+                        Bạn có chắc muốn xoá ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="assert/bootstrap/js/bootstrap.min.js"></script>
 <script src="assert/jquery/jquery-3.5.1.min.js"></script>
@@ -74,6 +100,11 @@
             "pageLength": 3
         });
     });
+</script>
+<script>
+    function setValueForm(employee_id) {
+        document.getElementById("employee_id").value = employee_id;
+    }
 </script>
 </body>
 </html>

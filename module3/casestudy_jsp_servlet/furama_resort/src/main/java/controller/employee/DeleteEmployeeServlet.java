@@ -19,7 +19,7 @@ public class DeleteEmployeeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("employee_id"));
         try {
             employeeService.deleteEmp(id);
         } catch (SQLException throwables) {

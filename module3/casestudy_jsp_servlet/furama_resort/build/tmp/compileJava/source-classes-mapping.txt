@@ -54,8 +54,8 @@ repository/customer/CustomerRepository.java
  repository.customer.CustomerRepository
 service/customer/Impl/CustomerServiceImpl.java
  service.customer.Impl.CustomerServiceImpl
-controller/employee/DeleteEmployeeServlet.java
- controller.employee.DeleteEmployeeServlet
+repository/contract_detail/impl/ContractDetailRepositoryImpl.java
+ repository.contract_detail.impl.ContractDetailRepositoryImpl
 controller/employee/ListEmployeeServlet.java
  controller.employee.ListEmployeeServlet
 controller/employee/SearchEmployeeServlet.java
@@ -104,5 +104,5 @@ repository/contract_detail/ContractDetailRepository.java
  repository.contract_detail.ContractDetailRepository
 service/contract_detail/ContractDetailService.java
  service.contract_detail.ContractDetailService
-repository/contract_detail/impl/ContractDetailRepositoryImpl.java
- repository.contract_detail.impl.ContractDetailRepositoryImpl
+controller/employee/DeleteEmployeeServlet.java
+ controller.employee.DeleteEmployeeServlet
