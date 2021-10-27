@@ -28,15 +28,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/employee/DeleteEmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/employee/DeleteEmployeeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/furama_resort-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/furama_resort-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/employee/DeleteEmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/employee/DeleteEmployeeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Validate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/employee/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employee/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/employee/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employee/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/employee/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/employee/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +98,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -314,6 +311,7 @@
       <workItem from="1634882997874" duration="3179000" />
       <workItem from="1634904622568" duration="3897000" />
       <workItem from="1635158234380" duration="9999000" />
+      <workItem from="1635331185909" duration="3384000" />
     </task>
     <servers />
   </component>
@@ -372,54 +370,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="427" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1635169100647" />
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.0.bottom" timestamp="1635334625072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.0.center" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635334625072" />
+    <state width="1237" height="278" key="GridCell.Tab.0.center" timestamp="1635334625072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.0.left" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1635334625072" />
+    <state width="1237" height="278" key="GridCell.Tab.0.left" timestamp="1635334625071">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.0.right" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1635334625071" />
+    <state width="1237" height="278" key="GridCell.Tab.0.right" timestamp="1635334625072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.1.bottom" timestamp="1635172772262">
+    <state width="1237" height="278" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1635334625072" />
+    <state width="1237" height="278" key="GridCell.Tab.1.bottom" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635172772262" />
-    <state width="1237" height="2" key="GridCell.Tab.1.center" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
+    <state width="1237" height="278" key="GridCell.Tab.1.center" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.1.left" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
+    <state width="1237" height="278" key="GridCell.Tab.1.left" timestamp="1635334625072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.1.right" timestamp="1635172772261">
+    <state width="1237" height="278" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1635334625072" />
+    <state width="1237" height="278" key="GridCell.Tab.1.right" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1635172772261" />
-    <state width="1237" height="2" key="GridCell.Tab.2.bottom" timestamp="1635172772262">
+    <state width="1237" height="278" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
+    <state width="1237" height="278" key="GridCell.Tab.2.bottom" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635172772262" />
-    <state width="1237" height="2" key="GridCell.Tab.2.center" timestamp="1635172772262">
+    <state width="1237" height="278" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
+    <state width="1237" height="278" key="GridCell.Tab.2.center" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1635172772262" />
-    <state width="1237" height="2" key="GridCell.Tab.2.left" timestamp="1635172772262">
+    <state width="1237" height="278" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
+    <state width="1237" height="278" key="GridCell.Tab.2.left" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1635172772262" />
-    <state width="1237" height="2" key="GridCell.Tab.2.right" timestamp="1635172772262">
+    <state width="1237" height="278" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
+    <state width="1237" height="278" key="GridCell.Tab.2.right" timestamp="1635334625073">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="2" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1635172772262" />
+    <state width="1237" height="278" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1635334625073" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1635158714567">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

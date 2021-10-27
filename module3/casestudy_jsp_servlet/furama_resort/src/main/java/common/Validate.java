@@ -28,4 +28,12 @@ public class Validate {
     public boolean checkEmail(String email) {
         return email.matches(regexEmail);
     }
+
+    public static String validatePrice(double price){
+        String message = null;
+        if (price <0){
+            message = "Giá phải là số dương";
+        }
+        return message;
+    }
 }

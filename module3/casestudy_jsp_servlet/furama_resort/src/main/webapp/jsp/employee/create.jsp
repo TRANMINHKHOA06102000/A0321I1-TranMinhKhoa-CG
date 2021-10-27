@@ -3,11 +3,13 @@
 <html>
 <head>
     <title>Insert</title>
+    <link rel="stylesheet" href="assert/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assert/bootstrap413/css/bootstrap.min.css">
 </head>
 <body>
 <h2>Insert A Employee</h2>
-<a href="/employees">Back</a>
-<div>
+<a href="/employees" class="btn btn-secondary" style="margin: 1px auto 5px 5px;">Back</a>
+<div style="margin-left: 5px">
     <form method="post" action="/createEmployee">
         <table border="1" cellpadding="5">
             <tr>
@@ -78,7 +80,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="submit" value="Save"/>
+                    <input type="submit" value="Save" class="btn btn-primary"/>
                 </td>
             </tr>
         </table>
