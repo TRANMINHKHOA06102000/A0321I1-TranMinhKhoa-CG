@@ -35,7 +35,8 @@
             <th scope="col">education_degree_id</th>
             <th scope="col">division_id</th>
             <th scope="col">username</th>
-            <th scope="col" colspan="2" style="text-align: center">Action</th>
+            <th scope="col">Action</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
