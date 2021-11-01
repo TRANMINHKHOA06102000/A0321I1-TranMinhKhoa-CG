@@ -8,7 +8,6 @@
 <body>
 <div class="container">
     <form action="/customer?action=create" method="post">
-
         <div class="form-group">
             <label for="idCustomerType">Type Name</label>
             <select class="form-control" id="idCustomerType" name="idCustomerType" required>
@@ -67,11 +66,13 @@
             <input type="text" class="form-control" id="address" name="address"
                    value="${customer.customer_address}" required maxlength="50">
         </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <button type="button" class="btn btn-success">
+            <a href="/" class="text-white">Quay Lại</a>
+        </button>
     </form>
 </div>
-<a href="/" class="btn btn-success">back</a>
+<%--<a href="/" class="btn btn-success">back</a>--%>
 <script src="/assert/jquery/jquery-3.5.1.min.js"></script>
 <script src="/assert/bootstrap413/js/popper.min.js"></script>
 <script src="/assert/bootstrap413/js/bootstrap.min.js"></script>

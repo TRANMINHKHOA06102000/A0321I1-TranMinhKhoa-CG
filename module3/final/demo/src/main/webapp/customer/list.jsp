@@ -7,17 +7,25 @@
     <link rel="stylesheet" href="/assert/datatables/css/dataTables.bootstrap4.min.css">
 </head>
 <body>
+<p>
+    <c:if test='${message != null}'>
+        <span class="message" style="color: green">${message}</span>
+    </c:if>
+</p>
 <div class="container">
     <a href="/customer?action=create" class="btn btn-success mt-3">Thêm mới</a>
     <form action="/customer" method="get">
         <input name="action" value="search" hidden>
-        <input type="text" name="nameSearch">
+        <input type="text" name="nameSearch" placeholder="tìm kiếm theo tên">
+        <input type="text" name="addressSearch" placeholder="tìm kiếm theo địa chỉ">
+        <input type="text" name="typeNameSearch" placeholder="tìm kiếm theo loại khách">
         <button class="btn btn-success">Tìm kiếm</button>
     </form>
     <table id="page" class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">ID Customer</th>
+            <th scope="col">STT</th>
+<%--            <th scope="col">ID Customer</th>--%>
             <th scope="col">Name</th>
             <th scope="col">BirthDay</th>
             <th scope="col">Gender</th>
@@ -27,13 +35,16 @@
             <th scope="col">Address</th>
             <th scope="col">Customer Type</th>
             <th scope="col">Action</th>
-<%--            <th scope="col">Action</th>--%>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="customer" items="${customerList}">
+        <c:forEach varStatus="loop" var="customer" items="${customerList}">
             <tr>
-                <td>${customer.customer_id}</td>
+                    <%--            count đếm từ 1--%>
+                    <%--            index đếm từ 0--%>
+                <td>${loop.count}</td>
+<%--                <td>${customer.customer_id}</td>--%>
                 <td>${customer.customer_name}</td>
                 <td>${customer.customer_birthday}</td>
                 <td>${customer.customer_gender ? 'Nam': 'Nữ'}</td>
@@ -42,9 +53,11 @@
                 <td>${customer.customer_email}</td>
                 <td>${customer.customer_address}</td>
                 <td>${customer.customer_type_name}</td>
-<%--                <td>--%>
-<%--                    <a class="btn btn-primary" href="/customer?action=edit&id=${employee.employee_id}">Edit</a>--%>
-<%--                </td>--%>
+                <td>
+                    <button type="button" class="btn btn-info">
+                        <a href="/customer?action=update&id=${customer.customer_id}" class="text-white">Sửa</a>
+                    </button>
+                </td>
                 <td>
                     <button type="button" class="btn btn-danger" onclick="setValueForm('${customer.customer_id}')"
                             data-toggle="modal" data-target="#modalDelete">

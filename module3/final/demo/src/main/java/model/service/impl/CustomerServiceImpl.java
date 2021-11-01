@@ -29,23 +29,39 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public List<Customer> findByContainAddress(String address) {
+        return customerRepository.findByContainAddress(address);
+    }
+
+    @Override
+    public List<Customer> findByContainTypeName(String typeName) {
+        return customerRepository.findByContainTypeName(typeName);
+    }
+
+
+    @Override
+    public List<Customer> findByContain(String name, String address, String typeName) {
+        return customerRepository.findByContain(name, address, typeName);
+    }
+
+    @Override
     public Map<String, String> create(Customer customer) {
         Map<String, String> mapMessage = new HashMap<>();
-//        if (Validator.validateDate(employee.getBirthday()) != null
-//                || Validator.validateIdCard(employee.getIdCard()) != null
-//                || Validator.validateInteger(employee.getSalary()) != null
-//                || Validator.validatePhone(employee.getPhone()) != null
-//                || Validator.validateEmail(employee.getEmail()) != null) {
-//            mapMessage.put("birthday", Validator.validateDate(employee.getBirthday()));
-//            mapMessage.put("idCard", Validator.validateIdCard(employee.getIdCard()));
-//            mapMessage.put("salary", Validator.validateInteger(employee.getSalary()));
-//            mapMessage.put("phone", Validator.validatePhone(employee.getPhone()));
-//            mapMessage.put("email", Validator.validateEmail(employee.getEmail()));
-//        } else {
-//            employeeRepository.save(employee);
-//        }
         customerRepository.save(customer);
         return mapMessage;
     }
+
+    @Override
+    public Customer findById(int id) {
+        return customerRepository.findById(id);
+    }
+
+    @Override
+    public Map<String, String> edit(Customer customer) {
+        Map<String, String> mapMessage = new HashMap<>();
+        customerRepository.update(customer);
+        return mapMessage;
+    }
+
 
 }
