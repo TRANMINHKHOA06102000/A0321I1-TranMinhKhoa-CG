@@ -160,8 +160,6 @@ public class Servlet extends HttpServlet {
     }
 
     private void showFormCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        String [] string= {"đỏ", "vàng", "xanh"};
-//        request.setAttribute("string", string);
         request.setAttribute("list", customerTypeService.findALl());
         request.getRequestDispatcher("/customer/create.jsp").forward(request, response);
     }
@@ -171,15 +169,16 @@ public class Servlet extends HttpServlet {
         String addressSearch = request.getParameter("addressSearch");
         String typeNameSearch = request.getParameter("typeNameSearch");
         List<Customer> customerList = null;
-        if (addressSearch == "" && typeNameSearch == "") {
-            customerList = customerService.findByContainName(name);
-        } else if (name == "" && typeNameSearch == ""){
-            customerList = customerService.findByContainAddress(addressSearch);
-        }else if (addressSearch == "" && name == ""){
-            customerList = customerService.findByContainTypeName(typeNameSearch);
-        }else {
-            customerList = customerService.findByContain(name, addressSearch, typeNameSearch);
-        }
+//        if (addressSearch == "" && typeNameSearch == "") {
+//            customerList = customerService.findByContainName(name);
+//        } else if (name == "" && typeNameSearch == ""){
+//            customerList = customerService.findByContainAddress(addressSearch);
+//        }else if (addressSearch == "" && name == ""){
+//            customerList = customerService.findByContainTypeName(typeNameSearch);
+//        }else {
+//            customerList = customerService.findByContain(name, addressSearch, typeNameSearch);
+//        }
+        customerList=customerService.findByContain(name, addressSearch, typeNameSearch);
         request.setAttribute("customerList", customerList);
         try {
             request.getRequestDispatcher("/customer/list.jsp").forward(request, response);

@@ -24,8 +24,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     private static final String SELECT_BY_CONTAIN_TYPENAME = "SELECT * FROM customer " +
             "inner join customer_type on customer_type.customer_type_id = customer.customer_type_id" +
             " WHERE customer_type_name LIKE ?";
-    private static final String SELECT_BY_CONTAIN = "select * from customer inner join customer_type on customer.customer_type_id=customer_type.customer_type_id\n" +
-            "where customer.customer_name = ? and customer.customer_address = ? and customer_type.customer_type_name = ?;";
+    private static final String SELECT_BY_CONTAIN = "select * from customer inner join customer_type " +
+            "on customer.customer_type_id=customer_type.customer_type_id where customer.customer_name = ? and " +
+            "customer.customer_address = ? and customer_type.customer_type_name = ?;";
+    private static final String SELECT_CONTAIN = "select * from customer inner join customer_type on customer.customer_type_id=customer_type.customer_type_id\n" +
+            "where customer.customer_name like ? and customer.customer_address like ? and customer_type.customer_type_name like ?;";
     private static final String INSERT_SQL = "insert into customer(customer_type_id,customer_name," +
             "customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address)" +
             "values (?,?,?,?,?,?,?,?)";
@@ -199,10 +202,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         List<Customer> list = new ArrayList<>();
         if (connection != null) {
             try {
-                PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_CONTAIN);
-                preparedStatement.setString(1, name);
-                preparedStatement.setString(2, address);
-                preparedStatement.setString(3, typeName);
+//                PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_CONTAIN);
+                PreparedStatement preparedStatement = connection.prepareStatement(SELECT_CONTAIN);
+                preparedStatement.setString(1, "%" + name + "%");
+                preparedStatement.setString(2, "%" + address + "%");
+                preparedStatement.setString(3, "%" + typeName + "%");
                 ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
                     int customer_id = resultSet.getInt("customer_id");
