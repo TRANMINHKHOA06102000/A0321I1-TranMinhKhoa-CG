@@ -20,41 +20,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d2365e6-d238-4be0-94f5-58dd413d831c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/AppConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/AppInitializer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/CustomerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/CustomerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/customer-manager-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/config/AppConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/config/AppInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/controller/ProductController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/model/bean/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/model/repository/ProductRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/model/repository/ProductRepositoryImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/model/service/ProductService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/classes/java/main/com/example/model/service/ProductServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/libs/product-manager-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/config/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/config/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/model/bean/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/model/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/model/repository/ProductRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/model/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/java/com/example/model/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap/product-manager/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,9 +111,12 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.711" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.711" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -184,6 +203,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636974935890</updated>
       <workItem from="1636974940101" duration="4355000" />
+      <workItem from="1637148052151" duration="79000" />
     </task>
     <servers />
   </component>
@@ -200,6 +220,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -217,53 +238,53 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state x="446" y="25" key="#com.intellij.ide.util.MemberChooser/0.0.1280.672@0.0.1280.672" timestamp="1636975856990" />
-    <state width="845" height="266" key="GridCell.Tab.0.bottom" timestamp="1636979346657">
+    <state width="845" height="266" key="GridCell.Tab.0.bottom" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1636979346657" />
-    <state width="845" height="266" key="GridCell.Tab.0.center" timestamp="1636979346657">
+    <state width="845" height="266" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.0.center" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1636979346657" />
-    <state width="845" height="266" key="GridCell.Tab.0.left" timestamp="1636979346657">
+    <state width="845" height="266" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.0.left" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1636979346657" />
-    <state width="845" height="266" key="GridCell.Tab.0.right" timestamp="1636979346657">
+    <state width="845" height="266" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.0.right" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1636979346657" />
-    <state width="845" height="266" key="GridCell.Tab.1.bottom" timestamp="1636979346658">
+    <state width="845" height="266" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.1.bottom" timestamp="1637148131485">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1636979346658" />
-    <state width="845" height="266" key="GridCell.Tab.1.center" timestamp="1636979346657">
+    <state width="845" height="266" key="GridCell.Tab.1.bottom/0.0.1280.672@0.0.1280.672" timestamp="1637148131485" />
+    <state width="845" height="266" key="GridCell.Tab.1.center" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1636979346657" />
-    <state width="845" height="266" key="GridCell.Tab.1.left" timestamp="1636979346657">
+    <state width="845" height="266" key="GridCell.Tab.1.center/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.1.left" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1636979346657" />
-    <state width="845" height="266" key="GridCell.Tab.1.right" timestamp="1636979346658">
+    <state width="845" height="266" key="GridCell.Tab.1.left/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.1.right" timestamp="1637148131484">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1636979346658" />
-    <state width="845" height="266" key="GridCell.Tab.2.bottom" timestamp="1636979346658">
+    <state width="845" height="266" key="GridCell.Tab.1.right/0.0.1280.672@0.0.1280.672" timestamp="1637148131484" />
+    <state width="845" height="266" key="GridCell.Tab.2.bottom" timestamp="1637148131485">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.2.bottom/0.0.1280.672@0.0.1280.672" timestamp="1636979346658" />
-    <state width="845" height="266" key="GridCell.Tab.2.center" timestamp="1636979346658">
+    <state width="845" height="266" key="GridCell.Tab.2.bottom/0.0.1280.672@0.0.1280.672" timestamp="1637148131485" />
+    <state width="845" height="266" key="GridCell.Tab.2.center" timestamp="1637148131485">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.2.center/0.0.1280.672@0.0.1280.672" timestamp="1636979346658" />
-    <state width="845" height="266" key="GridCell.Tab.2.left" timestamp="1636979346658">
+    <state width="845" height="266" key="GridCell.Tab.2.center/0.0.1280.672@0.0.1280.672" timestamp="1637148131485" />
+    <state width="845" height="266" key="GridCell.Tab.2.left" timestamp="1637148131485">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.2.left/0.0.1280.672@0.0.1280.672" timestamp="1636979346658" />
-    <state width="845" height="266" key="GridCell.Tab.2.right" timestamp="1636979346658">
+    <state width="845" height="266" key="GridCell.Tab.2.left/0.0.1280.672@0.0.1280.672" timestamp="1637148131485" />
+    <state width="845" height="266" key="GridCell.Tab.2.right" timestamp="1637148131485">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state width="845" height="266" key="GridCell.Tab.2.right/0.0.1280.672@0.0.1280.672" timestamp="1636979346658" />
+    <state width="845" height="266" key="GridCell.Tab.2.right/0.0.1280.672@0.0.1280.672" timestamp="1637148131485" />
   </component>
 </project>
