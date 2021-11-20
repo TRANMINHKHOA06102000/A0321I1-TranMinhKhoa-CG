@@ -3,7 +3,9 @@ package cg.wbd.grandemonstration.service.impl;
 import cg.wbd.grandemonstration.model.Customer;
 import cg.wbd.grandemonstration.service.CustomerService;
 import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.springframework.context.annotation.Bean;
 
@@ -14,8 +16,30 @@ import java.util.Collections;
 import java.util.List;
 
 public class HibernateCustomerServiceImpl implements CustomerService {
+    static {
+        try {
+            SessionFactory sessionFactory = new Configuration()
+                    .configure("hibernate.conf.xml")
+                    .buildSessionFactory();
+            //sessionFactory.close();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static SessionFactory sessionFactory;
     private static EntityManager entityManager;
+
+    static {
+        try {
+            sessionFactory = new Configuration()
+                    .configure("hibernate.conf.xml")
+                    .buildSessionFactory();
+            entityManager = sessionFactory.createEntityManager();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+    }
     @Override
     public List<Customer> findAll() {
         String queryStr = "SELECT c FROM Customer AS c";
@@ -33,6 +57,28 @@ public class HibernateCustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer save(Customer customer) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            Customer origin = findOne(customer.getId());
+            origin.setName(customer.getName());
+            origin.setEmail(customer.getEmail());
+            origin.setAddress(customer.getAddress());
+            session.saveOrUpdate(origin);
+            transaction.commit();
+            return origin;
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (transaction != null) {
+                transaction.rollback();
+            }
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
         return null;
     }
 
@@ -58,36 +104,18 @@ public class HibernateCustomerServiceImpl implements CustomerService {
 
     @Override
     public void delete(Long id) {
-
     }
 
     @Override
     public void delete(Customer customer) {
-
     }
 
     @Override
     public void delete(List<Customer> customers) {
-
     }
 
     @Override
     public void deleteAll() {
-
-    }
-    @Bean
-    public CustomerService customerService() {
-        return new HibernateCustomerServiceImpl();
     }
 
-    static {
-        try {
-            SessionFactory sessionFactory = new Configuration()
-                    .configure("hibernate.conf.xml")
-                    .buildSessionFactory();
-            entityManager = sessionFactory.createEntityManager();
-        } catch (HibernateException e) {
-            e.printStackTrace();
-        }
-    }
 }
