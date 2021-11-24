@@ -12,7 +12,7 @@ public class Province {
 
     private String name;
 
-    @OneToMany(targetEntity = Customer.class)
+    @OneToMany(mappedBy = "province", cascade = CascadeType.ALL)
     private List<Customer> customers;
 
     public Province() {
