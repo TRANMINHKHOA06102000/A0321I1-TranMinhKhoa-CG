@@ -4,7 +4,9 @@ import com.codegym.model.Category;
 import com.codegym.repository.CategoryRepository;
 import com.codegym.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
@@ -16,7 +18,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category findById(Integer id) {
-        return categoryRepository.findOne(id);
+        return categoryRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -25,7 +27,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void remove(Category category) {
-        categoryRepository.delete(category);
+    public void remove(Integer id) {
+        categoryRepository.deleteById(id);
     }
+
 }

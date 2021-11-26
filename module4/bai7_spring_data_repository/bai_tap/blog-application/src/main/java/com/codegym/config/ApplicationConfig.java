@@ -52,15 +52,15 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
         this.applicationContext = applicationContext;
     }
 
-    @Bean
-    public BlogService blogService() {
-        return new BlogServiceImpl();
-    }
-    
-    @Bean
-    public CategoryService categoryService(){
-        return new CategoryServiceImpl();
-    }
+//    @Bean
+//    public BlogService blogService() {
+//        return new BlogServiceImpl();
+//    }
+//
+//    @Bean
+//    public CategoryService categoryService(){
+//        return new CategoryServiceImpl();
+//    }
 
     @Override
     public void addFormatters(FormatterRegistry registry){

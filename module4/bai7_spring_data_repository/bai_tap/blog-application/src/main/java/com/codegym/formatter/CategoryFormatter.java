@@ -15,8 +15,8 @@ public class CategoryFormatter implements Formatter<Category> {
     private CategoryService categoryService;
 
     @Autowired
-    public CategoryFormatter(CategoryService categoryService){
-        this.categoryService=categoryService;
+    public CategoryFormatter(CategoryService categoryService) {
+        this.categoryService = categoryService;
     }
 
     @Override
@@ -26,6 +26,6 @@ public class CategoryFormatter implements Formatter<Category> {
 
     @Override
     public String print(Category object, Locale locale) {
-        return "[" + object.getCategoryId() + ", " +object.getCategoryName() + "]";
+        return "[" + object.getCategoryId() + ", " + object.getCategoryName() + "]";
     }
 }

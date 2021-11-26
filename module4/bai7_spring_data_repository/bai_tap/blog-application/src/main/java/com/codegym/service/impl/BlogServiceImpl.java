@@ -7,7 +7,9 @@ import com.codegym.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BlogServiceImpl implements BlogService {
     @Autowired
     private BlogRepository blogRepository;
@@ -25,7 +27,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Blog findById(Integer id) {
-        return blogRepository.findOne(id);
+        return blogRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -35,7 +37,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public void remove(Integer id) {
-        blogRepository.delete(id);
+        blogRepository.deleteById(id);
     }
 
     @Override

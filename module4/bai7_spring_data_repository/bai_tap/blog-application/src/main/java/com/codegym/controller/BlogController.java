@@ -42,33 +42,11 @@ public class BlogController {
 //        model.addAttribute("listBlog", blogService.findAll(pageable));
 //        return "list";
 //    }
-
-    @GetMapping("/")
-    public String listBlog(Model model,
-                           @RequestParam("s") Optional<String> s,
-                           @PageableDefault(size = 2) Pageable pageable) {
-        Page<Blog> blogPage;
-        if (s.isPresent()) {
-            blogPage = blogService.findAllByAuthorContaining(s.get(), pageable);
-        } else {
-            blogPage = blogService.findAll(pageable);
-        }
-        model.addAttribute("listBlog", blogPage);
-        return "list";
-    }
+//
 //    @GetMapping("/")
 //    public String listBlog(Model model,
 //                           @RequestParam("s") Optional<String> s,
-//            @RequestParam(name = "page", required = false, defaultValue = "0") int page,
-//            @RequestParam(name = "size", required = false, defaultValue = "2") int size,
-//            @RequestParam(name = "sort", required = false, defaultValue = "ASC") String sort) {
-//        Sort order = null;
-//        if (sort.equals("ASC")) {
-//            order = Sort.by("createDate").ascending();
-//        } else if (sort.equals("DESC")) {
-//            order = Sort.by("createDate").descending();
-//        }
-//        Pageable pageable = PageRequest.of(page, size, order);
+//                           @PageableDefault(size = 2) Pageable pageable) {
 //        Page<Blog> blogPage;
 //        if (s.isPresent()) {
 //            blogPage = blogService.findAllByAuthorContaining(s.get(), pageable);
@@ -78,6 +56,28 @@ public class BlogController {
 //        model.addAttribute("listBlog", blogPage);
 //        return "list";
 //    }
+    @GetMapping("/")
+    public String listBlog(Model model,
+                           @RequestParam("s") Optional<String> s,
+            @RequestParam(name = "page", required = false, defaultValue = "0") int page,
+            @RequestParam(name = "size", required = false, defaultValue = "2") int size,
+            @RequestParam(name = "sort", required = false, defaultValue = "ASC") String sort) {
+        Sort order = null;
+        if (sort.equals("ASC")) {
+            order = Sort.by("createDate").ascending();
+        } else if (sort.equals("DESC")) {
+            order = Sort.by("createDate").descending();
+        }
+        Pageable pageable = PageRequest.of(page, size, order);
+        Page<Blog> blogPage;
+        if (s.isPresent()) {
+            blogPage = blogService.findAllByAuthorContaining(s.get(), pageable);
+        } else {
+            blogPage = blogService.findAll(pageable);
+        }
+        model.addAttribute("listBlog", blogPage);
+        return "list";
+    }
 
     @GetMapping("/showCreateBlog")
     public ModelAndView showCreate() {

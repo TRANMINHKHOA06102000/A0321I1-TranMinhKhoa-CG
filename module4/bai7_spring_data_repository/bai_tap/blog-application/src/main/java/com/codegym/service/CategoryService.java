@@ -9,5 +9,5 @@ public interface CategoryService {
 
     void save(Category category);
 
-    void remove(Category category);
+    void remove(Integer id);
 }
