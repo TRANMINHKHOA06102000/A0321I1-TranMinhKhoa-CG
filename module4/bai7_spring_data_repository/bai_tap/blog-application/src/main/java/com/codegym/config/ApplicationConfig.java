@@ -61,7 +61,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
 //    public CategoryService categoryService(){
 //        return new CategoryServiceImpl();
 //    }
-
+//
     @Override
     public void addFormatters(FormatterRegistry registry){
         registry.addFormatter(new CategoryFormatter(applicationContext.getBean(CategoryService.class)));
