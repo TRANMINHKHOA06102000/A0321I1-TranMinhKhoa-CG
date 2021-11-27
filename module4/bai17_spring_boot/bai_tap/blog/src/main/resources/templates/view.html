@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>View Blog</h3>
+<p>
+    <a th:href="@{/}">
+        Back to blog list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Author:</label>
+        <label th:text="${blog.author}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Content:</label>
+        <label th:text="${blog.content}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Create Date:</label>
+        <label th:text="${blog.createDate}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Title:</label>
+        <label th:text="${blog.title}"></label>
+    </div>
+</div>
+<footer></footer>
+</body>
+</html>
