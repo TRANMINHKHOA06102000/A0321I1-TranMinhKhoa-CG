@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/user/user.css">
+</head>
+<body>
+<h3>FORM ĐĂNG KÍ</h3>
+<form th:object="${user}" method="post" th:action="@{/}">
+    <table>
+        <tr>
+            <th><label>First Name</label></th>
+            <td>
+                <input type="text" th:field="*{firstName}" required>
+                <label th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="error"></label>
+            </td>
+        </tr>
+        <tr>
+            <th><label>Last Name</label></th>
+            <td>
+                <input type="text" th:field="*{lastName}" required>
+                <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></label>
+            </td>
+        </tr>
+        <tr>
+            <th><label>Age</label></th>
+            <td>
+                <input type="text" th:field="*{age}">
+                <label th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="error"></label>
+            </td>
+        </tr>
+        <tr>
+            <th><label>Phone Number</label></th>
+            <td>
+                <input type="text" th:field="*{phoneNumber}">
+                <label th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="error"></label>
+            </td>
+        </tr>
+        <tr>
+            <th><label>Email</label></th>
+            <td>
+                <input type="text" th:field="*{email}">
+                <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></label>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
