@@ -15,15 +15,15 @@ public class Song {
     private Integer id;
     @NotEmpty(message = "{errorNull}")
     @Size(max=800, message = "{errorSize}")
-    @Pattern(regexp = "^[a-zA-Z0-9]*$",message = "{errorRegex}")
+    @Pattern(regexp = "^[a-zA-Z0-9 ]*$",message = "{errorRegex}")
     private String nameSong;
     @NotEmpty(message = "{errorNull}")
     @Size(max=1000, message = "{errorsize}")
-    @Pattern(regexp = "^[a-zA-Z0-9]*$",message = "{errorRegex}")
+    @Pattern(regexp = "^[a-zA-Z0-9 ]*$",message = "{errorRegex}")
     private String singer;
     @NotEmpty(message = "{errorNull}")
     @Size(max=300, message = "{errorsize}")
-    @Pattern(regexp = "^[a-zA-Z0-9,]*$",message = "{errorKindOfMusic}")
+    @Pattern(regexp = "^[a-zA-Z0-9, ]*$*$",message = "{errorKindOfMusic}")
     private String kindOfMusic;
     
     public Song() {
