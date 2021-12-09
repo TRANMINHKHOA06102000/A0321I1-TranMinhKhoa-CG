@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/product/layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="~{/product/layout::header}">
+    </div>
+    <div class="row">
+        <div class="card col-sm-3">
+            <img th:src="${cartProduct.imageUrl}" class="card-img-top mt-2" th:alt="${cartProduct.name}">
+            <div class="card-body mb-2">
+                <h5 class="card-title text-center">MÃ SẢN PHẨM</h5>
+                <h5 class="card-title text-center" style="" th:text="${cartProduct.id}"></h5>
+                <div>
+                    <h5 class="text-center card-text h-15" style="color: red">Giá:
+                        <th:block th:text="${#numbers.formatDecimal(cartProduct.price, 0, 'POINT', 0, 'COMMA')}">
+                        </th:block>
+                    </h5>
+                </div>
+                <!--                    <a th:href="@{/addCart/__${cartProduct.id}__}">-->
+                <!--                        <input class="btn btn-primary" type="submit" value="Mua ngay">-->
+                <!--                    </a>-->
+                <form class="h-20 mt-6 mb-2 form-group row d-flex justify-content-around"
+                      th:action="@{/addCart/__${cartProduct.id}__}" method="get">
+                    <input name="id" type="text" th:value="${cartProduct.id}" hidden>
+                    <input class="form-control col-sm-6" type="number" name="quantity" min="1" value="1">
+                    <input class="btn btn-primary" type="submit" value="Mua ngay">
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4 th:text="${cartProduct.name}"></h4>
+            <hr>
+            <div>
+                <ul>
+                    <li>Ưu đãi của nhà sản xuất</li>
+                    <li>Mua 1 tặng luôn cửa hàng</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+                        aliquam cumque dolor id minima molestias porro quam quibusdam recusandae saepe
+                        sit suscipit tenetur ullam veniam, voluptates? Eos odio sed voluptates.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
