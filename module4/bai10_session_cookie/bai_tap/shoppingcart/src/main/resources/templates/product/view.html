@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/product/layout::head}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="~{/product/layout::header}">
+    </div>
+    <th:block class="row" th:if="${products != null}">
+        <div class="row">
+            <div class="card col-sm-3">
+                <img th:src="${products.imageUrl}" class="card-img-top mt-2" th:alt="${products.name}">
+                <div class="card-body mb-2">
+                    <h5 class="card-title text-center">MÃ SẢN PHẨM</h5>
+                    <h5 class="card-title text-center" style="" th:text="${products.id}"></h5>
+                    <div>
+                        <h5 class="text-center card-text h-15" style="color: red">Giá:
+                            <th:block
+                                    th:text="${#numbers.formatDecimal(products.price, 0, 'POINT', 0, 'COMMA')}">
+                            </th:block>
+                        </h5>
+                    </div>
+                    <form class="h-20 mt-6 mb-2 form-group row d-flex justify-content-around"
+                          th:action="@{/addCart}" method="get">
+                        <input name="id" type="text" th:value="${products.id}" hidden>
+                        <input class="form-control col-sm-6" type="number" name="quantity" min="1" value="1">
+                        <input class="btn btn-primary" type="submit" value="Mua ngay">
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4 th:text="${products.name}"></h4>
+                <hr>
+                <div>
+                    <ul>
+                        <li>Ưu đãi của nhà sản xuất</li>
+                        <li>Mua 1 tặng luôn cửa hàng</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus,
+                            aliquam cumque dolor id minima molestias porro quam quibusdam recusandae saepe
+                            sit suscipit tenetur ullam veniam, voluptates? Eos odio sed voluptates.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </th:block>
+</div>
+</body>
+</html>
