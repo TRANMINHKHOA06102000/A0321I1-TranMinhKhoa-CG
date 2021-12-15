@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/list.js"></script>
+</head>
+<body>
+<h1>Blogs</h1>
+<h3 th:text="${message}" style="color: green"></h3>
+<a href="/showCreateBlog">Create new blog</a>
+<form>
+    Search by author:
+    <input name="s" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+<br/>
+Search by author ajax:
+<input type="text" name="nameAuthor" id="nameAuthor"/>
+<button onclick="getListAuthor();">Search</button>
+<br/>
+<br/>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Author</th>
+        <th>Content</th>
+        <th>Create Date</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th scope="col" colspan="3">Action</th>
+    </tr>
+    </thead>
+
+    <tbody id="result">
+    <th:block th:each="blog : ${listBlog}" id="result">
+        <tr>
+            <td th:text="${blog.author}"></td>
+            <td th:text="${blog.content}"></td>
+            <td th:text="${blog.createDate}"></td>
+            <td th:text="${blog.title}"></td>
+            <td th:text="${blog.category.categoryName}"></td>
+            <td><a th:href="@{/{id}/view(id=${blog.id})}">View</a></td>
+            <td><a th:href="@{/edit/__${blog.id}__}">Edit</a></td>
+            <td><a th:href="@{/delete/__${blog.id}__}">Delete</a></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<div>
+    <a th:href="@{'/'(page=${listBlog.number - 1})}" th:if="${listBlog.hasPrevious()}">Previous</a>
+    <span th:text="${listBlog.number+1}"></span>/<span th:text="${listBlog.totalPages}"></span>
+    <a th:href="@{'/'(page=${listBlog.number + 1})}" th:if="${listBlog.hasNext()}">Next</a>
+</div>
+<button onclick="getList();">xem thêm</button>
+</body>
+</html>
