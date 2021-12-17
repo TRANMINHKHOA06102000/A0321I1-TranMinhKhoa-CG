@@ -14,5 +14,4 @@ public interface BlogRepository extends PagingAndSortingRepository<Blog,Integer>
     Iterable<Blog> findAllByCategory(Category category);
     Page<Blog> findAllByAuthorContaining(String author, Pageable pageable);
     List<Blog> findByAuthorContains(String name);
-    List<Blog> findAll();
 }

@@ -23,10 +23,10 @@ public class BlogServiceImpl implements BlogService {
 //    }
 
 
-    @Override
-    public List<Blog> findAll() {
-        return blogRepository.findAll();
-    }
+//    @Override
+//    public List<Blog> findAll() {
+//        return blogRepository.findAll();
+//    }
 
     @Override
     public Page<Blog> findAll(Pageable pageable) {

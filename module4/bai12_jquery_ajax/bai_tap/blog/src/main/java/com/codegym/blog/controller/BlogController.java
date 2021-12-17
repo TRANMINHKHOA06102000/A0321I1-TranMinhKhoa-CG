@@ -10,12 +10,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -119,5 +121,17 @@ public class BlogController {
         blogService.remove(id);
         redirectAttributes.addFlashAttribute("message", "Delete " + blog.getTitle() + " success");
         return "redirect:/";
+    }
+
+//    @GetMapping("/listBlog")
+//    public List<Blog> findBlog() {
+//        List<Blog> blogs = blogService.findAll();
+//        return blogs;
+//    }
+
+    @GetMapping("/listBlog")
+    public String listBlogAll(Model model,Pageable pageable) {
+        model.addAttribute("listBlog", blogService.findAll(pageable));
+        return "list";
     }
 }

@@ -7,6 +7,7 @@
     <script src="/js/list.js"></script>
 </head>
 <body>
+<div class="body">
 <h1>Blogs</h1>
 <h3 th:text="${message}" style="color: green"></h3>
 <a href="/showCreateBlog">Create new blog</a>
@@ -18,7 +19,7 @@
 <br/>
 Search by author ajax:
 <input type="text" name="nameAuthor" id="nameAuthor"/>
-<button onclick="getListAuthor();">Search</button>
+<button class="btn-search">Search</button>
 <br/>
 <br/>
 <table border="1">
@@ -53,6 +54,7 @@ Search by author ajax:
     <span th:text="${listBlog.number+1}"></span>/<span th:text="${listBlog.totalPages}"></span>
     <a th:href="@{'/'(page=${listBlog.number + 1})}" th:if="${listBlog.hasNext()}">Next</a>
 </div>
-<button onclick="getList();">xem thêm</button>
+<button class="btn-view">xem thêm</button>
+</div>
 </body>
 </html>
