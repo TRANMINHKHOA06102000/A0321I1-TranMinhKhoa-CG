@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1 th:text="#{blog.edit.title}"></h1>
+<p>
+    <a href="/" th:text="#{blog.back}"></a>
+</p>
+<form th:action="@{/edit}" th:object="${blog}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td th:text="#{blog.view.author}"></td>
+            <td><input type="text" th:field="*{author}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.content}"></td>
+            <td><input type="text" th:field="*{content}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.createDate}"></td>
+            <td><input type="date" th:field="*{createDate}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.title}"></td>
+            <td><input type="text" th:field="*{title}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.category}">Category:</td>
+            <td>
+                <select name="category">
+                    <option th:each="c : ${category}"
+                            th:value="${c.categoryId}"
+                            th:text="${c.categoryName}"
+                            th:selected="(${c.categoryId} == *{category.categoryId})"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" th:value="#{blog.button.update}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
