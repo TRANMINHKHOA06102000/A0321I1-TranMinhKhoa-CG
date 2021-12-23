@@ -1,0 +1,7 @@
+***Annotation @OneToMany định nghĩa quan hệ giữa company và employee là 1-n. Trong đó có thuộc tính fetch:
+- fetch = FetchType.LAZY tức là khi bạn find, select đối tượng Company từ database thì nó sẽ không lấy các
+đối tượng Employee liên quan
+- fetch = FetchType.EAGER tức là khi bạn find, select đối tượng Company từ database thì tất cả các đối tượng
+Employee liên quan sẽ được lấy ra và lưu vào listEmployee
+- Với annotation @ManyToOne và @OneToOne thì fetchType mặc định là EAGER
+- Với annotation @ManyToMany và @OneToMany thì fetchType mặc định là LAZY
