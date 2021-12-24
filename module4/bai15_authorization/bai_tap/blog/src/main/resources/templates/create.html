@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create blog</title>
+</head>
+<body>
+<h1 th:text="#{blog.create.title}">Create blog</h1>
+<p>
+    <a href="/" th:text="#{blog.back}"></a>
+</p>
+<!--<div sec:authorize="isAuthenticated()">-->
+<!--    <a th:href="@{/}">Home</a> | <a th:href="@{/logout}">Logout</a>-->
+<!--</div>-->
+<form th:action="@{/createBlog}" th:object="${blog}" method="post">
+    <table>
+        <tr>
+            <td th:text="#{blog.view.author}"></td>
+            <td><input type="text" th:field="*{author}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.createDate}"></td>
+            <td><input type="date" th:field="*{createDate}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.content}"></td>
+            <td><input type="text" th:field="*{content}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.title}"></td>
+            <td><input type="text" th:field="*{title}"/></td>
+        </tr>
+        <tr>
+            <td th:text="#{blog.view.category}"></td>
+            <td>
+                <select th:field="*{category}">
+                    <option th:each="c : ${category}" th:value="${c.categoryId}" th:text="${c.categoryName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" th:value="#{blog.button.create}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

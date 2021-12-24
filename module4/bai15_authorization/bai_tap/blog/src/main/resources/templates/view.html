@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 th:text="#{blog.view}"></h3>
+<p>
+    <a th:href="@{/}" th:text="#{blog.back}" ></a>
+</p>
+<!--<div sec:authorize="isAuthenticated()">-->
+<!--    <a th:href="@{/}">Home</a> | <a th:href="@{/logout}">Logout</a>-->
+<!--</div>-->
+<div id="detail">
+    <div class="cusdetail">
+        <label th:text="#{blog.view.author}"></label>
+        <label th:text="${blog.author}"></label>
+    </div>
+    <div class="cusdetail">
+        <label th:text="#{blog.view.content}"></label>
+        <label th:text="${blog.content}"></label>
+    </div>
+    <div class="cusdetail">
+        <label th:text="#{blog.view.createDate}"></label>
+        <label th:text="${blog.createDate}"></label>
+    </div>
+    <div class="cusdetail">
+        <label th:text="#{blog.view.title}"></label>
+        <label th:text="${blog.title}"></label>
+    </div>
+</div>
+<footer></footer>
+</body>
+</html>
