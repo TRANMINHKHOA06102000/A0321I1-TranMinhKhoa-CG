@@ -4,35 +4,35 @@ import javax.persistence.*;
 
 @Entity
 public class ContractDetail {
-    @EmbeddedId
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private ContractDetailKey contractDetailId;
+    private int contractDetailId;
     private int quantity;
 
-    //    @ManyToOne(targetEntity = Contract.class)
-//    @JoinColumn(name = "contractId", referencedColumnName = "contractId")
-//    private Contract contract;
-    @ManyToOne
-    @MapsId("contractId")
-    @JoinColumn(name = "contractId")
+    @ManyToOne(targetEntity = Contract.class)
+    @JoinColumn(name = "contractId", referencedColumnName = "contractId")
     private Contract contract;
+//    @ManyToOne
+//    @MapsId("contractId")
+//    @JoinColumn(name = "contractId")
+//    private Contract contract;
 
-    //    @ManyToOne(targetEntity = AttachService.class)
-//    @JoinColumn(name = "attachServiceId",referencedColumnName = "attachServiceId")
-//    private AttachService attachService;
-    @ManyToOne
-    @MapsId("attachServiceId")
-    @JoinColumn(name = "attachServiceId")
+    @ManyToOne(targetEntity = AttachService.class)
+    @JoinColumn(name = "attachServiceId", referencedColumnName = "attachServiceId")
     private AttachService attachService;
+//    @ManyToOne
+//    @MapsId("attachServiceId")
+//    @JoinColumn(name = "attachServiceId")
+//    private AttachService attachService;
 
     public ContractDetail() {
     }
 
-    public ContractDetailKey getContractDetailId() {
+    public int getContractDetailId() {
         return contractDetailId;
     }
 
-    public void setContractDetailId(ContractDetailKey contractDetailId) {
+    public void setContractDetailId(int contractDetailId) {
         this.contractDetailId = contractDetailId;
     }
 
