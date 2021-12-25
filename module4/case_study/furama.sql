@@ -1,4 +1,5 @@
-create database furama_module4;
+-- create database furama_module4;
+-- drop database furama_module4;
 
 insert into `position`(position_name) values
 ('Lễ Tân'),
@@ -27,23 +28,33 @@ insert into `role`(role_name) values
 
 insert into `user`(user_name,`password`) values
 ('Khoa','12345'),
-('Tuấn','12345'),
+('Tuan','12345'),
 ('Minh','12345'),
-('Nguyệt','12345');
+('Tam','12345'),
+('An','12345'),
+('Hoa','12345'),
+('Ly','12345');
 
 insert into user_role(user_name,role_id) values
 ('Khoa',1),
-('Tuấn',2),
+('Tuan',2),
 ('Minh',3),
-('Nguyệt',3);
+('Tam',3),
+('An',3),
+('Hoa',3),
+('Ly',3);
 
 insert into employee
 (employee_name,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,
 employee_address,position_id,education_degree_id,division_id,user_name) 
 values
-('Hoa Vo Khuyet1','2000-12-06','123123123456',10000000,'0357740063','khoa425@gmail.com','Đà Nẵng',1,1,1,'Khoa'),
-('Hoa Vo Khuyet2','2000-12-06','123123123456',10000000,'0357740063','khoa435@gmail.com','Đà Nẵng',2,2,2,'Minh'),
-('Hoa Vo Khuyet3','2000-12-06','123123123456',10000000,'0357740063','khoa455@gmail.com','Đà Nẵng',3,3,3,'Nguyệt');
+('Võ Phi Dương','2000-12-06','123123123456',10000000,'0357740063','khoa425@gmail.com','Đà Nẵng',1,1,1,'Khoa'),
+('Nguyễn Hoài Bão','2000-12-06','123123123458',10000000,'0357740063','khoa4335@gmail.com','Đà Nẵng',2,2,2,'Tuan'),
+('Sùng Hạo','2000-12-06','123123123457',10000000,'0357740022','khoa4325@gmail.com','Đà Nẵng',2,2,2,'Minh'),
+('Lạc Nam','2000-12-06','123123123455',10000000,'0357740033','khoa4135@gmail.com','Đà Nẵng',2,2,2,'An'),
+('Diệp Tử Yên','2000-12-06','123123123459',10000000,'0357740093','khoa4365@gmail.com','Đà Nẵng',2,2,2,'Tam'),
+('Long Ngạo','2000-12-06','123123123451',10000000,'0357740098','khoa3435@gmail.com','Đà Nẵng',2,2,2,'Ly'),
+('Hoàng Phi Long','2000-12-06','123123123452',10000000,'0357740063','khoa455@gmail.com','Đà Nẵng',3,3,3,'Hoa');
 
 insert into customer_type(customer_type_name) values
 ('Diamond'),

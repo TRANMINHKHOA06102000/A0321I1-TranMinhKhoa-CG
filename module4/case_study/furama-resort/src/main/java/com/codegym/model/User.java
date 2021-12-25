@@ -17,7 +17,7 @@ public class User {
     )
     private Set<Role> roles;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
     private Employee employee;
 
     public User() {

@@ -10,7 +10,7 @@ public class Position {
     private int positionId;
     private String positionName;
 
-    @OneToMany(mappedBy = "position")
+    @OneToMany(mappedBy = "position",cascade = CascadeType.ALL)
     private Set<Employee> employees;
 
     public Position() {

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Detail Employee</h3>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Id: </label>
+        <label th:text="${employee.employeeId}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Name: </label>
+        <label th:text="${employee.employeeName}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>BirthDay: </label>
+        <label th:text="${employee.employeeBirthday}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Id Card: </label>
+        <label th:text="${employee.employeeIdCard}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Salary: </label>
+        <label th:text="${employee.employeeSalary}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Phone: </label>
+        <label th:text="${employee.employeePhone}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Email: </label>
+        <label th:text="${employee.employeeEmail}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Address: </label>
+        <label th:text="${employee.employeeAddress}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Employee's position: </label>
+        <label th:text="${employee.position.getPositionName()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Employee's Education Degree: </label>
+        <label th:text="${employee.educationDegree.getEducationDegreeName()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Employee's Division: </label>
+        <label th:text="${employee.division.getDivisionName()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>UserName: </label>
+        <label th:text="${employee.user.userName}"></label>
+    </div>
+</div>
+</body>
+</html>

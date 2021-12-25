@@ -32,7 +32,7 @@ public class Employee {
     @JoinColumn(name = "userName", referencedColumnName = "userName")
     private User user;
     
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
     private Set<Contract> contracts;
 
     public Employee() {

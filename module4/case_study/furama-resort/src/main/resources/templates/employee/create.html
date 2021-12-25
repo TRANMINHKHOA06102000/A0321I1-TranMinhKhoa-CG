@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create employee</title>
+</head>
+<body>
+<h1>Create employee</h1>
+<p>
+    <a href="/listEmployee">Back</a>
+</p>
+<form th:action="@{/createEmployee}" th:object="${employee}" method="post">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" th:field="*{employeeName}"/></td>
+        </tr>
+        <tr>
+            <td>BirthDay</td>
+            <td><input type="text" th:field="*{employeeBirthday}"/></td>
+        </tr>
+        <tr>
+            <td>Id Card</td>
+            <td><input type="text" th:field="*{employeeIdCard}"/></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="text" th:field="*{employeeSalary}"/></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" th:field="*{employeePhone}"/></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" th:field="*{employeeEmail}"/></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" th:field="*{employeeAddress}"/></td>
+        </tr>
+        <tr>
+            <td>Employee's position</td>
+            <td>
+                <select th:field="*{position}">
+                    <option th:each="c : ${listPosition}" th:value="${c.positionId}" th:text="${c.positionName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Employee's Education Degree</td>
+            <td>
+                <select th:field="*{educationDegree}">
+                    <option th:each="e : ${listDegree}" th:value="${e.educationDegreeId}" th:text="${e.educationDegreeName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Employee's Division</td>
+            <td>
+                <select th:field="*{division}">
+                    <option th:each="di : ${listDivision}" th:value="${di.divisionId}" th:text="${di.divisionName}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" th:field="*{user.userName}"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
