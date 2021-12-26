@@ -40,17 +40,19 @@ function showDelete(id) {
 }
 
 function actionDelete(id) {
-    $.ajax({
-        type: "POST",
-        url: "actionDelete/" + id,
-        dataType: "HTML",
-        success: function (data) {
-            let message="Delete succsess!!!"
-            setTimeout(function () {
-                $("#modelId").modal('hide')
-            },2000);
-            $("#searchTable").html(data)
-            $(".modal-body").html(message);
-        }
-    })
+    if (confirm('Are you sure you want to delete this employee?')) {
+        $.ajax({
+            type: "POST",
+            url: "actionDelete/" + id,
+            dataType: "HTML",
+            success: function (data) {
+                let message = "Delete succsess!!!"
+                setTimeout(function () {
+                    $("#modelId").modal('hide')
+                }, 2000);
+                $("#searchTable").html(data)
+                $(".modal-body").html(message);
+            }
+        })
+    }
 }

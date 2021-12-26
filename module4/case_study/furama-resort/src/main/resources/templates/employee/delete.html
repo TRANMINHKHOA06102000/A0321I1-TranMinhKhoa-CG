@@ -13,6 +13,7 @@
     Employee's BirthDay: <p th:text="${employee.employeeBirthday}"></p>
     Do you sure to delete?
 </div>
+<!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>-->
 <button id="clickDelete" type="button" class="btn bg-danger"
         th:onclick="'javascript:actionDelete(\''+${employee.employeeId}+'\');'">Delete
 </button>

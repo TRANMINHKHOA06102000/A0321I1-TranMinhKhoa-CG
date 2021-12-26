@@ -16,10 +16,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -78,7 +80,12 @@ public class EmployeeController {
     }
 
     @PostMapping("/createEmployee")
-    public String createEmployee(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
+    public String createEmployee(@Valid @ModelAttribute Employee employee,
+                                 BindingResult bindingResult,
+                                 RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasErrors()){
+            return "/employee/create";
+        }
         employeeService.save(employee);
         redirectAttributes.addFlashAttribute("message", "Add success employee: "
                 + employee.getEmployeeName());
@@ -100,7 +107,12 @@ public class EmployeeController {
     }
 
     @PostMapping("/edit")
-    public String edit(@ModelAttribute Employee employee, RedirectAttributes redirectAttributes) {
+    public String edit(@Valid @ModelAttribute Employee employee, 
+                       BindingResult bindingResult,
+                       RedirectAttributes redirectAttributes) {
+        if (bindingResult.hasErrors()){
+            return "/employee/edit";
+        }
         employeeService.save(employee);
         redirectAttributes.addFlashAttribute("message", "Update " +
                 employee.getEmployeeName() + " success");

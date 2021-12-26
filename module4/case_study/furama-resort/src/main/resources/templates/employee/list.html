@@ -21,13 +21,16 @@
 <body>
 <div id="searchTable">
     <h1>List Employee</h1>
-    <h3 th:text="${message}" style="color: green"></h3>
+    <div class="alert alert-danger alert-dismissible" th:if="${message}">
+        <p th:if="${message}" th:text="${message}"></p>
+<!--        <button type="button" class="close" data-dismiss="alert">&times;</button>-->
+    </div>
     <br/>
-    <a href="/showCreateEmployee">Create</a>
+    <a href="/showCreateEmployee" class="btn btn-outline-dark">Create</a>
     <br/>
     Search by name ajax:
     <input type="text" name="nameEmployee" id="nameEmployee"/>
-    <button class="btn-search bg-danger">Search</button>
+    <button class="btn btn-search btn-outline-dark">Search</button>
     <br/>
     <br/>
     <div>
@@ -57,14 +60,14 @@
                 <td th:text="${employee.educationDegree.getEducationDegreeName()}"></td>
                 <td th:text="${employee.division.getDivisionName()}"></td>
                 <td>
-                    <button class="btn btn-danger btnModalView">View</button>
+                    <button class="btn btn-outline-dark btnModalView">View</button>
                     <input type="hidden" th:value="${employee.employeeId}">
                 </td>
                 <td>
                     <a class="btn btn-outline-dark" th:href="@{/edit/__${employee.employeeId}__}">Update</a>
                 </td>
                 <td>
-                    <button id="btnModalDelete" type="button" class="btn bg-danger"
+                    <button id="btnModalDelete" type="button" class="btn btn-outline-dark"
                             th:onclick="'javascript:showDelete(\''+${employee.employeeId}+'\');'">Delete
                     </button>
                     <!--                <a class="btn btn-outline-dark"  th:href="@{/delete/__${employee.employeeId}__}">Delete</a>-->
@@ -75,9 +78,10 @@
     </div>
     <div>
         <a th:href="@{'/listEmployee'(page=${listEmployee.number - 1})}"
-           th:if="${listEmployee.hasPrevious()}">Previous</a>
+           th:if="${listEmployee.hasPrevious()}" class="btn btn-primary">Previous</a>
         <span th:text="${listEmployee.number+1}"></span>/<span th:text="${listEmployee.totalPages}"></span>
-        <a th:href="@{'/listEmployee'(page=${listEmployee.number + 1})}" th:if="${listEmployee.hasNext()}">Next</a>
+        <a th:href="@{'/listEmployee'(page=${listEmployee.number + 1})}"
+           th:if="${listEmployee.hasNext()}" class="btn btn-primary">Next</a>
     </div>
 </div>
 

@@ -54,7 +54,7 @@ public class SongController {
                        BindingResult bindingResult,
                        RedirectAttributes redirectAttributes) {
         if (bindingResult.hasErrors()){
-            return "song/create";
+            return "song/edit";
         }else {
             songService.save(song);
             redirectAttributes.addFlashAttribute("message", "Update " + song.getNameSong() + " success");
