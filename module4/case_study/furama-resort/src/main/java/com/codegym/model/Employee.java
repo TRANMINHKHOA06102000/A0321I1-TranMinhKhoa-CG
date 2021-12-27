@@ -23,7 +23,8 @@ public class Employee {
     @Pattern(regexp = "(\\d{9}|\\d{12}$)", message = "The length must be 9 or 12 number")
     private String employeeIdCard;
 
-    @Positive // số dương trừ số 0
+    // số dương trừ số 0
+    @Positive(message = "Must be greater than 0")
     private double employeeSalary;
 
     @Pattern(regexp = "^0(\\d{9}$)", message = "The length must be 10 number and start with 0 ")

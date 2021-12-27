@@ -40,7 +40,6 @@ function showDelete(id) {
 }
 
 function actionDelete(id) {
-    if (confirm('Are you sure you want to delete this employee?')) {
         $.ajax({
             type: "POST",
             url: "actionDelete/" + id,
@@ -48,11 +47,10 @@ function actionDelete(id) {
             success: function (data) {
                 let message = "Delete succsess!!!"
                 setTimeout(function () {
-                    $("#modelId").modal('hide')
-                }, 2000);
+                    $("#modelId").modal("hide")
+                }, 1000);
                 $("#searchTable").html(data)
                 $(".modal-body").html(message);
             }
         })
-    }
 }
