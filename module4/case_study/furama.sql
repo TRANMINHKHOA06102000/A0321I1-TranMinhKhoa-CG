@@ -48,7 +48,7 @@ insert into employee
 (employee_name,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,
 employee_address,position_id,education_degree_id,division_id,user_name) 
 values
-('Võ Phi Dương','2000-12-06','123123123456',10000000,'0357740063','khoa425@gmail.com','Đà Nẵng',1,1,1,'Khoa'),
+('Võ Phi Dương','2000-12-06','123123123456',10000000,'0357740063','khoa4755@gmail.com','Đà Nẵng',1,1,1,'Khoa'),
 ('Nguyễn Hoài Bão','2000-12-06','123123123458',10000000,'0357740063','khoa4335@gmail.com','Đà Nẵng',2,2,2,'Tuan'),
 ('Sùng Hạo','2000-12-06','123123123457',10000000,'0357740022','khoa4325@gmail.com','Đà Nẵng',2,2,2,'Minh'),
 ('Lạc Nam','2000-12-06','123123123455',10000000,'0357740033','khoa4135@gmail.com','Đà Nẵng',2,2,2,'An'),
