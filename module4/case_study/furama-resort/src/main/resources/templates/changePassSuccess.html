@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <title>Login V1</title>
+    <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -20,21 +20,10 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="/login/css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!--===============================================================================================-->
 </head>
 <body>
-<div th:if="${#request.getParameter('error') == 'true'}"
-     style="color:red;margin:10px 0px;">
-    Login Failed!!!<br/>
-    Reason : Sai username hoac password
-    <!--    <span th:if="${#session!= null and #session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION') != null}"-->
-    <!--          th:utext="${#session.getAttribute('SPRING_SECURITY_LAST_EXCEPTION').message}">-->
-    <!--                Static summary-->
-    <!--         </span>-->
 
-</div>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
@@ -42,53 +31,16 @@
                 <img src="/login/images/img-01.png" alt="IMG">
             </div>
 
-            <form class="login100-form validate-form" th:action="@{/j_spring_security_check}" method='POST'>
-					<span class="login100-form-title">
-						Login
-					</span>
-
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        <input class="input100" type="text" name="username" placeholder="UserName">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-                    </div>
-
-                    <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100" type="password" name="password" placeholder="Password">
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-md-6 offset-md-4">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember-me"> Remember Me
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-login100-form-btn" style="padding-top: 0px;">
-                        <button type="submit" class="login100-form-btn">
-                            Login
-                        </button>
-                    </div>
-                <div class="text-center p-t-12">
-						<span class="txt1">
-							Forgot
-						</span>
-                    <a class="txt2" href="/forgotPass">
-                        Username / Password?
-                    </a>
-                </div>
-
-            </form>
+            <span style="color: red" class="login100-form-title">
+						Sent new password to your email, please check it!
+            </span>
+            <div class="container-login100-form-btn" style="padding-top: 0px;">
+                <a href="/login" class="btn btn-success">Back to login</a>
+            </div>
         </div>
     </div>
 </div>
+
 
 <!--===============================================================================================-->
 <script src="/login/vendor/jquery/jquery-3.2.1.min.js"></script>
