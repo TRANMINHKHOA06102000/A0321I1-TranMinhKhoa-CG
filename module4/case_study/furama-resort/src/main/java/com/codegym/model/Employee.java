@@ -52,7 +52,7 @@ public class Employee {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userName", referencedColumnName = "userName")
     private User user;
-    
+
     @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL)
     private Set<Contract> contracts;
 

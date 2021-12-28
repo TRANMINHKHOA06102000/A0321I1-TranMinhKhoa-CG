@@ -14,7 +14,7 @@
                  class="icon-furama ">
         </div>
         <div class="col-lg-2 row-text">
-            <p class="text-logo">Trần Minh Khoa</p>
+            <p class="text-logo" th:if="${name != null}" th:utext="${name}"></p>
         </div>
     </div>
 </div>
