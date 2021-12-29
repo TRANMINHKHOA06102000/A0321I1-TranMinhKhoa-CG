@@ -24,11 +24,7 @@ public class HomeController {
     public JavaMailSender javaMailSender;
     
     @GetMapping("/")
-    public String homePage(Model model, Principal principal) {
-        if (principal != null) {
-            String name = "Hello " + principal.getName(); //
-            model.addAttribute("name", name);
-        }
+    public String homePage() {
         return "index";
     }
 
@@ -67,7 +63,7 @@ public class HomeController {
         userRepository.save(user);
 
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("khoa4755@gmail.com");
+        message.setFrom("trankhoadev06@gmail.com");
         message.setTo(email);
         message.setSubject("CÓ CÁI MẬT KHẨU MÀ QUÊN HOÀI!");
         message.setText("Mật khẩu mới là: " + newPass);
