@@ -8,93 +8,122 @@
 </head>
 <body>
 <div th:insert="~{/index::header}"></div>
-<h1>Create employee</h1>
-<form th:action="@{/createEmployee}" th:object="${employee}" method="post">
-    <table>
-        <tr>
-            <td>Name</td>
-            <td><input type="text" th:field="*{employeeName}" minlength="1" maxlength="50"/></td>
-            <td th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}" class="error">Name Error</td>
-        </tr>
-        <tr>
-            <td>BirthDay</td>
-            <td><input type="date" th:field="*{employeeBirthday}"/></td>
-            <td th:if="${#fields.hasErrors('employeeBirthday')}" th:errors="*{employeeBirthday}" class="error">Name
-                Error
-            </td>
-        </tr>
-        <tr>
-            <td>Id Card</td>
-            <td><input type="number" th:field="*{employeeIdCard}"/></td>
-            <td th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{employeeIdCard}" class="error">Name Error
-            </td>
-        </tr>
-        <tr>
-            <td>Salary</td>
-            <td><input type="number" th:field="*{employeeSalary}"/></td>
-            <td th:if="${#fields.hasErrors('employeeSalary')}" th:errors="*{employeeSalary}" class="error">Name Error
-            </td>
-        </tr>
-        <tr>
-            <td>Phone</td>
-            <td><input type="number" th:field="*{employeePhone}"/></td>
-            <td th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{employeePhone}" class="error">Name Error</td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="text" th:field="*{employeeEmail}" minlength="1" maxlength="50"/></td>
-            <td th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{employeeEmail}" class="error">Name Error</td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td><input type="text" th:field="*{employeeAddress}" minlength="1" maxlength="50"/></td>
-            <td th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{employeeAddress}" class="error">Name
-                Error
-            </td>
-        </tr>
-        <tr>
-            <td>Employee's position</td>
-            <td>
-                <select th:field="*{position}">
-                    <option th:each="c : ${listPosition}" th:value="${c.positionId}"
-                            th:text="${c.positionName}"></option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Employee's Education Degree</td>
-            <td>
-                <select th:field="*{educationDegree}">
-                    <option th:each="e : ${listDegree}" th:value="${e.educationDegreeId}"
-                            th:text="${e.educationDegreeName}"></option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Employee's Division</td>
-            <td>
-                <select th:field="*{division}">
-                    <option th:each="di : ${listDivision}" th:value="${di.divisionId}"
-                            th:text="${di.divisionName}"></option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>UserName</td>
-            <td><input type="text" th:field="*{user.userName}" minlength="1" maxlength="10" required/></td>
-            <td th:if="${#fields.hasErrors('user.userName')}" th:errors="*{user.userName}" class="error">Name Error</td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="text" th:field="*{user.password}" minlength="1" maxlength="10" required/></td>
-            <td th:if="${#fields.hasErrors('user.password')}" th:errors="*{user.password}" class="error">Name Error</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><input type="submit" value="Create" class="btn btn-primary"></td>
-        </tr>
-    </table>
-</form>
+<h1 class="title">Create employee</h1>
+<div id="layoutSidenav_content">
+    <main>
+        <form method="post" th:action="@{/createEmployee}" th:object="${employee}" id="form_layout">
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="name">Employee's name</label>
+                    <input type="text" th:field="*{employeeName}" minlength="1" maxlength="50"
+                           class="form-control" id="name">
+                    <span class="error" th:if="${#fields.hasErrors('employeeName')}"
+                          th:errors="*{employeeName}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="dof">Date of birth</label>
+                    <input type="date" th:field="*{employeeBirthday}" class="form-control" id="dof"/>
+                    <span class="error" th:if="${#fields.hasErrors('employeeBirthday')}"
+                          th:errors="*{employeeBirthday}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="idCard">Id Card</label>
+                    <input type="text" th:field="*{employeeIdCard}" class="form-control" id="idCard">
+                    <span class="error" th:if="${#fields.hasErrors('employeeIdCard')}"
+                          th:errors="*{employeeIdCard}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="salary">Salary</label>
+                    <input type="number" th:field="*{employeeSalary}" class="form-control" id="salary"/>
+                    <span class="error" th:if="${#fields.hasErrors('employeeSalary')}"
+                          th:errors="*{employeeSalary}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="phone">Phone</label>
+                    <input type="number" th:field="*{employeePhone}" class="form-control" id="phone">
+                    <span class="error" th:if="${#fields.hasErrors('employeePhone')}"
+                          th:errors="*{employeePhone}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="email">Email</label>
+                    <input type="text" th:field="*{employeeEmail}" minlength="1" maxlength="50"
+                           class="form-control" id="email">
+                    <span class="error" th:if="${#fields.hasErrors('employeeEmail')}"
+                          th:errors="*{employeeEmail}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="address">Address</label>
+                    <input type="text" th:field="*{employeeAddress}" minlength="1" maxlength="50"
+                           class="form-control" id="address">
+                    <span class="error" th:if="${#fields.hasErrors('employeeAddress')}"
+                          th:errors="*{employeeAddress}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="position">Employee's Position</label>
+                    <select th:field="*{position}"
+                            id="position" class="form-control">
+                        <option th:each="position : ${listPosition}" th:value="${position.positionId}"
+                                th:text="${position.positionName}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="degree">Employee's Degree</label>
+                    <select th:field="*{educationDegree}"
+                            id="degree" class="form-control">
+                        <option th:each="degree : ${listDegree}" th:value="${degree.educationDegreeId}"
+                                th:text="${degree.educationDegreeName}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="division">Employee's Divison</label>
+                    <select th:field="*{division}"
+                            id="division" class="form-control">
+                        <option th:each="type : ${listDivision}" th:value="${type.divisionId}"
+                                th:text="${type.divisionName}"></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="acc">Account name</label>
+                    <input type="text" th:field="*{user.userName}" minlength="1" maxlength="10" required
+                           class="form-control" id="acc">
+                    <span class="error" th:if="${#fields.hasErrors('user.userName')}"
+                          th:errors="*{user.userName}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="pass">Password</label>
+                    <input type="password" th:field="*{user.password}" minlength="1" maxlength="10" required
+                           class="form-control" id="pass">
+                    <span class="error" th:if="${#fields.hasErrors('user.password')}"
+                          th:errors="*{user.password}">Name Error</span>
+                </div>
+            </div>
+            <input type="submit" value="Create" class="btn btn-primary mt-2 mb-2">
+            <a href="/listEmployee" class="btn btn-warning mt-2 ml-2 mb-2">Back to list</a>
+        </form>
+    </main>
+</div>
 <script src="assert/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

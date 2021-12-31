@@ -1,6 +1,8 @@
 -- create database furama_module4;
 -- drop database furama_module4;
 -- SET SQL_SAFE_UPDATES = 0;
+-- update user set password='$2a$10$cejOX4094YUqZLIFQXg0meLO7/TQqnxJqPcZNeHim0G..M0t2/WhS';
+
 
 insert into `position`(position_name) values
 ('Lễ Tân'),
