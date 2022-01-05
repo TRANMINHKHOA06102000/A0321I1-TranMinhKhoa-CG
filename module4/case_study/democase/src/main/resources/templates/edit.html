@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Discount</title>
+</head>
+<body>
+<div>
+    <form th:action="@{/save}" th:method="post" th:object="${discount}">
+        <label>
+            <input type="text" th:field="*{id}" hidden>
+        </label>
+        <div>
+            <label>Tiêu đề:</label>
+            <label>
+                <input type="text" th:field="*{title}" required>
+            </label>
+        </div>
+        <div>
+            <label>Thời gian bắt đầu</label>
+            <label>
+                <input type="date" th:field="*{startDate}" required>
+            </label>
+        </div>
+        <div>
+            <label>Thời gian kết thúc</label>
+            <label>
+                <input type="date" th:field="*{endDate}" required>
+            </label>
+        </div>
+        <div>
+            <label>Mức giảm giá</label>
+            <label>
+                <input type="number" th:field="*{discounts}" required>
+            </label>
+        </div>
+        <div>
+            <label>Chi tiết</label>
+            <label>
+                <textarea th:field="*{details}" rows="10" cols="150" required></textarea>
+            </label>
+        </div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <a th:href="@{/}">Back to list</a>
+</div>
+</body>
+</html>

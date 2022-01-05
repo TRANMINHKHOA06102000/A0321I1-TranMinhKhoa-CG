@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Discount</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form th:action="@{/save}" th:method="post" th:object="${discount}">
+    <div>
+        <label>Tiêu đề:</label>
+        <label>
+            <input type="text" th:field="*{title}" >
+        </label>
+        <label class="text-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></label>
+    </div>
+    <div>
+        <label>Thời gian bắt đầu: </label>
+        <label>
+            <input type="date" th:field="*{startDate}" >
+        </label>
+        <label class="text-danger" th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></label>
+    </div>
+    <div>
+        <label>Thời gian kết thúc: </label>
+        <label>
+            <input type="date" th:field="*{endDate}" >
+        </label>
+        <label class="text-danger" th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></label>
+    </div>
+    <div>
+        <label>Mức giảm giá: </label>
+        <label>
+            <input type="number" th:field="*{discounts}" >
+        </label>
+        <label class="text-danger" th:if="${#fields.hasErrors('discounts')}" th:errors="*{discounts}"></label>
+    </div>
+    <div>
+        <label>Chi tiết</label>
+        <label>
+            <textarea th:field="*{details}" rows="10" cols="150" ></textarea>
+        </label>
+        <label class="text-danger" th:if="${#fields.hasErrors('details')}" th:errors="*{details}"></label>
+    </div>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+<a th:href="@{/}">Back to list</a>
+</body>
+</html>

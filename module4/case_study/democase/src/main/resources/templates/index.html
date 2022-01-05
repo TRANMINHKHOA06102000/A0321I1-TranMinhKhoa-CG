@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body>
+<h3>List Blog</h3>
+<a th:href="@{/create}">Create Discount</a>
+<div>
+    <form>
+        Search by title:
+        <input name="s" type="text"/>
+        <input type="submit" value="Search"/>
+    </form><br/>
+</div>
+<th:block th:if="${discount != null} ">
+    <table>
+        <tr>
+            <th>Tiêu đề</th>
+            <th>Thời gian bắt đầu</th>
+            <th>Thời gian kết thúc</th>
+            <th>Mức giảm giá</th>
+            <th>Chi tiết</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+        </tr>
+        <tr th:each="dis, discountStat : ${discount}">
+            <td>
+                <a th:text="${dis.title}" th:href="@{/{id}/view(id=${dis.id})}"></a>
+            </td>
+            <td>
+                <label th:text="${dis.startDate}"></label>
+            </td>
+            <td>
+                <label th:text="${dis.endDate}"></label>
+            </td>
+            <td>
+                <label th:text="${dis.discounts}"></label>
+            </td>
+            <td>
+                <label th:text="${#strings.abbreviate(dis.details,150)}"></label>
+            </td>
+            <td><a th:href="@{/{id}/edit(id=${dis.id})}">Edit</a></td>
+            <td>
+<!--                <button class="btn btn-outline-danger"-->
+<!--                        th:onclick="'javascript:deleteDiscount(' + ${dis.id} + ')'">Delete-->
+<!--                </button>-->
+                <a th:href="@{/{id}/delete(id=${dis.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</th:block>
+<!--<script>-->
+<!--    function deleteDiscount(id) {-->
+<!--        if (confirm("Are you sure to delete?")) {-->
+<!--            $.ajax({-->
+<!--                type: 'POST',-->
+<!--                url: '/{id}/delete',-->
+<!--                dataType: "HTML",-->
+<!--                data: {-->
+<!--                    id: id,-->
+<!--                },-->
+<!--                success: (data) => {-->
+<!--                    $("#result").html(data)-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>

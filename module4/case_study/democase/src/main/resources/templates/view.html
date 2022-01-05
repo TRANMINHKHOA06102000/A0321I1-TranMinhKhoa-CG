@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View detail discount</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="content-div">
+    <h4 th:text="${discount.title}"></h4>
+    <p> <lable>Thời gian bắt đầu: </lable>
+        <span th:text="${discount.startDate}"></span>
+        <label>     Thời gian kết thúc: </label>
+        <span th:text="${discount.endDate}"></span>
+    </p>
+    <hr>
+    <p th:text="${discount.discounts}"></p>
+    <p th:text="${discount.details}"></p>
+
+    <a th:href="@{/}">Back to list</a>
+</div>
+</body>
+</html>
