@@ -51,19 +51,35 @@ public class EmployeeController {
         return educationDegreeRepository.findAll();
     }
 
+    //    @GetMapping("/listEmployee")
+//    public String listEmployee(Model model,
+//                               @RequestParam("s") Optional<String> s,
+//                               @RequestParam(name = "page", required = false, defaultValue = "0") int page,
+//                               @RequestParam(name = "size", required = false, defaultValue = "3") int size,
+//                               @RequestParam(name = "sort", required = false, defaultValue = "ASC") String sort) {
+//        Sort order = null;
+//        if (sort.equals("ASC")) {
+//            order = Sort.by("employeeIdCard").ascending();
+//        } else if (sort.equals("DESC")) {
+//            order = Sort.by("employeeIdCard").descending();
+//        }
+//        Pageable pageable = PageRequest.of(page, size, order);
+//        Page<Employee> employeePage;
+//        if (s.isPresent()) {
+//            employeePage = employeeService.findAllByEmployeeNameContaining(s.get(), pageable);
+//        } else {
+//            employeePage = employeeService.findAll(pageable);
+//        }
+//        model.addAttribute("listEmployee", employeePage);
+//        return "/employee/list";
+//    }
     @GetMapping("/listEmployee")
     public String listEmployee(Model model,
                                @RequestParam("s") Optional<String> s,
                                @RequestParam(name = "page", required = false, defaultValue = "0") int page,
-                               @RequestParam(name = "size", required = false, defaultValue = "3") int size,
-                               @RequestParam(name = "sort", required = false, defaultValue = "ASC") String sort) {
-        Sort order = null;
-        if (sort.equals("ASC")) {
-            order = Sort.by("employeeIdCard").ascending();
-        } else if (sort.equals("DESC")) {
-            order = Sort.by("employeeIdCard").descending();
-        }
-        Pageable pageable = PageRequest.of(page, size, order);
+                               @RequestParam(name = "size", required = false, defaultValue = "3") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        //Pageable pageable = PageRequest.of(page, size);
         Page<Employee> employeePage;
         if (s.isPresent()) {
             employeePage = employeeService.findAllByEmployeeNameContaining(s.get(), pageable);
@@ -83,7 +99,7 @@ public class EmployeeController {
     public String createEmployee(@Valid @ModelAttribute Employee employee,
                                  BindingResult bindingResult,
                                  RedirectAttributes redirectAttributes) {
-        if (bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return "/employee/create";
         }
         employeeService.save(employee);
@@ -107,10 +123,10 @@ public class EmployeeController {
     }
 
     @PostMapping("/edit")
-    public String edit(@Valid @ModelAttribute Employee employee, 
+    public String edit(@Valid @ModelAttribute Employee employee,
                        BindingResult bindingResult,
                        RedirectAttributes redirectAttributes) {
-        if (bindingResult.hasErrors()){
+        if (bindingResult.hasErrors()) {
             return "/employee/edit";
         }
         employeeService.save(employee);

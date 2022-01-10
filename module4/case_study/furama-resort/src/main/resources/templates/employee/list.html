@@ -36,6 +36,7 @@
                 <th scope="col">Employee's position</th>
                 <th scope="col">Employee's Education Degree</th>
                 <th scope="col">Employee's Division</th>
+                <th scope="col">Employee id card</th>
                 <th scope="col" colspan="3" style="text-align: center">Action</th>
             </tr>
             </thead>
@@ -50,6 +51,7 @@
                 <td th:text="${employee.position.getPositionName()}"></td>
                 <td th:text="${employee.educationDegree.getEducationDegreeName()}"></td>
                 <td th:text="${employee.division.getDivisionName()}"></td>
+                <td th:text="${employee.employeeIdCard}"></td>
                 <td>
                     <button class="btn btn-outline-dark btnModalView">View</button>
                     <input type="hidden" th:value="${employee.employeeId}">

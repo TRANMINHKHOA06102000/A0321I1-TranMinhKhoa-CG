@@ -3,6 +3,9 @@ package com.codegym.controller;
 import com.codegym.model.Discount;
 import com.codegym.service.DiscountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -10,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class DiscountController {
@@ -18,16 +23,15 @@ public class DiscountController {
     DiscountService discountService;
 
     @GetMapping("/")
-    public ModelAndView getList(@RequestParam(required = false) String s) {
-        ModelAndView modelAndView = new ModelAndView("index");
+    public String listEmployee(Model model, @RequestParam("s") Optional<Integer> s) {
         List<Discount> discounts;
-        if(s != null) {
-            discounts = discountService.findAllByDiscount(s);
-        }else {
+        if (s.isPresent()) {
+            discounts = discountService.findAllByDiscount(s.get());
+        } else {
             discounts = discountService.findAll();
         }
-        modelAndView.addObject("discount", discounts);
-        return modelAndView;
+        model.addAttribute("discount", discounts);
+        return "/list";
     }
 
     @GetMapping("/create")
@@ -46,20 +50,16 @@ public class DiscountController {
         return "redirect:/";
     }
 
-    @GetMapping("/{id}/delete")
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable int id, Model model) {
+        Discount discount = discountService.findById(id);
+        model.addAttribute("discount", discount);
+        return "/delete";
+    }
+
+    @PostMapping("/actionDelete/{id}")
     public String deleteDiscount(@PathVariable int id) {
         discountService.delete(id);
         return "redirect:/";
-    }
-
-    @GetMapping("/{id}/edit")
-    public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("discount", discountService.findById(id));
-        return "edit";
-    }
-
-    @GetMapping("/{id}/view")
-    public ModelAndView view(@PathVariable int id) {
-        return new ModelAndView("view", "discount", discountService.findById(id));
     }
 }

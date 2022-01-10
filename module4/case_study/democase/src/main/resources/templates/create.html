@@ -2,52 +2,62 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create Discount</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Create</title>
+    <link rel="stylesheet" href="/assert/css/furama.css">
+    <link rel="stylesheet" href="/assert/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-<form th:action="@{/save}" th:method="post" th:object="${discount}">
-    <div>
-        <label>Tiêu đề:</label>
-        <label>
-            <input type="text" th:field="*{title}" >
-        </label>
-        <label class="text-danger" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></label>
-    </div>
-    <div>
-        <label>Thời gian bắt đầu: </label>
-        <label>
-            <input type="date" th:field="*{startDate}" >
-        </label>
-        <label class="text-danger" th:if="${#fields.hasErrors('startDate')}" th:errors="*{startDate}"></label>
-    </div>
-    <div>
-        <label>Thời gian kết thúc: </label>
-        <label>
-            <input type="date" th:field="*{endDate}" >
-        </label>
-        <label class="text-danger" th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></label>
-    </div>
-    <div>
-        <label>Mức giảm giá: </label>
-        <label>
-            <input type="number" th:field="*{discounts}" >
-        </label>
-        <label class="text-danger" th:if="${#fields.hasErrors('discounts')}" th:errors="*{discounts}"></label>
-    </div>
-    <div>
-        <label>Chi tiết</label>
-        <label>
-            <textarea th:field="*{details}" rows="10" cols="150" ></textarea>
-        </label>
-        <label class="text-danger" th:if="${#fields.hasErrors('details')}" th:errors="*{details}"></label>
-    </div>
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-</form>
-<a th:href="@{/}">Back to list</a>
+<h1 class="title">Thêm mới chương trình khuyến mãi</h1>
+<div id="layoutSidenav_content">
+    <main>
+        <form th:action="@{/save}" th:method="post" th:object="${discount}" id="form_layout">
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="name">Tiêu đề:</label>
+                    <input type="text" th:field="*{title}" minlength="1" maxlength="50"
+                           class="form-control" id="name">
+                    <span class="error" th:if="${#fields.hasErrors('title')}"
+                          th:errors="*{title}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="dof">Thời gian bắt đầu: </label>
+                    <input type="date" th:field="*{startDate}" class="form-control" id="dof"/>
+                    <span class="error" th:if="${#fields.hasErrors('startDate')}"
+                          th:errors="*{startDate}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="dof1">Thời gian kết thúc: </label>
+                    <input type="date" th:field="*{endDate}" class="form-control" id="dof1"/>
+                    <span class="error" th:if="${#fields.hasErrors('endDate')}"
+                          th:errors="*{endDate}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="idCard">Mức giảm giá:</label>
+                    <input type="number" th:field="*{discounts}" class="form-control" id="idCard">
+                    <span class="error" th:if="${#fields.hasErrors('discounts')}"
+                          th:errors="*{discounts}">Name Error</span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="address">Chi tiết</label>
+                    <textarea type="text" th:field="*{details}" minlength="1" maxlength="50"
+                              class="form-control" id="address"></textarea>
+                    <span class="error" th:if="${#fields.hasErrors('details')}"
+                          th:errors="*{details}">Name Error</span>
+                </div>
+            </div>
+            <input type="submit" value="Thêm mới" class="btn btn-primary mt-2 mb-2">
+            <a href="/" class="btn btn-warning mt-2 ml-2 mb-2">Quay lại</a>
+        </form>
+    </main>
+</div>
+<script src="assert/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

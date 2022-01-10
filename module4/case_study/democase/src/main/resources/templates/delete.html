@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<h1>Xóa?</h1>
+<input type="hidden" th:field="${discount.id}">
+<div>
+    Bạn có muốn xóa chương trình khuyến mãi: <p th:text="${discount.title}"></p>
+</div>
+<button id="clickDelete" type="button" class="btn bg-danger"
+        th:onclick="'javascript:actionDelete(\''+${discount.id}+'\');'">Yes
+</button>
+<a th:href="@{/}" class="btn btn-primary ml-2">No</a>
+</body>
+</html>

@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
@@ -17,7 +18,7 @@ public class Discount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotNull(message = "Không để trống")
+    @NotBlank(message = "Không để trống")
     private String title;
 
     @NotNull(message = "Không để trống")
@@ -33,7 +34,7 @@ public class Discount {
     @NotNull(message = "Không để trống")
     private int discounts;
 
-    @NotNull(message = "Không để trống")
+    @NotBlank(message = "Không để trống")
     private String details;
 
     public Discount() {
