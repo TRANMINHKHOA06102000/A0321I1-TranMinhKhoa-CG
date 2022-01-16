@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../assert/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assert/css/furama.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col-lg-10 row-img">
+            <img src="https://furamavietnam.com/wp-content/uploads/2018/08/logo@2x.png" alt=""
+                 class="icon-furama ">
+        </div>
+    </div>
+</div>
+<div id="layoutSidenav_content">
+    <main>
+        <form id="form_layout">
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="idCus">Customer's ID</label>
+                    <input type="text" class="form-control" id="idCus" formControlName="cus_id">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="inputState11">Customer's name</label>
+                    <input type="text" class="form-control" id="inputState11" formControlName="name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="cus-type">Customer Type</label>
+                    <select class="form-control" id="cus-type" formControlName="cus_type">
+                        <option value="" selected>Vui lòng chọn</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" formControlName="address">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" formControlName="email">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="idCard">Id Card</label>
+                    <input type="text" class="form-control" id="idCard" formControlName="id_card">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" formControlName="phone">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Nam"
+                               checked
+                               formControlName="gender">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="Nữ"
+                               formControlName="gender">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Female
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-10">
+                    <label for="dof">Date of birth</label>
+                    <input type="date" class="form-control" id="dof" formControlName="birthday">
+                </div>
+            </div>
+            <button class="btn btn-primary mt-2 mb-2">Update</button>
+            <a href="listCustomer.html" class="btn btn-warning mt-2 ml-2 mb-2">Back to list</a>
+        </form>
+    </main>
+</div>
+<script src="assert/js/jquery.js"></script>
+<script src="assert/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
