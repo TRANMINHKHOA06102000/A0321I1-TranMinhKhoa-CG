@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/2-typescript/bai-tap/search" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/2-typescript/thuc-hanh/typescript-demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/2-typescript/thuc-hanh/typescript-demo-thuchanh" vcs="Git" />
   </component>
