@@ -1,2 +1,3 @@
-// happy coding 👻
-console.log("hello world");
+import './scss/styles.scss';
+console.log(`Da~ hoat dong roi ne`);
+
