@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fonttop: segoe ui light;
+  --size1: 20px;
+  --fontmid: 'Amiri', serif;
+  --size2: 20px;
+  --colormid: #666666;
+  --size3: 25px;
+}
+
+.bannertop {
+  height: 100px;
+  background-size: cover;
+  position: relative;
+}
+
+.bannertop::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(left, #0000008a 0%, #05050517 50%, #0000008a 100%);
+}
+
+.bannertop .cottong {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  transition: 0.6s;
+  background: #046056;
+  /*position: fixed;*/
+}
+
+.bannertop .cottong:hover {
+
+  background: rgb(11, 55, 44);
+  opacity: 1;
+}
+
+.bannertop .cottong ._1cot {
+  width: 33.33%;
+}
+
+.bannertop .cottong ._1cot.trai {
+  padding: 30px 30px;
+
+}
+
+.bannertop .cottong ._1cot.trai a {
+  color: white;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+.bannertop .cottong ._1cot.trai a img {
+  width: 55px;
+  margin-left: 10px;
+}
+
+.bannertop .cottong ._1cot.trai a:hover {
+  color: rgb(53, 80, 199);
+
+}
+
+.bannertop .cottong ._1cot.giua {
+  text-align: center;
+
+}
+
+.bannertop .cottong ._1cot.giua img {
+  height: 30px;
+  padding-top: 30px;
+}
+
+.bannertop .cottong ._1cot.phai {
+  text-align: right;
+  padding: 30px 30px;
+}
+
+.bannertop .cottong ._1cot.phai a {
+  color: white;
+  padding-left: 10px;
+}
+
+/* end css cottong  */
+.bannertop .textbanner {
+  position: absolute;
+  width: 100%;
+  top: 350px;
+  left: 80px;
+}
+
+.textbanner .content {
+  width: 1170px;
+  margin: auto;
+}
+
+.textbanner .content .small {
+  color: white;
+  font-size: 30px;
+  line-height: 20px;
+  padding-top: 5px;
+}
+
+.textbanner .content .big {
+  color: white;
+  font-family: segoe ui;
+  font-size: 70px;
+  width: 50%;
+  line-height: 2px;
+  padding-top: 5px;
+}
+
+.textbanner .content .big h1 {
+  font-size: 50px;
+}
+
+.bannertop .cottong .giua {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 366px;
+}
+
+.bannertop .cottong .giua .menu li a {
+  margin-right: 5px;
+  padding: 10px 30px 0px 5px;
+  font-size: 25px;
+  opacity: 0.8;
+  color: #e5e5e5;
+  font-family: var(--fonttop);;
+}
+
+.bannertop .cottong .giua .menu li .dropmenu {
+  background: #d8d8d8;
+  margin-left: -40px;
+  opacity: 0.8;
+}
+
+.bannertop .cottong .giua .menu li .dropmenu a {
+  color: black;
+}
+
+.bannertop .cottong .giua .menu li a:hover {
+  opacity: 1;
+  color: #f12a0f;
+  transition: 0.6s;
+}
+
+/* end css top  */
+.bannermid {
+  width: 1170px;
+  margin: auto;
+  padding-top: 80px;
+  display: flex;
+  margin-left: 250px;
+}
+
+.bannermid .left {
+  width: 700px;
+}
+
+.bannermid .left span {
+  font-size: var(--size1);
+  color: var(--colormid);
+}
+
+.bannermid .left h2 {
+  padding-top: 10px;
+  font-family: var(--fonttop);
+  font-size: 30px;
+  color: #cbbe73;
+}
+
+.bannermid .right {
+  padding-left: 80px;
+  line-height: 25px;
+}
+
+.bannermid .right p {
+  font-family: var(--fontmid);
+  font-size: var(--size2);
+  color: var(--colormid);
+  padding-bottom: 20px;
+}
+
+.bannermid .right a {
+  text-decoration: none;
+  font-family: var(--fontmid);
+  font-size: 17px;
+  color: var(--colormid);
+  margin-left: 10px;
+}
+
+.bannermid .right a::before {
+  content: "\f178";
+  font: normal normal normal 14px/1 FontAwesome;
+  position: relative;
+  left: -10px;
+  transition: 0.3s;
+}
+
+.bannermid .right a:hover:before {
+  left: 0;
+}
+
+/* end css bannermid  */
+.bannergiua {
+  height: 1200px;
+  width: 1520px;
+  font-family: var(--fonttop);
+  color: white;
+  margin-top: 100px;
+}
+
+.bannergiua .nenden {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+
+}
+
+.bannergiua .nenden .menu {
+}
+
+.bannergiua .nenden .menu ul {
+  display: flex;
+  width: 700px;
+  height: 100px;
+  margin: auto;
+}
+
+.bannergiua .nenden .menu ul li {
+  padding: 50px 20px;
+  list-style: none;
+}
+
+.bannergiua .nenden .menu ul li .menucon {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.bannergiua .nenden .menu ul li:hover .menucon {
+
+  opacity: 1;
+}
+
+/* end menu  */
+.bannergiua .nenden .anhto {
+  width: 1180px;
+  height: 375px;
+  /* background-color: red; */
+  display: flex;
+  margin-left: 170px;
+  flex-wrap: wrap;
+}
+
+.bannergiua .nenden .anhto .anhlon {
+  padding-top: 25px;
+  width: 530px;
+  height: 350px;
+  margin-left: 40px;
+  position: relative;
+}
+
+.bannergiua .nenden .anhto .anhlon:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 325px;
+  transition: 0.3s;
+}
+
+.bannergiua .nenden .anhto .anhlon:hover:before {
+  background-color: rgb(122, 122, 122);
+  opacity: 0.4;
+}
+
+.bannergiua .nenden .anhto .anhlon .anhnho {
+  width: 100%;
+  height: 100%;
+}
+
+.bannergiua .nenden .anhto .anhlon .chubo {
+
+  position: absolute;
+  top: 180px;
+  left: 200px;
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.bannergiua .nenden .anhto .anhlon .chubo .chuto {
+  position: absolute;
+  top: 55px;
+  color: rgb(39, 39, 39);
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+  background: #046056;
+}
+
+.bannergiua .nenden .anhto .anhlon .chubo .chuto a {
+  color: #333435;
+  text-decoration: none;
+  transition: 0.6s;
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+.bannergiua .nenden .anhto .anhlon .chubo .chuto a:hover {
+  color: #4193e8;
+
+}
+
+.bannergiua .nenden .anhto .anhlon:hover .chubo .chuto {
+
+  top: 5px;
+}
+
+.bannergiua .nenden .anhto .anhlon h1 {
+  display: inline-block;
+  position: absolute;
+  top: 82px;
+  left: 190px;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s;
+  width: 205px;
+  margin-top: 150px;
+  /*margin-left: 40px;*/
+}
+
+.bannergiua .nenden .anhto .anhlon:hover h1 {
+  opacity: 1;
+}
+
+/* end css .bannergiua  */
+
+.banner-footer {
+  margin-top: 200px;
+  display: flex;
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-footer .banner-foot-left {
+
+}
+
+.banner-footer .banner-foot-left .tittle-hotel h3 {
+  color: #cbbe73;
+  text-align: center;
+  font-family: var(--fonttop);
+}
+.banner-footer .banner-foot-left .content-hotel p {
+  text-align: center;
+}
+
+.banner-footer .banner-foot-mid {
+
+}
+
+.banner-footer .banner-foot-mid h3 {
+  color: #cbbe73;
+  text-align: center;
+  font-family: var(--fonttop);
+}
+
+.banner-footer .banner-foot-right {
+
+}
+.banner-footer .banner-foot-right h3{
+  color: #cbbe73;
+  text-align: center;
+  font-family: var(--fonttop);
+}
