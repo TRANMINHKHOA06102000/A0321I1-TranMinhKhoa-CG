@@ -1,0 +1,31 @@
+<h2>Today's article</h2>
+<hr>
+<div>
+  <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+</div>
+<hr>
+<textarea [value]="article.title" cols="70" id="article-title"></textarea>
+<textarea [value]="article.url" cols="70" id="article-url"></textarea>
+<input (click)="updateArticle()" type="button" value="Update">
+
+<!--<textarea [(ngModel)]="article.title" cols="70"></textarea>-->
+<!--<textarea [(ngModel)]="article.url" cols="70"></textarea>-->
+@CodeGym, 2019
+<h1>Article List</h1>
+<div *ngFor="let art of articles">
+  <hr>
+  <a href="{{ art.url }}" target="_blank">{{art.title}}</a><br>
+  <app-likes></app-likes>
+  <textarea [value]="art.title" cols="70" id="art-title"></textarea>
+  <textarea [value]="art.url" cols="70" id="art-url"></textarea>
+  <button (click)='handleViewClick(art)'>Edit</button>
+  <hr>
+</div>
+
+<h1> Add new Title</h1>
+title :<input [(ngModel)]='articleForm.title'><br>
+url : <input [(ngModel)]='articleForm.url'>
+<p>{{articleForm.title}}</p>
+<button (click)='handleClick()'>Add article</button>
+
+

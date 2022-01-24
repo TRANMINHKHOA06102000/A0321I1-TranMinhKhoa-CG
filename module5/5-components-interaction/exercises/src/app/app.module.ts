@@ -9,6 +9,10 @@ import { CountdownTimerAliasComponent } from './countdown-timer-alias/countdown-
 import { CountdownTimerEventComponent } from './countdown-timer-event/countdown-timer-event.component';
 import { CountdownTimerEventAliasComponent } from './countdown-timer-event-alias/countdown-timer-event-alias.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
+import { HackernewsComponent } from './hackernews/hackernews.component';
+import { LikesComponent } from './hackernews/likes/likes.component';
+import { NavbarComponent } from './hackernews/navbar/navbar.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,10 +23,14 @@ import { RatingBarComponent } from './rating-bar/rating-bar.component';
     CountdownTimerAliasComponent,
     CountdownTimerEventComponent,
     CountdownTimerEventAliasComponent,
-    RatingBarComponent
+    RatingBarComponent,
+    HackernewsComponent,
+    LikesComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
