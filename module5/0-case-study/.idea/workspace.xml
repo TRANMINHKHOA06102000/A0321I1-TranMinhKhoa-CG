@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8bb69df5-3893-44d4-ad4a-e71c117485c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/0-case-study.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/exercises/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../7-service-and-router/practice/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="253CeZQcPq4zlgct1rAX7zt6yKf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bb69df5-3893-44d4-ad4a-e71c117485c5" name="Default Changelist" comment="" />
+      <created>1644746478382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644746478382</updated>
+      <workItem from="1644746480108" duration="61000" />
+      <workItem from="1644747898911" duration="349000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
