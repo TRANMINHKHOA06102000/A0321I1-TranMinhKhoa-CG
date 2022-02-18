@@ -1,0 +1,116 @@
+{
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "cus_id": "KH-0001",
+      "cus_type": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "Trần Minh Khoa",
+      "birthday": "2000-10-06",
+      "gender": "Nam",
+      "id_card": "123456789",
+      "phone": "0917740062",
+      "email": "khoa@gmail.com",
+      "address": "Quảng Ngãi"
+    },
+    {
+      "id": 2,
+      "cus_id": "KH-1234",
+      "cus_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Nguyễn Kiều Duyên",
+      "birthday": "2002-09-26",
+      "gender": "Nữ",
+      "id_card": "123456788",
+      "phone": "0915225252",
+      "email": "duyen@gmail.com",
+      "address": "Quảng Trị"
+    },
+    {
+      "id": 3,
+      "cus_id": "KH-2053",
+      "cus_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Huỳnh Đức Thiện",
+      "birthday": "2021-09-24",
+      "gender": "Nam",
+      "id_card": "123456787",
+      "phone": "0969351090",
+      "email": "thien2001@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "cus_id": "KH-8888",
+      "cus_type": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "name": "Nguyễn Huỳnh Như",
+      "birthday": "2021-09-17",
+      "gender": "Nữ",
+      "id_card": "123456786",
+      "phone": "0969351090",
+      "email": "nhu@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 5,
+      "cus_id": "KH-1809",
+      "cus_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Nguyễn Văn Toàn",
+      "birthday": "2021-09-18",
+      "gender": "Nam",
+      "id_card": "123456785",
+      "phone": "0915225252",
+      "email": "toan189@gmail.com",
+      "address": "Quảng Trị"
+    },
+    {
+      "id": 6,
+      "cus_id": "KH-1099",
+      "cus_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Nguyễn Văn Tuấn",
+      "birthday": "2021-09-18",
+      "gender": "Nam",
+      "id_card": "123456784",
+      "phone": "0915225252",
+      "email": "tuan1@gmail.com",
+      "address": "Quảng Ngãi"
+    }
+  ]
+}
