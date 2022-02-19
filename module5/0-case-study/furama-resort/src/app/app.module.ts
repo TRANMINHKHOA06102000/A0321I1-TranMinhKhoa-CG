@@ -8,6 +8,7 @@ import {FooterComponent} from './components/footer/footer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule} from "@angular/common/http";
+import {CustomerModule} from "./customer/customer.module";
 
 @NgModule({
   declarations: [
@@ -18,8 +19,8 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   imports: [
     BrowserModule,
-    CommonModule,
     HttpClientModule,
+    CustomerModule,
     AppRoutingModule,
     FormsModule
   ],

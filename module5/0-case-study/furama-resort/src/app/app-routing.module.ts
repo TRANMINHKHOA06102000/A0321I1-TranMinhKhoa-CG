@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./components/home/home.component";
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
-
+import { CustomerRoutingModule } from './customer/customer-routing.module';
+import {NgxPaginationModule} from 'ngx-pagination';
 const routes: Routes = [
   {
     path: '', component: HomeComponent

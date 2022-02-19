@@ -3,17 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { CustomerListComponent } from './customer-list/customer-list.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxPaginationModule} from "ngx-pagination";
+import { CustomerCreateComponent } from './customer-create/customer-create.component';
 @NgModule({
-  declarations: [CustomerListComponent],
+  declarations: [CustomerListComponent, CustomerCreateComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,
     FormsModule,
     Ng2SearchPipeModule,
     NgxPaginationModule,
+    ReactiveFormsModule,
   ]
 })
 export class CustomerModule { }

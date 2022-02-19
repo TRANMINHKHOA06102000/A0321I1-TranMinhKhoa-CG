@@ -11,7 +11,7 @@
       </div>
     </div>
     <br><br>
-    <!--    <a [routerLink]="'/createCus'" class="btn btn-primary">Create</a>-->
+    <a [routerLink]="'/createCus'" class="btn btn-primary">Create</a>
     <main>
       <table class="table table-striped resultTable" style="margin-left: auto;
                 margin-right: auto;">
@@ -22,7 +22,8 @@
           <th scope="col">Customer's type</th>
           <th scope="col">Address</th>
           <th scope="col">Date of birth</th>
-          <th scope="col" colspan="2">Action</th>
+          <th scope="col">Gender</th>
+          <th scope="col" colspan="2" style="text-align: center">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -34,19 +35,13 @@
           <td>{{cus.address}}</td>
           <td>{{cus.birthday}}</td>
           <td>{{cus.gender}}</td>
-          <td>
-            <a class="btn">
-              <!--            <a class="btn" [routerLink]="['/detailCus', cus.id]">-->
-              <i class="far fa-edit" style="color: #0869f6"></i>
-            </a>
-          </td>
+          <td><a class="btn"><i class="far fa-edit" style="color: #0869f6"></i></a></td>
           <td>
             <button data-toggle="modal" data-target="#idModal" (click)="getCustomerName(cus.id)" class="btn deleteBtn"
                     style="color: #0869f6">
               <i class="far fa-trash-alt" style="color: #0869f6"></i>
             </button>
           </td>
-
         </tr>
         </tbody>
       </table>
