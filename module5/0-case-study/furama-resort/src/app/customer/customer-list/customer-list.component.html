@@ -1,0 +1,76 @@
+<div id="list">
+  <div id="layoutSidenav_content" style="width: 88%;
+    margin-left: 122px;
+    margin-top: 80px;">
+    <h1 style="color:#e20d0d; text-align: center">Customer Management</h1>
+    <div class="formSearch">
+      <div class="autocomplete" style="width:300px;">
+        <input id="myInput" type="text" placeholder="Search by name" [(ngModel)]="searchValue">
+        <button id="submitSearch" type="submit" class="btn btn-success ml-1" (click)="doSearch()">Search</button>
+      </div>
+    </div>
+    <br><br>
+    <!--    <a [routerLink]="'/createCus'" class="btn btn-primary">Create</a>-->
+    <main>
+      <table class="table table-striped resultTable" style="margin-left: auto;
+                margin-right: auto;">
+        <thead>
+        <tr>
+          <th scope="col">Customer's id</th>
+          <th scope="col">Customer's name</th>
+          <th scope="col">Customer's type</th>
+          <th scope="col">Address</th>
+          <th scope="col">Date of birth</th>
+          <th scope="col" colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cus of customers|paginate: { itemsPerPage: 2, currentPage: page }">
+          <td>{{cus.cus_id}}</td>
+          <td><a style="cursor: pointer" class="viewBtn">{{cus.name}}</a>
+          </td>
+          <td>{{cus.cus_type.name}}</td>
+          <td>{{cus.address}}</td>
+          <td>{{cus.birthday}}</td>
+          <td>{{cus.gender}}</td>
+          <td>
+            <a class="btn">
+              <!--            <a class="btn" [routerLink]="['/detailCus', cus.id]">-->
+              <i class="far fa-edit" style="color: #0869f6"></i>
+            </a>
+          </td>
+          <td>
+            <button data-toggle="modal" data-target="#idModal" (click)="getCustomerName(cus.id)" class="btn deleteBtn"
+                    style="color: #0869f6">
+              <i class="far fa-trash-alt" style="color: #0869f6"></i>
+            </button>
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+      <div class="modal fade" id="idModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+           aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Attention!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure to delete: {{name}} ?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteCus(id)">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </main>
+  </div>
+</div>
