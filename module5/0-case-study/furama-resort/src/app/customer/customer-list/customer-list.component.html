@@ -2,11 +2,12 @@
   <div id="layoutSidenav_content" style="width: 88%;
     margin-left: 122px;
     margin-top: 80px;">
-    <h1 style="color:#e20d0d; text-align: center">Customer Management</h1>
-    <div class="formSearch">
-      <div class="autocomplete" style="width:300px;">
-        <input id="myInput" type="text" placeholder="Search by name" [(ngModel)]="searchValue">
-        <button id="submitSearch" type="submit" class="btn btn-success ml-1" (click)="doSearch()">Search</button>
+    <div class="justify-content-between row">
+      <h2>Customer Management</h2>
+      <div class="d-flex">
+        <input id="myInput" class="form-control mr-3 " type="text" tyle="width:400px;" placeholder="Search by name"
+               [(ngModel)]="searchValue">
+        <button id="submitSearch" type="submit" class="btn btn-outline-success" (click)="doSearch()">Search</button>
       </div>
     </div>
     <br><br>

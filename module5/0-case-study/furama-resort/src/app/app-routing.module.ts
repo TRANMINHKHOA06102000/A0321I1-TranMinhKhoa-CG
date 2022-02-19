@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from "./components/home/home.component";
-import {CustomerRoutingModule} from "./customer/customer-routing.module";
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 
 const routes: Routes = [
