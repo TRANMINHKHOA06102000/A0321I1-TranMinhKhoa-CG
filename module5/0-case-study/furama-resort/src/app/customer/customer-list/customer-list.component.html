@@ -35,10 +35,11 @@
           <td>{{cus.address}}</td>
           <td>{{cus.birthday}}</td>
           <td>{{cus.gender}}</td>
-          <td><a class="btn"><i class="far fa-edit" style="color: #0869f6"></i></a></td>
+          <td><a class="btn" [routerLink]="['/updateCus', cus.id]">
+            <i class="far fa-edit" style="color: #0869f6"></i></a></td>
           <td>
-            <button data-toggle="modal" data-target="#idModal" (click)="getCustomerName(cus.id)" class="btn deleteBtn"
-                    style="color: #0869f6">
+            <button data-toggle="modal" data-target="#idModal" (click)="getCustomerName(cus.id)"
+                    class="btn deleteBtn" style="color: #0869f6">
               <i class="far fa-trash-alt" style="color: #0869f6"></i>
             </button>
           </td>

@@ -7,8 +7,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxPaginationModule} from "ngx-pagination";
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
+import { CustomerUpdateComponent } from './customer-update/customer-update.component';
 @NgModule({
-  declarations: [CustomerListComponent, CustomerCreateComponent],
+  declarations: [CustomerListComponent, CustomerCreateComponent, CustomerUpdateComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,
