@@ -35,6 +35,9 @@
             <ng-container *ngFor="let customerType of listTypeCustomer">
               <option [ngValue]="customerType">{{customerType.name}}</option>
             </ng-container>
+<!--            <ng-container *ngFor="let cus of customers">-->
+<!--              <option [ngValue]="cus">{{cus.cus_type.name}}</option>-->
+<!--            </ng-container>-->
           </select>
           <div *ngIf="getType?.invalid && (getType?.dirty|| getType?.touched)">
             <div class="alert alert-danger" [hidden]="!getType?.errors?.required">

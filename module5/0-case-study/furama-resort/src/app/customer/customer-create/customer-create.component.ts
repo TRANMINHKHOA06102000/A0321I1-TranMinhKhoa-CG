@@ -4,6 +4,7 @@ import {TypeCustomerService} from '../services/type-customer.service';
 import {Router} from '@angular/router';
 import {ICustomerType} from '../model/customer-type';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {ICustomer} from "../model/customer";
 
 @Component({
   selector: 'app-customer-create',
@@ -11,7 +12,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./customer-create.component.css']
 })
 export class CustomerCreateComponent implements OnInit {
-
+  public customers!:ICustomer[];
   constructor(private _customerService: CustomerService,
               private _typeService: TypeCustomerService,
               private _router: Router) {
