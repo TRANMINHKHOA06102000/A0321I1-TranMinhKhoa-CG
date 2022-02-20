@@ -11,50 +11,50 @@
   <div class="form-group">
     <p>Vị Trí</p>
     <input class="form-control" type="text" formControlName="position">
-    <p  *ngIf="formCreateNewEmployee.controls.position.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.position.errors?.required &&
                   formCreateNewEmployee.controls.position.touched"
        class="text-danger">Vui lòng nhập vị trí</p>
   </div>
   <div class="form-group">
     <p>Trình Độ</p>
     <input class="form-control" type="text" formControlName="academicLevel">
-    <p  *ngIf="formCreateNewEmployee.controls.academicLevel.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.academicLevel.errors?.required &&
                   formCreateNewEmployee.controls.academicLevel.touched"
        class="text-danger">Vui lòng nhập trình độ</p>
   </div>
   <div class="form-group">
     <p>Bộ Phận</p>
     <input class="form-control" type="text" formControlName="part">
-    <p  *ngIf="formCreateNewEmployee.controls.part.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.part.errors?.required &&
                   formCreateNewEmployee.controls.part.touched"
        class="text-danger">Vui lòng nhập bộ phận</p>
   </div>
   <div class="form-group">
     <p>Ngày Sinh</p>
     <input class="form-control" type="date" formControlName="dateOfBirth">
-    <p  *ngIf="formCreateNewEmployee.controls.dateOfBirth.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.dateOfBirth.errors?.required &&
                   formCreateNewEmployee.controls.dateOfBirth.touched"
        class="text-danger">Vui lòng nhập ngày sinh</p>
   </div>
   <div class="form-group">
     <p>Số CMND</p>
     <input class="form-control" type="text" formControlName="identityNumber">
-    <p  *ngIf="formCreateNewEmployee.controls.identityNumber.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.identityNumber.errors?.required &&
                   formCreateNewEmployee.controls.identityNumber.touched"
        class="text-danger">Vui lòng nhập số cmnd</p>
-    <p  *ngIf="formCreateNewEmployee.controls.identityNumber.errors?.pattern &&
+    <p *ngIf="formCreateNewEmployee.controls.identityNumber.errors?.pattern &&
                   formCreateNewEmployee.controls.identityNumber.touched"
-        class="text-danger">Số CMND không đúng định dạng</p>
+       class="text-danger">Số CMND không đúng định dạng</p>
   </div>
   <div class="form-group">
     <p>Lương</p>
     <input class="form-control" type="text" formControlName="salary">
-    <p  *ngIf="formCreateNewEmployee.controls.salary.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.salary.errors?.required &&
                   formCreateNewEmployee.controls.salary.touched"
        class="text-danger">Vui lòng nhập lương</p>
-    <p  *ngIf="formCreateNewEmployee.controls.salary.errors?.pattern &&
+    <p *ngIf="formCreateNewEmployee.controls.salary.errors?.pattern &&
                   formCreateNewEmployee.controls.salary.touched"
-        class="text-danger">Mức lương không đúng định dạng</p>
+       class="text-danger">Mức lương không đúng định dạng</p>
   </div>
   <div class="form-group">
     <p>Email</p>
@@ -69,21 +69,23 @@
   <div class="form-group">
     <p>Số Điện Thoại</p>
     <input class="form-control" type="text" formControlName="phoneNumber">
-    <p  *ngIf="formCreateNewEmployee.controls.phoneNumber.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.phoneNumber.errors?.required &&
                   formCreateNewEmployee.controls.phoneNumber.touched"
        class="text-danger">Vui lòng nhập số điện thoại</p>
-    <p  *ngIf="formCreateNewEmployee.controls.phoneNumber.errors?.pattern &&
+    <p *ngIf="formCreateNewEmployee.controls.phoneNumber.errors?.pattern &&
                   formCreateNewEmployee.controls.phoneNumber.touched"
-        class="text-danger">Số điện thoại không đúng định dạng</p>
+       class="text-danger">Số điện thoại không đúng định dạng</p>
   </div>
   <div class="form-group">
     <p>Địa Chỉ</p>
     <input class="form-control" type="text" formControlName="address">
-    <p  *ngIf="formCreateNewEmployee.controls.address.errors?.required &&
+    <p *ngIf="formCreateNewEmployee.controls.address.errors?.required &&
                   formCreateNewEmployee.controls.address.touched"
        class="text-danger">Vui lòng nhập địa chỉ</p>
   </div>
 </form>
 <div class="row d-flex justify-content-center mt-4">
-  <button class="btn btn-success" (click)="createEmployee()">Thêm Mới</button>
+  <button [disabled]="formCreateNewEmployee.invalid"
+          class="btn btn-success" (click)="createEmployee()">Thêm Mới
+  </button>
 </div>

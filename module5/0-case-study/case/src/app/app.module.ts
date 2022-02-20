@@ -25,7 +25,7 @@ import { EmployeeCreateComponent } from './employees/employee-create/employee-cr
     HttpClientModule,
     NgxPaginationModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

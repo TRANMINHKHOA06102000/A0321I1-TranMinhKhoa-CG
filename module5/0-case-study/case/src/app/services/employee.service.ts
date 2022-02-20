@@ -21,4 +21,10 @@ export class EmployeeService {
   create(employee):Observable<any>{
     return this._http.post(this.API,employee);
   }
+  delete(id:number):Observable<any>{
+    return this._http.delete<any>(this.API+"/"+id)
+  }
+  findById(id:number):Observable<any>{
+    return this._http.get<any>(this.API+"/"+id);
+  }
 }
