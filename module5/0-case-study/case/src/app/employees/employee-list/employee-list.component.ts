@@ -8,14 +8,20 @@ import {EmployeeService} from "../../services/employee.service";
 })
 export class EmployeeListComponent implements OnInit {
   public employees;
+  public searchValue!:string;
 
-  constructor(public employeeService:EmployeeService) { }
+  constructor(public _employeeService:EmployeeService) { }
 
   ngOnInit(): void {
-    this.employeeService.getAllEmployees().subscribe(data=>{
+    this._employeeService.getAllEmployees().subscribe(data=>{
       this.employees=data;
       console.log(this.employees)
     })
   }
 
+  doSearch(){
+    this._employeeService.search(this.searchValue.trim()).subscribe(
+      (data) => this.employees = data
+    );
+  }
 }

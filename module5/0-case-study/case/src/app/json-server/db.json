@@ -1,7 +1,8 @@
 {
   "employees": [
-    { "id": 1,
-      "fullname": "Trần Minh Khoa",
+    {
+      "id": 1,
+      "fullName": "Trần Minh Khoa",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -12,8 +13,9 @@
       "phoneNumber": "0357740062",
       "address": "Đà Nẵng"
     },
-    { "id": 2,
-      "fullname": "Trần Minh Chiến",
+    {
+      "id": 2,
+      "fullName": "Trần Minh Chiến",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -24,8 +26,9 @@
       "phoneNumber": "0357740072",
       "address": "Đà Nẵng"
     },
-    { "id": 3,
-      "fullname": "Trần Minh Hạo",
+    {
+      "id": 3,
+      "fullName": "Trần Minh Hạo",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -36,8 +39,9 @@
       "phoneNumber": "0357741172",
       "address": "Đà Nẵng"
     },
-    { "id": 4,
-      "fullname": "Trần Minh Thiên",
+    {
+      "id": 4,
+      "fullName": "Trần Minh Thiên",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -48,8 +52,9 @@
       "phoneNumber": "0357742072",
       "address": "Đà Nẵng"
     },
-    { "id": 5,
-      "fullname": "Trần Minh Tùng",
+    {
+      "id": 5,
+      "fullName": "Trần Minh Tùng",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -60,8 +65,9 @@
       "phoneNumber": "0357700072",
       "address": "Đà Nẵng"
     },
-    { "id": 6,
-      "fullname": "Trần Minh Tân",
+    {
+      "id": 6,
+      "fullName": "Trần Minh Tân",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -71,6 +77,32 @@
       "email": "tan@gmail.com",
       "phoneNumber": "0357749972",
       "address": "Đà Nẵng"
+    },
+    {
+      "fullName": "test",
+      "position": "",
+      "academicLevel": "",
+      "part": "",
+      "dateOfBirth": "",
+      "identityNumber": "",
+      "salary": "",
+      "email": "",
+      "phoneNumber": "",
+      "address": "",
+      "id": 7
+    },
+    {
+      "fullName": "Võ Luân",
+      "position": "Nhân Viên",
+      "academicLevel": "Đại Học",
+      "part": "Kinh Doanh",
+      "dateOfBirth": "2022-01-31",
+      "identityNumber": "211456987",
+      "salary": "10000000",
+      "email": "luan@gmail.com",
+      "phoneNumber": "0901236541",
+      "address": "Quảng Ngãi",
+      "id": 8
     }
   ]
 }
