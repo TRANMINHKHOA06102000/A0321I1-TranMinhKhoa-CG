@@ -39,7 +39,8 @@
         <td>{{employee.phoneNumber}}</td>
         <td>{{employee.address}}</td>
         <td style="width: 12%;">
-          <button class="btn btn-sm btn-warning mr-2">Sửa</button>
+          <button class="btn btn-sm btn-warning mr-2"
+                  [routerLink]="['/employee-edit/'+employee.id]">Sửa</button>
           <button data-toggle="modal" data-target="#idModal" class="btn btn-sm btn-danger"
                   (click)="getEmployeeName(employee.id)">Xóa</button>
         </td>
@@ -52,17 +53,17 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Attention!</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Thông Báo!</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          Are you sure to delete: {{fullName}} ?
+          Bạn có chắc chắn muốn xóa: {{fullName}} không?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteEmp(id)">Delete</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteEmp(id)">Xóa</button>
         </div>
       </div>
     </div>

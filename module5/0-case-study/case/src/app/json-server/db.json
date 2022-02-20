@@ -1,8 +1,7 @@
 {
   "employees": [
     {
-      "id": 1,
-      "fullName": "Trần Minh Khoa",
+      "fullName": "Trần Minh Khoa 12",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
@@ -10,11 +9,11 @@
       "identityNumber": "212345678",
       "salary": "10000000",
       "email": "Khoa4755@gmail.com",
-      "phoneNumber": "0357740062",
-      "address": "Đà Nẵng"
+      "phoneNumber": "0907740062",
+      "address": "Đà Nẵng",
+      "id": 1
     },
     {
-      "id": 2,
       "fullName": "Trần Minh Chiến",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
@@ -23,11 +22,11 @@
       "identityNumber": "212345676",
       "salary": "10000000",
       "email": "Chien4755@gmail.com",
-      "phoneNumber": "0357740072",
-      "address": "Đà Nẵng"
+      "phoneNumber": "0917740072",
+      "address": "Đà Nẵng",
+      "id": 2
     },
     {
-      "id": 3,
       "fullName": "Trần Minh Hạo",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
@@ -36,11 +35,11 @@
       "identityNumber": "212345176",
       "salary": "10000000",
       "email": "hao@gmail.com",
-      "phoneNumber": "0357741172",
-      "address": "Đà Nẵng"
+      "phoneNumber": "0907741172",
+      "address": "Đà Nẵng",
+      "id": 3
     },
     {
-      "id": 4,
       "fullName": "Trần Minh Thiên",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
@@ -49,11 +48,11 @@
       "identityNumber": "212645676",
       "salary": "10000000",
       "email": "thien@gmail.com",
-      "phoneNumber": "0357742072",
-      "address": "Đà Nẵng"
+      "phoneNumber": "0907742072",
+      "address": "Đà Nẵng",
+      "id": 4
     },
     {
-      "id": 5,
       "fullName": "Trần Minh Tùng",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
@@ -62,11 +61,11 @@
       "identityNumber": "212345626",
       "salary": "10000000",
       "email": "tung@gmail.com",
-      "phoneNumber": "0357700072",
-      "address": "Đà Nẵng"
+      "phoneNumber": "0907700072",
+      "address": "Đà Nẵng",
+      "id": 5
     },
     {
-      "id": 6,
       "fullName": "Trần Minh Tân",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
@@ -75,21 +74,22 @@
       "identityNumber": "212349676",
       "salary": "10000000",
       "email": "tan@gmail.com",
-      "phoneNumber": "0357749972",
-      "address": "Đà Nẵng"
+      "phoneNumber": "0907749972",
+      "address": "Đà Nẵng",
+      "id": 6
     },
     {
-      "fullName": "Võ Luân",
+      "fullName": "Thái Duy Đoan",
       "position": "Nhân Viên",
       "academicLevel": "Đại Học",
       "part": "Kinh Doanh",
-      "dateOfBirth": "2022-01-31",
-      "identityNumber": "211456987",
-      "salary": "10000000",
-      "email": "luan@gmail.com",
-      "phoneNumber": "0901236541",
+      "dateOfBirth": "2022-01-30",
+      "identityNumber": "211324123",
+      "salary": "1233000",
+      "email": "a@gmail.com",
+      "phoneNumber": "0915559090",
       "address": "Quảng Ngãi",
-      "id": 8
+      "id": 9
     }
   ]
 }

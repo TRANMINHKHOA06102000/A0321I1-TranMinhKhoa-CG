@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {NgxPaginationModule} from "ngx-pagination";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EmployeeCreateComponent } from './employees/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './employees/employee-edit/employee-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { EmployeeCreateComponent } from './employees/employee-create/employee-cr
     HomeComponent,
     PageNotFoundComponent,
     EmployeeListComponent,
-    EmployeeCreateComponent
+    EmployeeCreateComponent,
+    EmployeeEditComponent
   ],
   imports: [
     BrowserModule,

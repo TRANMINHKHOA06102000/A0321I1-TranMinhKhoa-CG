@@ -12,19 +12,27 @@ export class EmployeeService {
   constructor(private _http: HttpClient) {
   }
 
-  getAllEmployees():Observable<any>{
+  getAllEmployees(): Observable<any> {
     return this._http.get(this.API);
   }
+
+  findById(id: number): Observable<any> {
+    return this._http.get<any>(this.API + "/" + id);
+  }
+
   search(search: string): Observable<any[]> {
     return this._http.get<any[]>(this.API + '?fullName_like=' + search);
   }
-  create(employee):Observable<any>{
-    return this._http.post(this.API,employee);
+
+  create(employee): Observable<any> {
+    return this._http.post(this.API, employee);
   }
-  delete(id:number):Observable<any>{
-    return this._http.delete<any>(this.API+"/"+id)
+
+  delete(id: number): Observable<any> {
+    return this._http.delete<any>(this.API + "/" + id)
   }
-  findById(id:number):Observable<any>{
-    return this._http.get<any>(this.API+"/"+id);
+
+  edit(employee, employeeId): Observable<any> {
+    return this._http.put(this.API + "/" + employeeId, employee);
   }
 }
