@@ -1,0 +1,71 @@
+<div class="row justify-content-between">
+  <h2>Danh Sách Kho Hàng</h2>
+  <div class="d-flex">
+    <input class="form-control mr-3" type="text" style="width: 400px;"
+           placeholder="Tìm kiếm theo tên khách hàng" [(ngModel)]="searchValue">
+    <button class="btn btn-outline-success" (click)="doSearch()">Tìm Kiếm</button>
+  </div>
+</div>
+<div class="row mt-3 px-3">
+  <button class="btn btn-success" [routerLink]="['/warehous-create']">Thêm Mới</button>
+  <table class="table mt-3" style="font-size: 12px;">
+    <thead>
+    <tr>
+      <!--      <th>ID</th>-->
+      <th>Mã Lô Hàng</th>
+      <th>Tên Sản Phẩm</th>
+      <th>Giá Tiền</th>
+      <th>Đơn Vị</th>
+      <th>Số Lượng</th>
+      <th>Ngày Nhập Hàng</th>
+      <th>Ngày Sản Xuất</th>
+      <th>Ngày Hết Hạn</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let shipment of shipments | paginate: { itemsPerPage: 2, currentPage: page }">
+      <!--      <td>{{customer.id}}</td>-->
+      <td>{{shipment.shipment_id}}</td>
+      <td>{{shipment.product_shipment.name}}</td>
+      <td>{{shipment.product_shipment.price}}</td>
+      <td>{{shipment.product_shipment.unit}}</td>
+      <td>{{shipment.amount}}</td>
+      <td>{{shipment.dateAdd}}</td>
+      <td>{{shipment.dateProduce}}</td>
+      <td>{{shipment.dateExpiration}}</td>
+      <td style="width: 12%;">
+        <button class="btn btn-sm btn-warning mr-2"
+                [routerLink]="['/warehous-edit/'+shipment.id]">Sửa
+        </button>
+        <button data-toggle="modal" data-target="#idModal" class="btn btn-sm btn-danger"
+                (click)="getShipmentShipment_id(shipment.id)">Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="idModal" tabindex="-1" role="dialog"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông Báo!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bạn có chắc chắn muốn xóa: {{shipment_id}} không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteShip(id)">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
