@@ -1,0 +1,97 @@
+<h3 class="text-center">Chỉnh Sửa Thông Tin Khách Hàng</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEditCustomer">
+  <div class="form-group">
+    <p>Mã KH</p>
+    <input class="form-control" type="text" formControlName="cus_id">
+    <p *ngIf="formEditCustomer.controls.cus_id.errors?.required &&
+                  formEditCustomer.controls.cus_id.touched"
+       class="text-danger">Vui lòng nhập mã khách hàng</p>
+    <p *ngIf="formEditCustomer.controls.cus_id.errors?.pattern &&
+                  formEditCustomer.controls.cus_id.touched"
+       class="text-danger">Mã KH phải có định dạng là: KH-XXXX (X là số)</p>
+  </div>
+  <div class="form-group">
+    <label>Loại Khách Hàng</label>
+    <select class="custom-select" formGroupName="cus_type" (change)="changeCustomerType($event.target.value)">
+<!--      <option value="" selected>Vui lòng chọn</option>-->
+      <option [value]="type | json" *ngFor="let type of customerTypes">{{type.name}}</option>
+      <input hidden formControlName="id" [(ngModel)]="id">
+      <input hidden formControlName="name" [(ngModel)]="name">
+    </select>
+    <p class="text-danger" *ngIf="formEditCustomer.hasError('required', ['cus_type']) &&
+      formEditCustomer.get('cus_type').touched">Vui lòng chọn loại khách hàng!</p>
+  </div>
+  <div class="form-group">
+    <p>Họ Và Tên</p>
+    <input class="form-control" type="text" formControlName="name">
+    <p *ngIf="formEditCustomer.controls.name.errors?.required &&
+                  formEditCustomer.controls.name.touched"
+       class="text-danger">Vui lòng nhập họ và tên</p>
+  </div>
+  <div class="form-group">
+    <p>Ngày Sinh</p>
+    <input class="form-control" type="date" formControlName="birthday">
+    <p *ngIf="formEditCustomer.controls.birthday.errors?.required &&
+                  formEditCustomer.controls.birthday.touched"
+       class="text-danger">Vui lòng nhập ngày sinh</p>
+  </div>
+  <div class="form-group">
+    <p>Giới Tính</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Nam" checked
+             formControlName="gender">
+      <label class="form-check-label" for="exampleRadios1">Nam</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="Nữ"
+             formControlName="gender">
+      <label class="form-check-label" for="exampleRadios2">Nữ</label>
+    </div>
+    <p *ngIf="formEditCustomer.controls.gender.errors?.required &&
+                  formEditCustomer.controls.gender.touched"
+       class="text-danger">Vui lòng chọn giới tính</p>
+  </div>
+  <div class="form-group">
+    <p>Số CMND</p>
+    <input class="form-control" type="text" formControlName="id_card">
+    <p *ngIf="formEditCustomer.controls.id_card.errors?.required &&
+                  formEditCustomer.controls.id_card.touched"
+       class="text-danger">Vui lòng nhập số cmnd</p>
+    <p *ngIf="formEditCustomer.controls.id_card.errors?.pattern &&
+                  formEditCustomer.controls.id_card.touched"
+       class="text-danger">Số CMND không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Số Điện Thoại</p>
+    <input class="form-control" type="text" formControlName="phone">
+    <p *ngIf="formEditCustomer.controls.phone.errors?.required &&
+                  formEditCustomer.controls.phone.touched"
+       class="text-danger">Vui lòng nhập số điện thoại</p>
+    <p *ngIf="formEditCustomer.controls.phone.errors?.pattern &&
+                  formEditCustomer.controls.phone.touched"
+       class="text-danger">Số điện thoại không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Email</p>
+    <input class="form-control" type="text" formControlName="email">
+    <p *ngIf="formEditCustomer.controls.email.errors?.required &&
+                  formEditCustomer.controls.email.touched"
+       class="text-danger">Vui lòng nhập email</p>
+    <p *ngIf="formEditCustomer.controls.email.errors?.email &&
+                  formEditCustomer.controls.email.touched"
+       class="text-danger">Email không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Địa Chỉ</p>
+    <input class="form-control" type="text" formControlName="address">
+    <p *ngIf="formEditCustomer.controls.address.errors?.required &&
+                  formEditCustomer.controls.address.touched"
+       class="text-danger">Vui lòng nhập địa chỉ</p>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formEditCustomer.invalid"
+          class="btn btn-success" (click)="editCustomer()">Sửa Thông Tin
+  </button>
+</div>

@@ -191,18 +191,18 @@
       "address": "Quảng Ngãi"
     },
     {
-      "cus_id": "KH-9099",
+      "cus_id": "KH-9094",
       "cus_type": {
         "id": 2,
         "name": "Platinum"
       },
-      "name": "Minh",
-      "birthday": "2022-01-30",
-      "gender": "Nam",
-      "id_card": "212332244",
-      "phone": "0902211221",
-      "email": "kh@gmail.com",
-      "address": "Đà Nẵng",
+      "name": "Nguyễn Minh Tâm",
+      "birthday": "2021-12-26",
+      "gender": "Nữ",
+      "id_card": "212332249",
+      "phone": "0902211229",
+      "email": "tam@gmail.com",
+      "address": "Sài Gòn",
       "id": 9
     }
   ]
