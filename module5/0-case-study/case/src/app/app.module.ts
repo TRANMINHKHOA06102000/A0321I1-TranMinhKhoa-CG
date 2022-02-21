@@ -11,6 +11,8 @@ import {NgxPaginationModule} from "ngx-pagination";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EmployeeCreateComponent } from './employees/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employees/employee-edit/employee-edit.component';
+import { CustomerListComponent } from './customers/customer-list/customer-list.component';
+import { CustomerCreateComponent } from './customers/customer-create/customer-create.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { EmployeeEditComponent } from './employees/employee-edit/employee-edit.c
     PageNotFoundComponent,
     EmployeeListComponent,
     EmployeeCreateComponent,
-    EmployeeEditComponent
+    EmployeeEditComponent,
+    CustomerListComponent,
+    CustomerCreateComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EmployeeListComponent implements OnInit {
   public employees;
+  public page;
   public searchValue!:string;
   public fullName!:string;
   public id!:number;

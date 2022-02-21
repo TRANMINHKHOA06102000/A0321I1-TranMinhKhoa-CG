@@ -1,0 +1,71 @@
+<div class="row justify-content-between">
+  <h2>Danh Sách Khách Hàng</h2>
+  <div class="d-flex">
+    <input class="form-control mr-3" type="text" style="width: 400px;"
+           placeholder="Tìm kiếm theo tên khách hàng"[(ngModel)]="searchValue">
+    <button class="btn btn-outline-success" (click)="doSearch()">Tìm Kiếm</button>
+  </div>
+</div>
+<div class="row mt-3 px-3">
+  <button class="btn btn-success" [routerLink]="['/customer-create']">Thêm Mới</button>
+  <table class="table mt-3" style="font-size: 12px;">
+    <thead>
+    <tr>
+<!--      <th>ID</th>-->
+      <th>Mã KH</th>
+      <th>Loại KH</th>
+      <th>Họ Tên</th>
+      <th>Ngày Sinh</th>
+      <th>Giới Tính</th>
+      <th>Số CMND</th>
+      <th>SĐT</th>
+      <th>Email</th>
+      <th>Địa Chỉ</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers | paginate: { itemsPerPage: 2, currentPage: page }">
+<!--      <td>{{customer.id}}</td>-->
+      <td>{{customer.cus_id}}</td>
+      <td>{{customer.cus_type.name}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.birthday}}</td>
+      <td>{{customer.gender}}</td>
+      <td>{{customer.id_card}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+      <td style="width: 12%;">
+        <button class="btn btn-sm btn-warning mr-2"
+                [routerLink]="['/customer-edit/'+customer.id]">Sửa</button>
+        <button data-toggle="modal" data-target="#idModal" class="btn btn-sm btn-danger"
+                (click)="getCustomerName(customer.id)">Xóa</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="idModal" tabindex="-1" role="dialog"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông Báo!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bạn có chắc chắn muốn xóa: {{name}} không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteCus(id)">Xóa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

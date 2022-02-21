@@ -5,6 +5,8 @@ import {EmployeeListComponent} from "./employees/employee-list/employee-list.com
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {EmployeeCreateComponent} from "./employees/employee-create/employee-create.component";
 import {EmployeeEditComponent} from "./employees/employee-edit/employee-edit.component";
+import {CustomerListComponent} from "./customers/customer-list/customer-list.component";
+import {CustomerCreateComponent} from "./customers/customer-create/customer-create.component";
 
 
 const routes: Routes = [
@@ -12,6 +14,9 @@ const routes: Routes = [
   {path: 'employee-list', component: EmployeeListComponent},
   {path: 'employee-create', component: EmployeeCreateComponent},
   {path: 'employee-edit/:id', component: EmployeeEditComponent},
+
+  {path: 'customer-list', component: CustomerListComponent},
+  {path: 'customer-create', component: CustomerCreateComponent},
 
   {path: '**', component: PageNotFoundComponent}
 ];
