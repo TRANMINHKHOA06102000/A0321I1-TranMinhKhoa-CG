@@ -14,6 +14,7 @@
   <div class="form-group">
     <label>Loại Khách Hàng</label>
     <select class="custom-select" formGroupName="cus_type" (change)="changeCustomerType($event.target.value)">
+      <option value="" selected>Vui lòng chọn</option>
       <option [value]="type | json" *ngFor="let type of customerTypes">{{type.name}}</option>
       <input hidden formControlName="id" [(ngModel)]="id">
       <input hidden formControlName="name" [(ngModel)]="name">
@@ -94,4 +95,3 @@
           class="btn btn-success" (click)="createCustomer()">Thêm Mới
   </button>
 </div>
-
