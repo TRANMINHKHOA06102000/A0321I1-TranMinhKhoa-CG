@@ -1,0 +1,63 @@
+<h3 class="text-center">Nhập Hàng</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formCreateNewShipment">
+  <div class="form-group">
+    <p>Mã Lô Hàng</p>
+    <input class="form-control" type="text" formControlName="shipment_id">
+    <p *ngIf="formCreateNewShipment.controls.shipment_id.errors?.required &&
+                  formCreateNewShipment.controls.shipment_id.touched"
+       class="text-danger">Vui lòng nhập mã lô hàng</p>
+    <p *ngIf="formCreateNewShipment.controls.shipment_id.errors?.pattern &&
+                  formCreateNewShipment.controls.shipment_id.touched"
+       class="text-danger">Mã lô hàng phải có định dạng là: LH-XXXX (X là số)</p>
+  </div>
+  <div class="form-group">
+    <label>Sản Phẩm</label>
+    <select class="custom-select" formGroupName="product_shipment" (change)="changeProduct($event.target.value)">
+      <option value="" selected>Vui lòng chọn</option>
+      <option [value]="type | json" *ngFor="let type of products">{{type.name}}</option>
+      <input hidden formControlName="id" [(ngModel)]="id">
+      <input hidden formControlName="name" [(ngModel)]="name">
+      <input hidden formControlName="price" [(ngModel)]="price">
+      <input hidden formControlName="unit" [(ngModel)]="unit">
+    </select>
+    <p class="text-danger" *ngIf="formCreateNewShipment.hasError('required', ['product_shipment']) &&
+      formCreateNewShipment.get('product_shipment').touched">Vui lòng chọn sản phẩm!</p>
+  </div>
+  <div class="form-group">
+    <p>Số Lượng</p>
+    <input class="form-control" type="text" formControlName="amount">
+    <p *ngIf="formCreateNewShipment.controls.amount.errors?.required &&
+                  formCreateNewShipment.controls.amount.touched"
+       class="text-danger">Vui lòng nhập số lượng</p>
+    <p *ngIf="formCreateNewShipment.controls.amount.errors?.pattern &&
+                  formCreateNewShipment.controls.amount.touched"
+       class="text-danger">Số lượng không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Ngày Nhập Hàng</p>
+    <input class="form-control" type="date" formControlName="dateAdd">
+    <p *ngIf="formCreateNewShipment.controls.dateAdd.errors?.required &&
+                  formCreateNewShipment.controls.dateAdd.touched"
+       class="text-danger">Vui lòng nhập ngày nhập hàng</p>
+  </div>
+  <div class="form-group">
+    <p>Ngày Sản Xuất</p>
+    <input class="form-control" type="date" formControlName="dateProduce">
+    <p *ngIf="formCreateNewShipment.controls.dateProduce.errors?.required &&
+                  formCreateNewShipment.controls.dateProduce.touched"
+       class="text-danger">Vui lòng nhập ngày sản xuất</p>
+  </div>
+  <div class="form-group">
+    <p>Ngày Hết Hạn</p>
+    <input class="form-control" type="date" formControlName="dateExpiration">
+    <p *ngIf="formCreateNewShipment.controls.dateExpiration.errors?.required &&
+                  formCreateNewShipment.controls.dateExpiration.touched"
+       class="text-danger">Vui lòng nhập ngày hết hạn</p>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formCreateNewShipment.invalid"
+          class="btn btn-success" (click)="createShipment()">Nhập Hàng
+  </button>
+</div>

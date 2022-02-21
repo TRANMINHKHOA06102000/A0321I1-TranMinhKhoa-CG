@@ -41,19 +41,6 @@
       "dateExpiration": "2000-12-06"
     },
     {
-      "id": 2,
-      "shipment_id": "LH-0011",
-      "product_shipment": {
-        "id": 1,
-        "name": "Laptop asus",
-        "price": "15000000",
-        "unit": "VNĐ"
-      },
-      "dateAdd": "2000-11-06",
-      "dateProduce": "2000-01-06",
-      "dateExpiration": "2000-12-06"
-    },
-    {
       "id": 3,
       "shipment_id": "LH-0021",
       "product_shipment": {
@@ -80,6 +67,20 @@
       "dateAdd": "2000-11-05",
       "dateProduce": "2000-01-07",
       "dateExpiration": "2000-12-05"
+    },
+    {
+      "shipment_id": "LH-1123",
+      "product_shipment": {
+        "id": 4,
+        "name": "Laptop acer",
+        "price": "11000000",
+        "unit": "VNĐ"
+      },
+      "amount": "4",
+      "dateAdd": "2022-01-30",
+      "dateProduce": "2022-01-04",
+      "dateExpiration": "2022-03-31",
+      "id": 5
     }
   ]
 }
