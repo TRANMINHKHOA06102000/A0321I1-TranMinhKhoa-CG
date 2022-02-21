@@ -191,18 +191,18 @@
       "address": "Quảng Ngãi"
     },
     {
-      "cus_id": "KH-0016",
+      "cus_id": "KH-0094",
       "cus_type": {
-        "id": 2,
-        "name": "Platinum"
+        "id": 4,
+        "name": "Silver"
       },
-      "name": "Nguyễn Minh",
+      "name": "Minh Nguyệt",
       "birthday": "2022-01-30",
-      "gender": "true",
-      "id_card": "231455111",
-      "phone": "0908337222",
-      "email": "k@gamil.com",
-      "address": "Đà Nẵng",
+      "gender": "Nữ",
+      "id_card": "322373727",
+      "phone": "0902222113",
+      "email": "k1@gmail.com",
+      "address": "Quảng Ngãi",
       "id": 7
     }
   ]
