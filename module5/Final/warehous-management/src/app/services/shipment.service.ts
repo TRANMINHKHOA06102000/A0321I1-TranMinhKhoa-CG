@@ -25,7 +25,7 @@ export class ShipmentService {
   }
 
   search(search: string): Observable<any[]> {
-    return this._http.get<any[]>(this.API + '?name_like=' + search);
+    return this._http.get<any[]>(this.API + '?product_shipment.name_like=' + search);
   }
 
   create(shipment): Observable<any> {
