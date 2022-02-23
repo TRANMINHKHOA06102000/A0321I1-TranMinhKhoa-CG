@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {IShipment} from "../model/shipment";
 
 @Injectable({
   providedIn: 'root'
@@ -20,15 +21,15 @@ export class ShipmentService {
     return this._http.get(this.API);
   }
 
-  findById(id: number): Observable<any> {
-    return this._http.get<any>(this.API + "/" + id);
+  findById(id: number): Observable<IShipment> {
+    return this._http.get<IShipment>(this.API + "/" + id);
   }
 
-  search(search: string): Observable<any[]> {
-    return this._http.get<any[]>(this.API + '?product_shipment.name_like=' + search);
+  search(searchName: string, searchDateExpiration: string): Observable<IShipment[]> {
+    return this._http.get<IShipment[]>(this.API + '?product_shipment.name_like=' + searchName+ '&dateExpiration_like=' + searchDateExpiration);
   }
 
-  create(shipment): Observable<any> {
+  create(shipment:IShipment): Observable<any> {
     return this._http.post(this.API, shipment);
   }
 
@@ -36,7 +37,7 @@ export class ShipmentService {
     return this._http.delete<any>(this.API + "/" + id)
   }
 
-  edit(shipment, shipmentId): Observable<any> {
+  edit(shipment:IShipment, shipmentId:any): Observable<any> {
     return this._http.put(this.API + "/" + shipmentId, shipment);
   }
 }

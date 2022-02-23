@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ShipmentService} from "../../services/shipment.service";
+import {IShipment} from "../../model/shipment";
 
 @Component({
   selector: 'app-warehous-list',
@@ -9,9 +10,13 @@ import {ShipmentService} from "../../services/shipment.service";
 })
 export class WarehousListComponent implements OnInit {
 
-  public shipments;
-  public page;
-  public searchValue!:string;
+  public shipments:IShipment[];
+
+  public page=1;
+
+  public searchValue: string="";
+  public searchDateExpiration: string="";
+
   public shipment_id!:string;
   public id!:number;
 
@@ -26,8 +31,9 @@ export class WarehousListComponent implements OnInit {
   }
 
   doSearch(){
-    this._shipmentService.search(this.searchValue.trim()).subscribe(
+    this._shipmentService.search(this.searchValue,this.searchDateExpiration).subscribe(
       (data) => {
+        this.page = 1;
         this.shipments = data;
       });
 
@@ -36,6 +42,7 @@ export class WarehousListComponent implements OnInit {
     this._shipmentService.delete(id).subscribe(data=>{
       // this.router.navigateByUrl('listCus');
       this.ngOnInit();
+      this.page=1;
     })
   }
   getShipmentShipment_id(id:number){

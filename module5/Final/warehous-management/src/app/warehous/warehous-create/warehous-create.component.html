@@ -13,16 +13,13 @@
   </div>
   <div class="form-group">
     <label>Sản Phẩm</label>
-    <select class="custom-select" formGroupName="product_shipment" (change)="changeProduct($event.target.value)">
+    <select  [compareWith]="compareFn" class="custom-select" formControlName="product_shipment">
       <option value="" selected>Vui lòng chọn</option>
-      <option [value]="type | json" *ngFor="let type of products">{{type.name}}</option>
-      <input hidden formControlName="id" [(ngModel)]="id">
-      <input hidden formControlName="name" [(ngModel)]="name">
-      <input hidden formControlName="price" [(ngModel)]="price">
-      <input hidden formControlName="unit" [(ngModel)]="unit">
+      <option [ngValue]="type" *ngFor="let type of products">{{type.name}}</option>
     </select>
-    <p class="text-danger" *ngIf="formCreateNewShipment.hasError('required', ['product_shipment']) &&
-      formCreateNewShipment.get('product_shipment').touched">Vui lòng chọn sản phẩm!</p>
+    <p *ngIf="formCreateNewShipment.controls.product_shipment.errors?.required &&
+                  formCreateNewShipment.controls.product_shipment.touched"
+       class="text-danger">Vui lòng chọn sản phẩm!</p>
   </div>
   <div class="form-group">
     <p>Số Lượng</p>

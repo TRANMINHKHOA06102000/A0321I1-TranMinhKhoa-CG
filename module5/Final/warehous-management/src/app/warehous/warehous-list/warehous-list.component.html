@@ -1,8 +1,11 @@
+<h2>Danh Sách Kho Hàng</h2>
 <div class="row justify-content-between">
-  <h2>Danh Sách Kho Hàng</h2>
   <div class="d-flex">
-    <input class="form-control mr-3" type="text" style="width: 400px;"
+    <input class="form-control mr-3" type="text" style="width: 250px;"
            placeholder="Tìm kiếm theo tên sản phẩm" [(ngModel)]="searchValue">
+    <input class="form-control mr-3" type="text" style="width: 250px;"
+           placeholder="Tìm kiếm theo ngày hết hạn" [(ngModel)]="searchDateExpiration">
+
     <button class="btn btn-outline-success" (click)="doSearch()">Tìm Kiếm</button>
   </div>
 </div>

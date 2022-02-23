@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {ShipmentService} from "../../services/shipment.service";
+import {IProduct} from "../../model/product";
 
 @Component({
   selector: 'app-warehous-create',
@@ -10,12 +11,7 @@ import {ShipmentService} from "../../services/shipment.service";
 })
 export class WarehousCreateComponent implements OnInit {
   public formCreateNewShipment:FormGroup
-  public products;
-  public product_shipment;
-  public id;
-  public name;
-  public price;
-  public unit;
+  public products!: IProduct[];
 
   constructor(public _formBuilder:FormBuilder,
               public _shipmentService:ShipmentService,
@@ -30,12 +26,7 @@ export class WarehousCreateComponent implements OnInit {
 
     this.formCreateNewShipment=this._formBuilder.group({
       shipment_id: ['',[Validators.required,Validators.pattern("^LH-[\\d]{4}$")]],
-      product_shipment: this._formBuilder.group({
-        id: [''],
-        name: ['', [Validators.required]],
-        price: [''],
-        unit: ['']
-      }),
+      product_shipment: ['',[Validators.required]],
       amount: ['',[Validators.required,Validators.pattern('^[0-9]*$')]],
       dateAdd: ['',[Validators.required]],
       dateProduce: ['',[Validators.required]],
@@ -50,13 +41,8 @@ export class WarehousCreateComponent implements OnInit {
     console.log(this.formCreateNewShipment);
   }
 
-  changeProduct(type: any) {
-    this.product_shipment = JSON.parse(type);
-    this.id = this.product_shipment.id;
-    this.name = this.product_shipment.name;
-    this.price = this.product_shipment.price;
-    this.unit = this.product_shipment.unit;
-    console.log(this.product_shipment);
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 
 }
