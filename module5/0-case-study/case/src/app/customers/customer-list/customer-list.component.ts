@@ -8,9 +8,8 @@ import {CustomerService} from "../../services/customer.service";
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-
   public customers;
-  public page;
+  public page = 1;
   public name!: string;
   public id!: number;
 
@@ -19,7 +18,7 @@ export class CustomerListComponent implements OnInit {
   public searchGender: string = "";
   public searchBirthday: string = "";
 
-  public customerTypes!:any[];
+  public customerTypes!: any[];
   public searchType: string = "";
 
   public cusType;
@@ -43,25 +42,37 @@ export class CustomerListComponent implements OnInit {
 
   doSearch() {
     this._customerService.search(this.searchValue.trim()).subscribe(
-      (data) => this.customers = data
+      (data) => {
+        this.page = 1;
+        this.customers = data
+      }
     );
   }
 
   doSearch2() {
     this._customerService.search2Way(this.searchValue.trim(), this.searchGender).subscribe(
-      (data) => this.customers = data
+      (data) => {
+        this.page = 1;
+        this.customers = data
+      }
     );
   }
 
   doSearch3() {
     this._customerService.search3Way(this.searchValue.trim(), this.searchGender, this.searchBirthday).subscribe(
-      (data) => this.customers = data
+      (data) => {
+        this.page = 1;
+        this.customers = data
+      }
     );
   }
 
   doSearch4() {
-    this._customerService.search4Way(this.searchValue.trim(), this.searchGender, this.searchBirthday, this.searchType).subscribe(
-      (data) => this.customers = data
+    this._customerService.search4Way(this.searchValue, this.searchGender, this.searchBirthday, this.searchType).subscribe(
+      (data) => {
+        this.page = 1;
+        this.customers = data
+      }
     );
   }
 
