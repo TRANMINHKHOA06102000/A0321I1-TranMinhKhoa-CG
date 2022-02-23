@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerService} from "../../services/customer.service";
+import { ICustomerType } from 'src/app/model/customerType';
 
 @Component({
   selector: 'app-customer-edit',
@@ -11,10 +12,7 @@ import {CustomerService} from "../../services/customer.service";
 export class CustomerEditComponent implements OnInit {
 
   public formEditCustomer: FormGroup
-  public customerTypes;
-
-  public id;
-  public name;
+  public customerTypes!: ICustomerType[];
 
   public customerOfId;
 

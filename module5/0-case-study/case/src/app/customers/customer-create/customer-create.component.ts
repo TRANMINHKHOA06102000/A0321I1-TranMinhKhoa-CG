@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {CustomerService} from "../../services/customer.service";
+import { ICustomerType } from 'src/app/model/customerType';
 
 @Component({
   selector: 'app-customer-create',
@@ -11,10 +12,7 @@ import {CustomerService} from "../../services/customer.service";
 export class CustomerCreateComponent implements OnInit {
 
   public formCreateNewCustomer:FormGroup
-  public customerTypes;
-
-  // public id;
-  // public name;
+  public customerTypes!: ICustomerType[];
 
   constructor(public _formBuilder:FormBuilder,
               public _customerService:CustomerService,

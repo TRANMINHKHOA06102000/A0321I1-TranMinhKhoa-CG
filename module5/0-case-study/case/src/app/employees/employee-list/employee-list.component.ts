@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EmployeeService} from "../../services/employee.service";
-import { Router, ActivatedRoute } from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
+import {IEmployee} from "../../model/employee";
 
 @Component({
   selector: 'app-employee-list',
@@ -8,37 +9,44 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
-  public employees;
-  public page;
-  public searchValue!:string;
-  public fullName!:string;
-  public id!:number;
+  public employees!:IEmployee[];
+  public page = 1;
+  public searchValue!: string;
+  public fullName!: string;
+  public id!: number;
 
-  constructor(public _employeeService:EmployeeService,
-              private _router:Router,
-              private _activeRouter:ActivatedRoute) { }
+  constructor(public _employeeService: EmployeeService,
+              private _router: Router,
+              private _activeRouter: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-    this._employeeService.getAllEmployees().subscribe(data=>{
-      this.employees=data;
+    this._employeeService.getAllEmployees().subscribe(data => {
+      this.employees = data;
     })
   }
 
-  doSearch(){
+  doSearch() {
     this._employeeService.search(this.searchValue.trim()).subscribe(
-      (data) => this.employees = data
+      (data) => {
+        this.page=1;
+        this.employees = data;
+      }
     );
   }
-  deleteEmp(id:number){
-    this._employeeService.delete(id).subscribe(data=>{
+
+  deleteEmp(id: number) {
+    this._employeeService.delete(id).subscribe(data => {
       // this.router.navigateByUrl('listCus');
       this.ngOnInit();
+      this.page = 1;
     })
   }
-  getEmployeeName(id:number){
-    this._employeeService.findById(id).subscribe(data=>{
-      this.fullName=data.fullName;
-      this.id=data.id;
+
+  getEmployeeName(id: number) {
+    this._employeeService.findById(id).subscribe(data => {
+      this.fullName = data.fullName;
+      this.id = data.id;
     });
   }
 }

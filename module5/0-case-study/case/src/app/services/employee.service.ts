@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {IEmployee} from "../model/employee";
 
 
 @Injectable({
@@ -16,15 +17,15 @@ export class EmployeeService {
     return this._http.get(this.API);
   }
 
-  findById(id: number): Observable<any> {
-    return this._http.get<any>(this.API + "/" + id);
+  findById(id: number): Observable<IEmployee> {
+    return this._http.get<IEmployee>(this.API + "/" + id);
   }
 
-  search(search: string): Observable<any[]> {
-    return this._http.get<any[]>(this.API + '?fullName_like=' + search);
+  search(search: string): Observable<IEmployee[]> {
+    return this._http.get<IEmployee[]>(this.API + '?fullName_like=' + search);
   }
 
-  create(employee): Observable<any> {
+  create(employee:IEmployee): Observable<any> {
     return this._http.post(this.API, employee);
   }
 
@@ -32,7 +33,7 @@ export class EmployeeService {
     return this._http.delete<any>(this.API + "/" + id)
   }
 
-  edit(employee, employeeId): Observable<any> {
+  edit(employee:IEmployee, employeeId:any): Observable<any> {
     return this._http.put(this.API + "/" + employeeId, employee);
   }
 }

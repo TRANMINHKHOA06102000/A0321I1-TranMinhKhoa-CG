@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerService} from "../../services/customer.service";
+import { ICustomer } from 'src/app/model/customer';
+import { ICustomerType } from 'src/app/model/customerType';
 
 @Component({
   selector: 'app-customer-list',
@@ -8,7 +10,7 @@ import {CustomerService} from "../../services/customer.service";
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-  public customers;
+  public customers!:ICustomer[];
   public page = 1;
   public name!: string;
   public id!: number;
@@ -18,7 +20,7 @@ export class CustomerListComponent implements OnInit {
   public searchGender: string = "";
   public searchBirthday: string = "";
 
-  public customerTypes!: any[];
+  public customerTypes!:ICustomerType[];
   public searchType: string = "";
 
   constructor(public _customerService: CustomerService,
@@ -38,32 +40,32 @@ export class CustomerListComponent implements OnInit {
     })
   }
 
-  doSearch() {
-    this._customerService.search(this.searchValue.trim()).subscribe(
-      (data) => {
-        this.page = 1;
-        this.customers = data
-      }
-    );
-  }
-
-  doSearch2() {
-    this._customerService.search2Way(this.searchValue.trim(), this.searchGender).subscribe(
-      (data) => {
-        this.page = 1;
-        this.customers = data
-      }
-    );
-  }
-
-  doSearch3() {
-    this._customerService.search3Way(this.searchValue.trim(), this.searchGender, this.searchBirthday).subscribe(
-      (data) => {
-        this.page = 1;
-        this.customers = data
-      }
-    );
-  }
+  // doSearch() {
+  //   this._customerService.search(this.searchValue.trim()).subscribe(
+  //     (data) => {
+  //       this.page = 1;
+  //       this.customers = data
+  //     }
+  //   );
+  // }
+  //
+  // doSearch2() {
+  //   this._customerService.search2Way(this.searchValue.trim(), this.searchGender).subscribe(
+  //     (data) => {
+  //       this.page = 1;
+  //       this.customers = data
+  //     }
+  //   );
+  // }
+  //
+  // doSearch3() {
+  //   this._customerService.search3Way(this.searchValue.trim(), this.searchGender, this.searchBirthday).subscribe(
+  //     (data) => {
+  //       this.page = 1;
+  //       this.customers = data
+  //     }
+  //   );
+  // }
 
   doSearch4() {
     this._customerService.search4Way(this.searchValue, this.searchGender, this.searchBirthday, this.searchType).subscribe(

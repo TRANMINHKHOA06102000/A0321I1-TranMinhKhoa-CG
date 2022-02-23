@@ -77,19 +77,6 @@
       "phoneNumber": "0907749972",
       "address": "Đà Nẵng",
       "id": 6
-    },
-    {
-      "fullName": "Thái Duy Đoan",
-      "position": "Nhân Viên",
-      "academicLevel": "Đại Học",
-      "part": "Kinh Doanh",
-      "dateOfBirth": "2022-01-30",
-      "identityNumber": "211324123",
-      "salary": "1233000",
-      "email": "a@gmail.com",
-      "phoneNumber": "0915559090",
-      "address": "Quảng Ngãi",
-      "id": 9
     }
   ],
   "customerTypes": [
@@ -131,11 +118,10 @@
       "address": "Quảng Ngãi"
     },
     {
-      "id": 2,
       "cus_id": "KH-1234",
       "cus_type": {
-        "id": 1,
-        "name": "Diamond"
+        "id": 3,
+        "name": "Gold"
       },
       "name": "Nguyễn Kiều Duyên",
       "birthday": "2002-09-26",
@@ -143,7 +129,8 @@
       "id_card": "123456788",
       "phone": "0915225252",
       "email": "duyen@gmail.com",
-      "address": "Quảng Trị"
+      "address": "Quảng Trị",
+      "id": 2
     },
     {
       "id": 4,
