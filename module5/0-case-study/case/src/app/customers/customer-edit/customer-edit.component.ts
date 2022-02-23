@@ -12,7 +12,7 @@ export class CustomerEditComponent implements OnInit {
 
   public formEditCustomer: FormGroup
   public customerTypes;
-  public cusType;
+
   public id;
   public name;
 
@@ -27,16 +27,14 @@ export class CustomerEditComponent implements OnInit {
   ngOnInit(): void {
     this._customerService.getAllCustomerType().subscribe(data => {
       this.customerTypes = data;
+      console.log(data);
     }, error => {
       console.log('Failed to get list customer type!');
     });
 
     this.formEditCustomer = this._formBuilder.group({
       cus_id: ['',[Validators.required,Validators.pattern("^KH-[\\d]{4}$")]],
-      cus_type: this._formBuilder.group({
-        id: [''],
-        name: ['', [Validators.required]]
-      }),
+      cus_type: ['',[Validators.required]],
       name: ['',[Validators.required]],
       birthday: ['',[Validators.required]],
       gender: ['',[Validators.required]],
@@ -49,6 +47,7 @@ export class CustomerEditComponent implements OnInit {
     this._activatedRoute.params.subscribe(data => {
       this.customerOfId = data.id;
       this._customerService.findById(this.customerOfId).subscribe(data => {
+        console.log(data);
         this.formEditCustomer.patchValue(data);
       })
     })
@@ -57,13 +56,12 @@ export class CustomerEditComponent implements OnInit {
   editCustomer() {
     this._customerService.edit(this.formEditCustomer.value, this.customerOfId).subscribe(data => {
       this._router.navigateByUrl('customer-list');
+      console.log(this.formEditCustomer.value);
     })
   }
 
-  changeCustomerType(type: any) {
-    this.cusType = JSON.parse(type);
-    this.id = this.cusType.id;
-    this.name = this.cusType.name;
-    console.log(this.cusType);
+
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 }

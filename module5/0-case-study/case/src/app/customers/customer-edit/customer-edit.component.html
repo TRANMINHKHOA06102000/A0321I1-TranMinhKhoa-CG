@@ -13,14 +13,13 @@
   </div>
   <div class="form-group">
     <label>Loại Khách Hàng</label>
-    <select class="custom-select" formGroupName="cus_type" (change)="changeCustomerType($event.target.value)">
-<!--      <option value="" selected>Vui lòng chọn</option>-->
-      <option [value]="type | json" *ngFor="let type of customerTypes">{{type.name}}</option>
-      <input hidden formControlName="id" [(ngModel)]="id">
-      <input hidden formControlName="name" [(ngModel)]="name">
+    <select [compareWith]="compareFn" class="custom-select" formControlName="cus_type">
+      <option [ngValue]="type" *ngFor="let type of customerTypes"
+              [selected]="type.id == formEditCustomer.value.cus_type.id">{{type.name}}</option>
     </select>
-    <p class="text-danger" *ngIf="formEditCustomer.hasError('required', ['cus_type']) &&
-      formEditCustomer.get('cus_type').touched">Vui lòng chọn loại khách hàng!</p>
+    <p *ngIf="formEditCustomer.controls.cus_type.errors?.required &&
+                  formEditCustomer.controls.cus_type.touched"
+       class="text-danger">Vui lòng chọn loại khách hàng!</p>
   </div>
   <div class="form-group">
     <p>Họ Và Tên</p>

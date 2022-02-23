@@ -13,7 +13,6 @@ export class CustomerCreateComponent implements OnInit {
   public formCreateNewCustomer:FormGroup
   public customerTypes;
 
-  public cusType;
   public id;
   public name;
 
@@ -30,10 +29,7 @@ export class CustomerCreateComponent implements OnInit {
 
     this.formCreateNewCustomer=this._formBuilder.group({
       cus_id: ['',[Validators.required,Validators.pattern("^KH-[\\d]{4}$")]],
-      cus_type: this._formBuilder.group({
-        id: [''],
-        name: ['', [Validators.required]]
-      }),
+      cus_type: ['',[Validators.required]],
       name: ['',[Validators.required]],
       birthday: ['',[Validators.required]],
       gender: ['',[Validators.required]],
@@ -51,10 +47,7 @@ export class CustomerCreateComponent implements OnInit {
     console.log(this.formCreateNewCustomer);
   }
 
-  changeCustomerType(type: any) {
-    this.cusType = JSON.parse(type);
-    this.id = this.cusType.id;
-    this.name = this.cusType.name;
-    console.log(this.cusType);
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
 }

@@ -13,15 +13,13 @@ export class CustomerListComponent implements OnInit {
   public name!: string;
   public id!: number;
 
-  public searchValue!: string;
+  public searchValue: string="";
 
   public searchGender: string = "";
   public searchBirthday: string = "";
 
   public customerTypes!: any[];
   public searchType: string = "";
-
-  public cusType;
 
   constructor(public _customerService: CustomerService,
               private _router: Router,
@@ -80,6 +78,7 @@ export class CustomerListComponent implements OnInit {
     this._customerService.delete(id).subscribe(data => {
       // this.router.navigateByUrl('listCus');
       this.ngOnInit();
+      this.page=1;
     })
   }
 
@@ -90,10 +89,8 @@ export class CustomerListComponent implements OnInit {
     });
   }
 
-  changeCustomerType(type: any) {
-    this.cusType = JSON.parse(type);
-    this.id = this.cusType.id;
-    this.name = this.cusType.name;
-    console.log(this.cusType);
+  compareFn(c1: any, c2: any): boolean {
+    return c1 && c2 ? c1.id === c2.id : c1 === c2;
   }
+
 }

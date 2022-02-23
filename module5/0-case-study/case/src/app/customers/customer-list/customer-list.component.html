@@ -15,12 +15,10 @@
            placeholder="Tìm kiếm theo ngày sinh" [(ngModel)]="searchBirthday">
 
     <select class="form-control" [(ngModel)]="searchType" [ngModelOptions]="{standalone: true}"
-            style="width: 150px;" (change)="changeCustomerType($event.target.value)">
+            style="width: 150px;" [compareWith]="compareFn">
       <option value="" selected>Vui lòng chọn</option>
-      <option [value]="type | json" *ngFor="let type of customerTypes" [ngValue]="type.name">
+      <option [ngValue]="type" *ngFor="let type of customerTypes" [ngValue]="type.name">
         {{type.name}}</option>
-      <input hidden [(ngModel)]="id">
-      <input hidden [(ngModel)]="name">
     </select>
 
     <!--    <button class="btn btn-outline-success" (click)="doSearch()">Tìm Kiếm</button>-->

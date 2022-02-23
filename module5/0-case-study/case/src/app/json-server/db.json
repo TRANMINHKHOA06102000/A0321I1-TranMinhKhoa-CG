@@ -146,21 +146,6 @@
       "address": "Quảng Trị"
     },
     {
-      "id": 3,
-      "cus_id": "KH-2053",
-      "cus_type": {
-        "id": 1,
-        "name": "Diamond"
-      },
-      "name": "Huỳnh Đức Thiện",
-      "birthday": "2021-09-24",
-      "gender": "Nam",
-      "id_card": "123456787",
-      "phone": "0969351090",
-      "email": "thien2001@gmail.com",
-      "address": "Đà Nẵng"
-    },
-    {
       "id": 4,
       "cus_id": "KH-8888",
       "cus_type": {
@@ -174,21 +159,6 @@
       "phone": "0969351090",
       "email": "nhu@gmail.com",
       "address": "Đà Nẵng"
-    },
-    {
-      "id": 6,
-      "cus_id": "KH-1099",
-      "cus_type": {
-        "id": 1,
-        "name": "Diamond"
-      },
-      "name": "Nguyễn Văn Tuấn",
-      "birthday": "2021-09-18",
-      "gender": "Nam",
-      "id_card": "123456784",
-      "phone": "0915225252",
-      "email": "tuan1@gmail.com",
-      "address": "Quảng Ngãi"
     },
     {
       "cus_id": "KH-9094",
@@ -219,6 +189,21 @@
       "email": "k@g",
       "address": "Hà Nội",
       "id": 10
+    },
+    {
+      "cus_id": "KH-1107",
+      "cus_type": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "Đoàn Ngọc Linh",
+      "birthday": "2022-01-30",
+      "gender": "Nam",
+      "id_card": "223442212",
+      "phone": "0908487393",
+      "email": "k@aa",
+      "address": "Hà Nội",
+      "id": 11
     }
   ]
 }
