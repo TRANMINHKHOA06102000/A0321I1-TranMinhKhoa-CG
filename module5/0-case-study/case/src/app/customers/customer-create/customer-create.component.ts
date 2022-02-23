@@ -12,6 +12,7 @@ export class CustomerCreateComponent implements OnInit {
 
   public formCreateNewCustomer:FormGroup
   public customerTypes;
+
   public cusType;
   public id;
   public name;

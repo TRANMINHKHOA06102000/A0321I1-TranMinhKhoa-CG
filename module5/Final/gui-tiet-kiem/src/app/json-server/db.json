@@ -1,0 +1,82 @@
+{
+  "khachHang": [
+    {
+      "id": 1,
+      "name": "Trần Minh Khoa"
+    },
+    {
+      "id": 2,
+      "name": "Trần Minh Chiến"
+    },
+    {
+      "id": 3,
+      "name": "Võ Thành Luân"
+    },
+    {
+      "id": 4,
+      "name": "Lê Thị Nga"
+    },
+    {
+      "id": 5,
+      "name": "Đoàn Chí Trung"
+    }
+  ],
+  "soTietKiem": [
+    {
+      "id": 1,
+      "soTietKiem_id": "STK-0001",
+      "kh_stk": {
+        "id": 5,
+        "name": "Đoàn Chí Trung"
+      },
+      "ngayMo": "2000-10-06",
+      "thoiGianGui": "2000-10-06",
+      "kiHan": "6 tháng",
+      "soTienGui": 15000000,
+      "laiSuat": 2,
+      "uuDai": "Không"
+    },
+    {
+      "id": 2,
+      "soTietKiem_id": "STK-0001",
+      "kh_stk": {
+        "id": 3,
+        "name": "Võ Thành Luân"
+      },
+      "ngayMo": "2000-11-06",
+      "thoiGianGui": "2000-11-06",
+      "kiHan": "12 tháng",
+      "soTienGui": 15000000,
+      "laiSuat": 2,
+      "uuDai": "Không"
+    },
+    {
+      "id": 3,
+      "soTietKiem_id": "STK-0001",
+      "kh_stk": {
+        "id": 1,
+        "name": "Trần Minh Khoa"
+      },
+      "ngayMo": "2001-10-06",
+      "thoiGianGui": "2001-10-06",
+      "kiHan": "6 tháng",
+      "soTienGui": 19000000,
+      "laiSuat": 2,
+      "uuDai": "Không"
+    },
+    {
+      "id": 4,
+      "soTietKiem_id": "STK-0001",
+      "kh_stk": {
+        "id": 4,
+        "name": "Lê Thị Nga"
+      },
+      "ngayMo": "2000-12-06",
+      "thoiGianGui": "2000-12-06",
+      "kiHan": "6 tháng",
+      "soTienGui": 28000000,
+      "laiSuat": 2,
+      "uuDai": "Không"
+    }
+  ]
+}
