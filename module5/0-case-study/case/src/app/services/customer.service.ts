@@ -29,6 +29,21 @@ export class CustomerService {
     return this._http.get<any[]>(this.API + '?name_like=' + search);
   }
 
+  search2Way(search: string, searchGender: string): Observable<any[]> {
+    console.log(search, searchGender);
+    return this._http.get<any[]>(this.API + '?name_like=' + search + '&gender_like=' + searchGender);
+  }
+
+  search3Way(search: string, searchGender: string, searchBirthday: string): Observable<any[]> {
+    console.log(search, searchGender);
+    return this._http.get<any[]>(this.API + '?name_like=' + search + '&gender_like=' + searchGender + '&birthday_like=' + searchBirthday);
+  }
+
+  search4Way(search: string, searchGender: string, searchBirthday: string, searchType:string): Observable<any[]> {
+    console.log(search, searchGender);
+    return this._http.get<any[]>(this.API + '?name_like=' + search + '&gender_like=' + searchGender + '&birthday_like=' + searchBirthday+ '&cus_type.name_like=' + searchType);
+  }
+
   create(customer): Observable<any> {
     return this._http.post(this.API, customer);
   }

@@ -204,6 +204,21 @@
       "email": "tam@gmail.com",
       "address": "Sài Gòn",
       "id": 9
+    },
+    {
+      "cus_id": "KH-0939",
+      "cus_type": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "Trần Văn Như",
+      "birthday": "2022-02-01",
+      "gender": "Nam",
+      "id_card": "228387472782",
+      "phone": "0903376639",
+      "email": "k@g",
+      "address": "Hà Nội",
+      "id": 10
     }
   ]
 }

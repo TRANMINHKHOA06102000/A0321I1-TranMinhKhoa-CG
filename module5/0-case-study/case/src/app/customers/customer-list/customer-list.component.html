@@ -1,9 +1,32 @@
 <div class="row justify-content-between">
   <h2>Danh Sách Khách Hàng</h2>
   <div class="d-flex">
-    <input class="form-control mr-3" type="text" style="width: 400px;"
+    <input class="form-control mr-3" type="text" style="width: 250px;"
            placeholder="Tìm kiếm theo tên khách hàng" [(ngModel)]="searchValue">
-    <button class="btn btn-outline-success" (click)="doSearch()">Tìm Kiếm</button>
+
+    <select class="form-control" [(ngModel)]="searchGender" [ngModelOptions]="{standalone: true}"
+            style="width: 150px;">
+      <option value="" selected>Vui lòng chọn</option>
+      <option value="Nam">Nam</option>
+      <option value="Nữ">Nữ</option>
+    </select>
+
+    <input class="form-control mr-3 ml-3" type="text" style="width: 200px;"
+           placeholder="Tìm kiếm theo ngày sinh" [(ngModel)]="searchBirthday">
+
+    <select class="form-control" [(ngModel)]="searchType" [ngModelOptions]="{standalone: true}"
+            style="width: 150px;" (change)="changeCustomerType($event.target.value)">
+      <option value="" selected>Vui lòng chọn</option>
+      <option [value]="type | json" *ngFor="let type of customerTypes" [ngValue]="type.name">
+        {{type.name}}</option>
+      <input hidden [(ngModel)]="id">
+      <input hidden [(ngModel)]="name">
+    </select>
+
+    <!--    <button class="btn btn-outline-success" (click)="doSearch()">Tìm Kiếm</button>-->
+    <!--    <button class="btn btn-outline-success ml-3" (click)="doSearch2()">Tìm Kiếm</button>-->
+    <!--    <button class="btn btn-outline-success ml-3" (click)="doSearch3()">Tìm Kiếm</button>-->
+    <button class="btn btn-outline-success ml-3" (click)="doSearch4()">Tìm Kiếm</button>
   </div>
 </div>
 <div class="row mt-3 px-3">

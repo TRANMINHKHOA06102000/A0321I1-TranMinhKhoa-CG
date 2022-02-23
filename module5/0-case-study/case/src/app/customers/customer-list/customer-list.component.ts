@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerService} from "../../services/customer.service";
 
@@ -11,36 +11,78 @@ export class CustomerListComponent implements OnInit {
 
   public customers;
   public page;
-  public searchValue!:string;
-  public name!:string;
-  public id!:number;
+  public name!: string;
+  public id!: number;
 
-  constructor(public _customerService:CustomerService,
-              private _router:Router,
-              private _activeRouter:ActivatedRoute) { }
+  public searchValue!: string;
+
+  public searchGender: string = "";
+  public searchBirthday: string = "";
+
+  public customerTypes!:any[];
+  public searchType: string = "";
+
+  public cusType;
+
+  constructor(public _customerService: CustomerService,
+              private _router: Router,
+              private _activeRouter: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-    this._customerService.getAllCustomers().subscribe(data=>{
-      this.customers=data;
+    this._customerService.getAllCustomerType().subscribe(data => {
+      this.customerTypes = data;
+    }, error => {
+      console.log('Failed to get list customer type!');
+    });
+
+    this._customerService.getAllCustomers().subscribe(data => {
+      this.customers = data;
     })
   }
 
-  doSearch(){
+  doSearch() {
     this._customerService.search(this.searchValue.trim()).subscribe(
       (data) => this.customers = data
     );
   }
-  deleteCus(id:number){
-    this._customerService.delete(id).subscribe(data=>{
+
+  doSearch2() {
+    this._customerService.search2Way(this.searchValue.trim(), this.searchGender).subscribe(
+      (data) => this.customers = data
+    );
+  }
+
+  doSearch3() {
+    this._customerService.search3Way(this.searchValue.trim(), this.searchGender, this.searchBirthday).subscribe(
+      (data) => this.customers = data
+    );
+  }
+
+  doSearch4() {
+    this._customerService.search4Way(this.searchValue.trim(), this.searchGender, this.searchBirthday, this.searchType).subscribe(
+      (data) => this.customers = data
+    );
+  }
+
+  deleteCus(id: number) {
+    this._customerService.delete(id).subscribe(data => {
       // this.router.navigateByUrl('listCus');
       this.ngOnInit();
     })
   }
-  getCustomerName(id:number){
-    this._customerService.findById(id).subscribe(data=>{
-      this.name=data.name;
-      this.id=data.id;
+
+  getCustomerName(id: number) {
+    this._customerService.findById(id).subscribe(data => {
+      this.name = data.name;
+      this.id = data.id;
     });
   }
 
+  changeCustomerType(type: any) {
+    this.cusType = JSON.parse(type);
+    this.id = this.cusType.id;
+    this.name = this.cusType.name;
+    console.log(this.cusType);
+  }
 }
