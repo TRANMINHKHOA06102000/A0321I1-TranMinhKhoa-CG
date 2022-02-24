@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 import {ISoTietKiem} from "../model/SoTietKiem";
 
 @Injectable({
@@ -25,8 +25,8 @@ export class SotietkiemService {
     return this._http.get<ISoTietKiem>(this.API + "/" + id);
   }
 
-  search(search: string): Observable<ISoTietKiem[]> {
-    return this._http.get<ISoTietKiem[]>(this.API + '?kh_stk.name_like=' + search);
+  search(searchName: string, searchThoiGianGui: string, searchLaiSuat: string): Observable<ISoTietKiem[]> {
+    return this._http.get<ISoTietKiem[]>(this.API + '?kh_stk.name_like=' + searchName + '&thoiGianGui_like=' + searchThoiGianGui + '&laiSuat_like=' + searchLaiSuat);
   }
 
   // search2Way(search: string, searchType: string): Observable<ICustomer[]> {
@@ -39,7 +39,7 @@ export class SotietkiemService {
   //   return this.http.get<ICustomer[]>(this.API + '?name_like=' + search + '&gender_like=' + gender + '&cus_type.name_like=' + searchType);
   // }
 
-  create(sotietkiem:ISoTietKiem): Observable<any> {
+  create(sotietkiem: ISoTietKiem): Observable<any> {
     return this._http.post(this.API, sotietkiem);
   }
 
@@ -47,7 +47,7 @@ export class SotietkiemService {
     return this._http.delete<any>(this.API + "/" + id)
   }
 
-  edit(sotietkiemId,sotietkiem:ISoTietKiem): Observable<ISoTietKiem> {
-    return this._http.put<ISoTietKiem>(this.API + "/" + sotietkiemId, sotietkiem);
+  edit(sotietkiemId: any, sotietkiem: ISoTietKiem): Observable<any> {
+    return this._http.put(this.API + "/" + sotietkiemId, sotietkiem);
   }
 }

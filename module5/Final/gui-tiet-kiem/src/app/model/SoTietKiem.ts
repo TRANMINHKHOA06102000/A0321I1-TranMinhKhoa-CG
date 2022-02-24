@@ -8,6 +8,6 @@ export interface ISoTietKiem {
   thoiGianGui:string,
   kiHan:string,
   soTienGui:number,
-  laiSuat:number,
+  laiSuat:string,
   uuDai:string
 }

@@ -1,0 +1,76 @@
+<h3 class="text-center">Chỉnh Sửa Thông Tin Sổ Tiết Kiệm</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEditSoTietKiem">
+  <div class="form-group">
+    <p>Mã Sổ Tiết Kiệm</p>
+    <input class="form-control" type="text" formControlName="soTietKiem_id">
+    <p *ngIf="formEditSoTietKiem.controls.soTietKiem_id.errors?.required &&
+                  formEditSoTietKiem.controls.soTietKiem_id.touched"
+       class="text-danger">Vui lòng nhập mã sổ tiết kiệm</p>
+    <p *ngIf="formEditSoTietKiem.controls.soTietKiem_id.errors?.pattern &&
+                  formEditSoTietKiem.controls.soTietKiem_id.touched"
+       class="text-danger">Mã sổ tiết kiệm phải có định dạng là: STK-XXXX (X là số)</p>
+  </div>
+  <div class="form-group">
+    <label>Khách Hàng</label>
+    <select  [compareWith]="compareFn" class="custom-select" formControlName="kh_stk">
+      <option [ngValue]="type" *ngFor="let type of khachHangs"
+              [selected]="type.id == formEditSoTietKiem.value.kh_stk.id">{{type.name}}</option>
+    </select>
+    <p *ngIf="formEditSoTietKiem.controls.kh_stk.errors?.required &&
+                  formEditSoTietKiem.controls.kh_stk.touched"
+       class="text-danger">Vui lòng chọn khách hàng!</p>
+  </div>
+  <div class="form-group">
+    <p>Ngày Mở</p>
+    <input class="form-control" type="date" formControlName="ngayMo">
+    <p *ngIf="formEditSoTietKiem.controls.ngayMo.errors?.required &&
+                  formEditSoTietKiem.controls.ngayMo.touched"
+       class="text-danger">Vui lòng nhập ngày mở sổ tiết kiệm</p>
+  </div>
+  <div class="form-group">
+    <p>Thời Gian Gửi</p>
+    <input class="form-control" type="date" formControlName="thoiGianGui">
+    <p *ngIf="formEditSoTietKiem.controls.thoiGianGui.errors?.required &&
+                  formEditSoTietKiem.controls.thoiGianGui.touched"
+       class="text-danger">Vui lòng nhập thời gian gửi</p>
+  </div>
+  <div class="form-group">
+    <p>Kì Hạn</p>
+    <input class="form-control" type="text" formControlName="kiHan">
+    <p *ngIf="formEditSoTietKiem.controls.kiHan.errors?.required &&
+                  formEditSoTietKiem.controls.kiHan.touched"
+       class="text-danger">Vui lòng nhập kì hạn gửi</p>
+  </div>
+  <div class="form-group">
+    <p>Số Tiền Gửi</p>
+    <input class="form-control" type="text" formControlName="soTienGui">
+    <p *ngIf="formEditSoTietKiem.controls.soTienGui.errors?.required &&
+                  formEditSoTietKiem.controls.soTienGui.touched"
+       class="text-danger">Vui lòng nhập số tiền gửi</p>
+    <p *ngIf="formEditSoTietKiem.controls.soTienGui.errors?.pattern &&
+                  formEditSoTietKiem.controls.soTienGui.touched"
+       class="text-danger">Số tiền gửi không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Lãi Suất</p>
+    <input class="form-control" type="text" formControlName="laiSuat">
+    <p *ngIf="formEditSoTietKiem.controls.laiSuat.errors?.required &&
+                  formEditSoTietKiem.controls.laiSuat.touched"
+       class="text-danger">Vui lòng nhập lãi suất</p>
+  </div>
+  <div class="form-group">
+    <p>Ưu Đãi</p>
+    <input class="form-control" type="text" formControlName="uuDai">
+    <p *ngIf="formEditSoTietKiem.controls.uuDai.errors?.required &&
+                  formEditSoTietKiem.controls.uuDai.touched"
+       class="text-danger">Vui lòng nhập ưu đãi</p>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formEditSoTietKiem.invalid"
+          class="btn btn-success" (click)="editSoTietKiem()">Sửa Thông Tin
+  </button>
+  <button class="btn btn-primary ml-4" [routerLink]="['/sotietkiem-list']">Quay Lại
+  </button>
+</div>

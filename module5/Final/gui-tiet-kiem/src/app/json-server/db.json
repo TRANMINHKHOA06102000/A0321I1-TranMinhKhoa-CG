@@ -33,7 +33,7 @@
       "thoiGianGui": "2000-10-06",
       "kiHan": "6 tháng",
       "soTienGui": 15000000,
-      "laiSuat": 2,
+      "laiSuat": "2",
       "uuDai": "Không"
     },
     {
@@ -47,7 +47,7 @@
       "thoiGianGui": "2000-11-06",
       "kiHan": "12 tháng",
       "soTienGui": 15000000,
-      "laiSuat": 2,
+      "laiSuat": "2",
       "uuDai": "Không"
     },
     {
@@ -61,7 +61,7 @@
       "thoiGianGui": "2001-10-06",
       "kiHan": "6 tháng",
       "soTienGui": 19000000,
-      "laiSuat": 2,
+      "laiSuat": "2",
       "uuDai": "Không"
     },
     {
@@ -75,7 +75,7 @@
       "thoiGianGui": "2000-12-06",
       "kiHan": "6 tháng",
       "soTienGui": 28000000,
-      "laiSuat": 2,
+      "laiSuat": "2",
       "uuDai": "Không"
     }
   ]
