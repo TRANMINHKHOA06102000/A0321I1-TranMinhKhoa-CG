@@ -1,0 +1,68 @@
+<div class="row justify-content-between">
+  <h2>Danh sách các xe đăng ký ở bến xe XYZ</h2>
+</div>
+<div class="row mt-3 px-3">
+  <button class="btn btn-success" [routerLink]="['/xe-create']">Thêm Mới</button>
+  <table class="table mt-3" style="font-size: 12px;">
+    <thead>
+    <tr>
+      <!--      <th>ID</th>-->
+      <th>Số xe</th>
+      <th>Loại xe</th>
+      <th>Tên nhà xe</th>
+      <th>Điểm đi</th>
+      <th>Điểm đến</th>
+      <th>Số điện thoại</th>
+      <th>Email</th>
+      <th>Giờ đi</th>
+      <th>Giờ đến</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let xe of xes | paginate: { itemsPerPage: 2, currentPage: page }">
+      <!--      <td>{{customer.id}}</td>-->
+      <td>{{xe.biensoxe}}</td>
+      <td>{{xe.loaixe}}</td>
+      <td>{{xe.tennhaxe}}</td>
+      <td>{{xe.diadiem_diden.diemdi}}</td>
+      <td>{{xe.diadiem_diden.diemden}}</td>
+      <td>{{xe.sodienthoai}}</td>
+      <td>{{xe.email}}</td>
+      <td>{{xe.giodi}}</td>
+      <td>{{xe.gioden}}</td>
+      <td style="width: 12%;">
+        <button class="btn btn-sm btn-warning mr-2"
+                [routerLink]="['/xe-edit/'+xe.id]">Sửa
+        </button>
+        <button data-toggle="modal" data-target="#idModal" class="btn btn-sm btn-danger"
+                (click)="getXeBienSoXe(xe.id)">Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="modal fade" id="idModal" tabindex="-1" role="dialog"
+       aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông Báo!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bạn có chắc chắn muốn xóa: {{biensoxe}} không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteXe(id)">Có</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>

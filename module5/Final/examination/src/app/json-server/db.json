@@ -1,0 +1,86 @@
+{
+  "diaDiem": [
+    {
+      "id": 1,
+      "diemdi": "Hà Nội",
+      "diemden": "Sài Gòn"
+    },
+    {
+      "id": 2,
+      "diemdi": "Đà Nẵng",
+      "diemden": "Quảng Nam"
+    },
+    {
+      "id": 3,
+      "diemdi": "Huế",
+      "diemden": "Quảng Ngãi"
+    },
+    {
+      "id": 4,
+      "diemdi": "Nha Trang",
+      "diemden": "Lâm Đồng"
+    }
+  ],
+  "xe": [
+    {
+      "biensoxe": "1112",
+      "loaixe": "gh",
+      "tennhaxe": "Mai Linh",
+      "diadiem_diden": {
+        "id": 4,
+        "diemdi": "Nha Trang",
+        "diemden": "Lâm Đồng"
+      },
+      "sodienthoai": "0975555555",
+      "email": "edu_com@a.com.e-d.co-com",
+      "giodi": "13:07",
+      "gioden": "16:00",
+      "id": 2
+    },
+    {
+      "biensoxe": "1113",
+      "loaixe": "Giường nằm",
+      "tennhaxe": "Hoàng Long",
+      "diadiem_diden": {
+        "id": 2,
+        "diemdi": "Đà Nẵng",
+        "diemden": "Quảng Nam"
+      },
+      "sodienthoai": "0900540062",
+      "email": "khoa32@gmail.com",
+      "giodi": "14:00",
+      "gioden": "16:20",
+      "id": 3
+    },
+    {
+      "biensoxe": "5514",
+      "loaixe": "Giường nằm",
+      "tennhaxe": "Mai Vũ",
+      "diadiem_diden": {
+        "id": 2,
+        "diemdi": "Đà Nẵng",
+        "diemden": "Quảng Nam"
+      },
+      "sodienthoai": "0937673682",
+      "email": "ak@gmail.com",
+      "giodi": "04:05",
+      "gioden": "20:00",
+      "id": 5
+    },
+    {
+      "biensoxe": "5504",
+      "loaixe": "Giường nằm",
+      "tennhaxe": "Hoàng Vũ",
+      "diadiem_diden": {
+        "id": 3,
+        "diemdi": "Huế",
+        "diemden": "Quảng Ngãi"
+      },
+      "sodienthoai": "0909540462",
+      "email": "tung@gmail.com",
+      "giodi": "13:01",
+      "gioden": "16:00",
+      "id": 6
+    }
+  ]
+}

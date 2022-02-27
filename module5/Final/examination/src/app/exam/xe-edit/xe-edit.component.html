@@ -1,0 +1,86 @@
+<h3 class="text-center">Chỉnh sửa thông tin xe khách</h3>
+
+<form class="w-75 mx-auto mt-3" [formGroup]="formEditXe">
+  <div class="form-group">
+    <p>Số xe</p>
+    <input class="form-control" type="text" formControlName="biensoxe" disabled>
+    <p *ngIf="formEditXe.controls.biensoxe.errors?.required &&
+                  formEditXe.controls.biensoxe.touched"
+       class="text-danger">Vui lòng nhập biển số xe</p>
+  </div>
+  <div class="form-group">
+    <p>Loại Xe(<span>*</span>)</p>
+    <input class="form-control" type="text" formControlName="loaixe">
+    <p *ngIf="formEditXe.controls.loaixe.errors?.required &&
+                  formEditXe.controls.loaixe.touched"
+       class="text-danger">Vui lòng nhập loại xe</p>
+  </div>
+  <div class="form-group">
+    <p>Tên nhà xe(<span>*</span>)</p>
+    <input class="form-control" type="text" formControlName="tennhaxe">
+    <p *ngIf="formEditXe.controls.tennhaxe.errors?.required &&
+                  formEditXe.controls.tennhaxe.touched"
+       class="text-danger">Vui lòng nhập loại xe</p>
+  </div>
+  <div class="form-group">
+    <label>Điểm Đi(<span>*</span>)</label>
+    <select [compareWith]="compareFn" class="custom-select" formControlName="diadiem_diden">
+      <option [ngValue]="type" *ngFor="let type of diaDiems"
+              [selected]="type.id == formEditXe.value.diadiem_diden.id">{{type.diemdi}}</option>
+    </select>
+    <p *ngIf="formEditXe.controls.diadiem_diden.errors?.required &&
+                  formEditXe.controls.diadiem_diden.touched"
+       class="text-danger">Vui lòng chọn điểm đi!</p>
+  </div>
+  <div class="form-group">
+    <label>Điểm Đến(<span>*</span>)</label>
+    <select [compareWith]="compareFn" class="custom-select" formControlName="diadiem_diden">
+      <option [ngValue]="types" *ngFor="let types of diaDiems"
+              [selected]="types.id == formEditXe.value.diadiem_diden.id">{{types.diemden}}</option>
+    </select>
+    <p *ngIf="formEditXe.controls.diadiem_diden.errors?.required &&
+                  formEditXe.controls.diadiem_diden.touched"
+       class="text-danger">Vui lòng chọn điểm đến!</p>
+  </div>
+  <div class="form-group">
+    <p>Số Điện Thoại(<span>*</span>)</p>
+    <input class="form-control" type="text" formControlName="sodienthoai">
+    <p *ngIf="formEditXe.controls.sodienthoai.errors?.required &&
+                  formEditXe.controls.sodienthoai.touched"
+       class="text-danger">Vui lòng nhập số điện thoại</p>
+    <p *ngIf="formEditXe.controls.sodienthoai.errors?.pattern &&
+                  formEditXe.controls.sodienthoai.touched"
+       class="text-danger">Số điện thoại không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Email(<span>*</span>)</p>
+    <input class="form-control" type="text" formControlName="email">
+    <p *ngIf="formEditXe.controls.email.errors?.required &&
+                  formEditXe.controls.email.touched"
+       class="text-danger">Vui lòng nhập email</p>
+    <p *ngIf="formEditXe.controls.email.errors?.email &&
+                  formEditXe.controls.email.touched"
+       class="text-danger">Email không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <p>Giờ đi(<span>*</span>)</p>
+    <input class="form-control" type="time" formControlName="giodi">
+    <p *ngIf="formEditXe.controls.giodi.errors?.required &&
+                  formEditXe.controls.giodi.touched"
+       class="text-danger">Vui lòng nhập giờ đi</p>
+  </div>
+  <div class="form-group">
+    <p>Giờ đến(<span>*</span>)</p>
+    <input class="form-control" type="time" formControlName="gioden">
+    <p *ngIf="formEditXe.controls.gioden.errors?.required &&
+                  formEditXe.controls.gioden.touched"
+       class="text-danger">Vui lòng nhập giờ đến</p>
+  </div>
+</form>
+<div class="row d-flex justify-content-center mt-4">
+  <button [disabled]="formEditXe.invalid"
+          class="btn btn-success" (click)="editXe()">Sửa
+  </button>
+  <button class="btn btn-primary ml-4" [routerLink]="['/xe-list']">Quay về
+  </button>
+</div>
