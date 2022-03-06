@@ -2,7 +2,7 @@ html {
     width: 100%;
     height: 100%;
 }
-body {
+.login-body {
     background: linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
     color: rgba(0, 0, 0, 0.6);
     font-family: "Roboto", sans-serif;
@@ -36,6 +36,10 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 20px;
+}
+.form-group i{
+    color: red;
+    font-size: 14px;
 }
 .form-group:last-child {
     margin: 0;
