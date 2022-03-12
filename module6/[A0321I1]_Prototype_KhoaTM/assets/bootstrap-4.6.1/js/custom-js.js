@@ -1,5 +1,5 @@
-// Username không được trống, tối thiểu 3 ký tự, không chứa ký tự đặc biệt
-// Mật khẩu không được trống, tối thiểu 8 ký tự
+// Username không được trống, tối thiểu 4 ký tự,tối đa 15 ký tự, không chứa ký tự đặc biệt và khoảng trắng
+// Mật khẩu không được trống, tối thiểu 6 ký tự,tối đa 15 ký tự
 
 $(document).ready(function () {
     $('#username').on('focusout', function () {
@@ -7,14 +7,7 @@ $(document).ready(function () {
             if (validateUserName($('#username').val())) {
                 $('.error1').fadeOut('slow');
             } else {
-                $('.error1').text('Tên tài khoản không được chưa ký tự đặc biệt!');
-                $('.error1').fadeIn('slow');
-            }
-
-            if (validateUserNameTwo($('#username').val())) {
-                $('.error1').fadeOut('slow');
-            } else {
-                $('.error1').text('Tên tài khoản tối thiểu 3 ký tự!');
+                $('.error1').text('Tên tài khoản không đúng định dạng!');
                 $('.error1').fadeIn('slow');
             }
         } else {
@@ -29,7 +22,7 @@ $(document).ready(function () {
             if (validatePassword($('#password').val())) {
                 $('.error2').fadeOut('slow');
             } else {
-                $('.error2').text('Mật khẩu tối thiểu 8 ký tự!');
+                $('.error2').text('Mật khẩu không đúng định dạng!');
                 $('.error2').fadeIn('slow');
             }
         } else {
@@ -41,27 +34,17 @@ $(document).ready(function () {
 
 
 function validateUserName(eVal) {
-    var val = /(^[a-zA-Z0-9]*)$/;
+    var val = /^\S[a-zA-Z0-9]{4,15}$/;
     if (val.test(eVal)) {
         return true;
     } else {
         return false;
     }
 }
-function validateUserNameTwo() {
-    const usernameEle = document.getElementById('username');
-    let usernameValue = usernameEle.value;
-    if (usernameValue.length >= 3) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
-function validatePassword() {
-    const passwordEle = document.getElementById('password');
-    let passwordValue = passwordEle.value;
-    if (passwordValue.length >= 8) {
+function validatePassword(eVal) {
+    var val = /^[-@.\/#&+\w\s]{6,15}$/;
+    if (val.test(eVal)) {
         return true;
     } else {
         return false;
